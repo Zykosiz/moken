@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://df1k00nx173eb"
+path="res://.godot/imported/Support_Long.obj-977de5739299f28a15c22a9b6229408f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Support_Long.obj-977de5739299f28a15c22a9b6229408f.mesh"]
+
+source_file="res://Assets/Quaternius/Game Kits/Cyberpunk Game Kit - July 2022/Platforms/Support_Long.obj"
+dest_files=["res://.godot/imported/Support_Long.obj-977de5739299f28a15c22a9b6229408f.mesh", "res://.godot/imported/Support_Long.obj-977de5739299f28a15c22a9b6229408f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

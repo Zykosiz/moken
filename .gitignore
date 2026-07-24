@@ -7,8 +7,24 @@
 .mcp.json
 
 # External asset and reference packs
-Assets/
+Assets/*
+!Assets/Kenney/
+!Assets/Quaternius/
 Reference/
+
+# ...except the import settings and extracted material resources for those
+# packs, which hold deliberate in-project decisions (extraction, normal maps,
+# roughness/metallic) and should be tracked/rollback-able. Source models,
+# textures, and everything else under these packs stays ignored.
+Assets/Kenney/**
+!Assets/Kenney/**/
+!Assets/Kenney/**/*.import
+!Assets/Kenney/**/*.tres
+
+Assets/Quaternius/**
+!Assets/Quaternius/**/
+!Assets/Quaternius/**/*.import
+!Assets/Quaternius/**/*.tres
 
 # Build/export output
 android/

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ccbhoy6mt6725"
+path="res://.godot/imported/Rail_Short.obj-8863bb88be9fa6343abed1c8f10e3003.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Rail_Short.obj-8863bb88be9fa6343abed1c8f10e3003.mesh"]
+
+source_file="res://Assets/Quaternius/Game Kits/Cyberpunk Game Kit - July 2022/Platforms/Rail_Short.obj"
+dest_files=["res://.godot/imported/Rail_Short.obj-8863bb88be9fa6343abed1c8f10e3003.mesh", "res://.godot/imported/Rail_Short.obj-8863bb88be9fa6343abed1c8f10e3003.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://k2rrn2bhlgnw"
+path="res://.godot/imported/Pipe_Corner.obj-6350f653acf8bc1f59b7536cc3ece886.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Pipe_Corner.obj-6350f653acf8bc1f59b7536cc3ece886.mesh"]
+
+source_file="res://Assets/Quaternius/Game Kits/Cyberpunk Game Kit - July 2022/Platforms/Pipe_Corner.obj"
+dest_files=["res://.godot/imported/Pipe_Corner.obj-6350f653acf8bc1f59b7536cc3ece886.mesh", "res://.godot/imported/Pipe_Corner.obj-6350f653acf8bc1f59b7536cc3ece886.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

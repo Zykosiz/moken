@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dsp1ahhycghro"
+path="res://.godot/imported/Enemy_2Legs_Gun.obj-64ab6a0eb2d758f7f8b877839f0eebfc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Enemy_2Legs_Gun.obj-64ab6a0eb2d758f7f8b877839f0eebfc.mesh"]
+
+source_file="res://Assets/Quaternius/Game Kits/Cyberpunk Game Kit - July 2022/Enemies/Enemy_2Legs_Gun.obj"
+dest_files=["res://.godot/imported/Enemy_2Legs_Gun.obj-64ab6a0eb2d758f7f8b877839f0eebfc.mesh", "res://.godot/imported/Enemy_2Legs_Gun.obj-64ab6a0eb2d758f7f8b877839f0eebfc.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

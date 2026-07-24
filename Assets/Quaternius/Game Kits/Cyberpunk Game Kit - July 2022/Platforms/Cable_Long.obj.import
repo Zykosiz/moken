@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cxbjwqi00i1nd"
+path="res://.godot/imported/Cable_Long.obj-2747e7361df06ec5a42053be527ffe34.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Cable_Long.obj-2747e7361df06ec5a42053be527ffe34.mesh"]
+
+source_file="res://Assets/Quaternius/Game Kits/Cyberpunk Game Kit - July 2022/Platforms/Cable_Long.obj"
+dest_files=["res://.godot/imported/Cable_Long.obj-2747e7361df06ec5a42053be527ffe34.mesh", "res://.godot/imported/Cable_Long.obj-2747e7361df06ec5a42053be527ffe34.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

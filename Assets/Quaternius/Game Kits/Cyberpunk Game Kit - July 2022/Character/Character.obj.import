@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bt83cx13fxfy2"
+path="res://.godot/imported/Character.obj-f5a92bbadda8e18559531dd26c36123d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Character.obj-f5a92bbadda8e18559531dd26c36123d.mesh"]
+
+source_file="res://Assets/Quaternius/Game Kits/Cyberpunk Game Kit - July 2022/Character/Character.obj"
+dest_files=["res://.godot/imported/Character.obj-f5a92bbadda8e18559531dd26c36123d.mesh", "res://.godot/imported/Character.obj-f5a92bbadda8e18559531dd26c36123d.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

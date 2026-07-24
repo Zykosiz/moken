@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ukn4bur5ph8y"
+path="res://.godot/imported/Lever.obj-554513b8c17b22b59b5f389a8c5c35c5.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Lever.obj-554513b8c17b22b59b5f389a8c5c35c5.mesh"]
+
+source_file="res://Assets/Quaternius/Game Kits/Cyberpunk Game Kit - July 2022/Pickups and Objects/Lever.obj"
+dest_files=["res://.godot/imported/Lever.obj-554513b8c17b22b59b5f389a8c5c35c5.mesh", "res://.godot/imported/Lever.obj-554513b8c17b22b59b5f389a8c5c35c5.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
