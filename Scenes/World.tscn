@@ -9,10 +9,10 @@
 [ext_resource type="Script" uid="uid://c35m6fu3cd6fy" path="res://scripts/world/layout/AuthoredIslandLayout.gd" id="8_layout"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1"]
-sky_top_color = Color(0.3, 0.55, 0.85, 1)
-sky_horizon_color = Color(0.75, 0.86, 0.9, 1)
+sky_top_color = Color(0.25, 0.52, 0.82, 1)
+sky_horizon_color = Color(0.55, 0.75, 0.85, 1)
 ground_bottom_color = Color(0.2, 0.35, 0.4, 1)
-ground_horizon_color = Color(0.75, 0.86, 0.9, 1)
+ground_horizon_color = Color(0.55, 0.75, 0.85, 1)
 
 [sub_resource type="Sky" id="Sky_1"]
 sky_material = SubResource("ProceduralSkyMaterial_1")
