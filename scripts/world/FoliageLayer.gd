@@ -97,6 +97,11 @@ func _load_mesh(path: String) -> Mesh:
 	var result: Mesh = null
 	if mesh_instance != null:
 		result = mesh_instance.mesh
+		# result is Godot's cached Mesh resource for this model path (shared
+		# across every load() of the same file), so this rewires it globally
+		# for all instances/scenes using this mesh, not just this MultiMesh --
+		# that's the intended behavior, not an accidental side effect.
+		ExtractedMaterialMap.rewire_mesh(result, path)
 	instance.queue_free()
 	return result
 

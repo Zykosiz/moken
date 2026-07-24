@@ -41,6 +41,13 @@ func _rebuild() -> void:
 	if Engine.is_editor_hint() and get_tree() != null and get_tree().edited_scene_root != null:
 		visual.owner = get_tree().edited_scene_root
 
+	# Rewire to each mesh's extracted standalone material where one exists,
+	# regardless of apply_tint below -- apply_tint's per-instance override
+	# (if set) still wins visually, but this keeps the underlying mesh
+	# resource correct for every other instance/scene sharing it too.
+	if source_scene != null:
+		ExtractedMaterialMap.rewire_tree(visual, source_scene.resource_path)
+
 	if apply_tint:
 		_apply_tint_recursive(visual)
 

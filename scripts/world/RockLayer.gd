@@ -94,6 +94,10 @@ func _load_mesh(path: String) -> Mesh:
 	var result: Mesh = null
 	if mesh_instance != null:
 		result = _smooth_shaded_mesh(mesh_instance.mesh)
+		# _smooth_shaded_mesh() already builds a private ArrayMesh copy (needed
+		# for the new normal data), so rewiring its material here is safe --
+		# it doesn't mutate anything shared/cached.
+		ExtractedMaterialMap.rewire_mesh(result, path)
 	instance.queue_free()
 	return result
 
