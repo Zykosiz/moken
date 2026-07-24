@@ -4,4 +4,5 @@
 resource_name = "Eyebrows"
 cull_mode = 2
 albedo_color = Color(0.2431373, 0.2039216, 0.16078432, 1)
-roughness = 0.5
+roughness = 0.7
+metallic = 0.0

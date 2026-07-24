@@ -4,4 +4,5 @@
 resource_name = "EyeColor"
 cull_mode = 2
 albedo_color = Color(0.073441036, 0.17659909, 0.2533219, 1)
-roughness = 0.5
+roughness = 0.35
+metallic = 0.9

@@ -4,4 +4,5 @@
 resource_name = "M_Alien_Orange"
 cull_mode = 2
 albedo_color = Color(0.6138927, 0.25449535, 0.1194282, 1)
-roughness = 0.43700787
+roughness = 0.35
+metallic = 0.9

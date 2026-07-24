@@ -5,4 +5,5 @@ resource_name = "Black"
 cull_mode = 2
 vertex_color_use_as_albedo = true
 albedo_color = Color(0.06665542, 0.06665542, 0.06665542, 1)
-roughness = 0.5
+roughness = 0.7
+metallic = 0.0

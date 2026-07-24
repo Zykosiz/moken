@@ -4,4 +4,5 @@
 resource_name = "Hooves"
 cull_mode = 2
 albedo_color = Color(0.41998965, 0.39840207, 0.36399072, 1)
-roughness = 0.5
+roughness = 0.7
+metallic = 0.0

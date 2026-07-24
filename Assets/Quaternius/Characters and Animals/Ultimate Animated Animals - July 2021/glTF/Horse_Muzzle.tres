@@ -4,4 +4,5 @@
 resource_name = "Muzzle"
 cull_mode = 2
 albedo_color = Color(0.23998919, 0.20409615, 0.14846876, 1)
-roughness = 0.5
+roughness = 0.7
+metallic = 0.0

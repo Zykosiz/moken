@@ -5,3 +5,5 @@ resource_name = "Screen"
 vertex_color_use_as_albedo = true
 albedo_color = Color(0.33688402, 0.4554112, 0.47998923, 1)
 emission_enabled = true
+roughness = 0.7
+metallic = 0.0

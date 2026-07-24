@@ -4,4 +4,5 @@
 resource_name = "M_Joints"
 cull_mode = 2
 albedo_color = Color(0.6654698, 0.39817953, 0.8581861, 1)
-roughness = 0.5
+roughness = 0.7
+metallic = 0.0

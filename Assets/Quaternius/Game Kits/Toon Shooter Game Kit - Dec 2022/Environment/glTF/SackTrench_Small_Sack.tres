@@ -4,4 +4,5 @@
 resource_name = "Sack"
 cull_mode = 2
 albedo_color = Color(0.62665653, 0.5811058, 0.46702644, 1)
-roughness = 0.5
+roughness = 0.35
+metallic = 0.9

@@ -4,3 +4,5 @@
 resource_name = "Book4"
 cull_mode = 2
 vertex_color_use_as_albedo = true
+roughness = 0.7
+metallic = 0.0

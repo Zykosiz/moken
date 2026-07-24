@@ -4,4 +4,5 @@
 resource_name = "Teeth"
 cull_mode = 2
 albedo_color = Color(0.5466555, 0.54299206, 0.39289936, 1)
-roughness = 0.5
+roughness = 0.7
+metallic = 0.0

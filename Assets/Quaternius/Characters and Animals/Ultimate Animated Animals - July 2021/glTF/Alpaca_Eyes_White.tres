@@ -3,4 +3,5 @@
 [resource]
 resource_name = "Eyes_White"
 cull_mode = 2
-roughness = 0.5
+roughness = 0.7
+metallic = 0.0

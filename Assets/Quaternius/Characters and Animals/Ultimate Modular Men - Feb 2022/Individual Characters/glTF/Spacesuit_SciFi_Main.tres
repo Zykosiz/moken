@@ -4,4 +4,5 @@
 resource_name = "SciFi_Main"
 cull_mode = 2
 albedo_color = Color(0.25882357, 0.32941177, 0.3215687, 1)
-roughness = 0.5
+roughness = 0.35
+metallic = 0.9

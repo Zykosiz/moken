@@ -4,4 +4,5 @@
 resource_name = "Main_Light"
 cull_mode = 2
 albedo_color = Color(0.5733261, 0.5625153, 0.57062334, 1)
-roughness = 0.5
+roughness = 0.7
+metallic = 0.0

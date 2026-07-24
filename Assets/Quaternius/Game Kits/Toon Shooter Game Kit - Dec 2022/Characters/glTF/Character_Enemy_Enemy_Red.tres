@@ -4,4 +4,5 @@
 resource_name = "Enemy_Red"
 cull_mode = 2
 albedo_color = Color(0.5999932, 0.11132966, 0.1342782, 1)
-roughness = 0.5
+roughness = 0.7
+metallic = 0.0

@@ -6,6 +6,7 @@
 resource_name = "MI_Eyes"
 cull_mode = 2
 albedo_texture = ExtResource("1_qew47")
-roughness = 0.34545454
+roughness = 0.7
 normal_enabled = true
 metadata/_gltf_primary_texture_coord = 0
+metallic = 0.0

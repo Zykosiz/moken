@@ -3,6 +3,7 @@
 [resource]
 resource_name = "Window"
 cull_mode = 2
-metallic = 1.0
+metallic = 0.9
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
+roughness = 0.35

@@ -4,4 +4,5 @@
 resource_name = "Character_Main"
 cull_mode = 2
 albedo_color = Color(0.40000004, 0.47450987, 0.2431373, 1)
-roughness = 0.5
+roughness = 0.7
+metallic = 0.0

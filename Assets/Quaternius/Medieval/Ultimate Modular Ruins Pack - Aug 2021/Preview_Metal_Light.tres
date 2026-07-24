@@ -4,3 +4,5 @@
 resource_name = "Metal_Light"
 cull_mode = 2
 vertex_color_use_as_albedo = true
+roughness = 0.35
+metallic = 0.9

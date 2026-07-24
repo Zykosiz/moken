@@ -4,4 +4,5 @@
 resource_name = "Band"
 cull_mode = 2
 albedo_color = Color(0.51998967, 0.20831437, 0.15514757, 1)
-roughness = 0.5
+roughness = 0.7
+metallic = 0.0

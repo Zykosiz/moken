@@ -3,3 +3,5 @@
 [resource]
 resource_name = "Material.005"
 cull_mode = 2
+roughness = 0.7
+metallic = 0.0

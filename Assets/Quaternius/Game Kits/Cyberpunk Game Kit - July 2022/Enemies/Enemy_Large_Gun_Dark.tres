@@ -5,3 +5,5 @@ resource_name = "Dark"
 vertex_color_use_as_albedo = true
 albedo_color = Color(0.21332288, 0.21332288, 0.21332288, 1)
 emission_enabled = true
+roughness = 0.35
+metallic = 0.9

@@ -4,4 +4,5 @@
 resource_name = "Skin"
 cull_mode = 2
 albedo_color = Color(0.11999293, 0.11999293, 0.11999293, 1)
-roughness = 0.5
+roughness = 0.7
+metallic = 0.0

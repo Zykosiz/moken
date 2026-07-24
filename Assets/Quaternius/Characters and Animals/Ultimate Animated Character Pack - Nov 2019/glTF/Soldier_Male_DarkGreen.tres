@@ -4,4 +4,5 @@
 resource_name = "DarkGreen"
 cull_mode = 2
 albedo_color = Color(0.19681747, 0.22665437, 0.11451199, 1)
-roughness = 0.5
+roughness = 0.7
+metallic = 0.0

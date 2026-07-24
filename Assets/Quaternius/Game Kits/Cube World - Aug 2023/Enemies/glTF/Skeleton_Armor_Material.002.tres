@@ -4,4 +4,5 @@
 resource_name = "Material.002"
 cull_mode = 2
 vertex_color_use_as_albedo = true
-metallic = 1.0
+metallic = 0.9
+roughness = 0.35

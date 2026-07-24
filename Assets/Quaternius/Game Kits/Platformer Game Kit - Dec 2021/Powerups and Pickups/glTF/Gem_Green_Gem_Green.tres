@@ -4,4 +4,5 @@
 resource_name = "Gem_Green"
 cull_mode = 2
 albedo_color = Color(0.5691523, 0.8266568, 0, 1)
-roughness = 0.5
+roughness = 0.7
+metallic = 0.0

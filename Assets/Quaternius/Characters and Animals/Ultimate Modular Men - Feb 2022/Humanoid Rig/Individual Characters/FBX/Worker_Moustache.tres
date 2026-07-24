@@ -5,3 +5,5 @@ resource_name = "Moustache"
 vertex_color_use_as_albedo = true
 albedo_color = Color(0.43998885, 0.25448605, 0.016948223, 1)
 emission_enabled = true
+roughness = 0.7
+metallic = 0.0

@@ -5,3 +5,5 @@ resource_name = "Gold"
 vertex_color_use_as_albedo = true
 albedo_color = Color(0.5647059, 0.454902, 0.21960786, 1)
 emission_enabled = true
+roughness = 0.35
+metallic = 0.9

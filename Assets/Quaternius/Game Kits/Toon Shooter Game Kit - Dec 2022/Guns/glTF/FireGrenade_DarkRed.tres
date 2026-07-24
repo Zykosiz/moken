@@ -3,4 +3,5 @@
 [resource]
 resource_name = "DarkRed"
 cull_mode = 2
-metallic = 1.0
+metallic = 0.9
+roughness = 0.35

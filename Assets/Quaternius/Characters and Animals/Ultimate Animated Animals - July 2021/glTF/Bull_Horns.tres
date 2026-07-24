@@ -4,4 +4,5 @@
 resource_name = "Horns"
 cull_mode = 2
 albedo_color = Color(0.6733236, 0.63140196, 0.4571132, 1)
-roughness = 0.5
+roughness = 0.7
+metallic = 0.0

@@ -4,4 +4,5 @@
 resource_name = "DarkClothes"
 cull_mode = 2
 albedo_color = Color(0.22757271, 0.18644382, 0.33998933, 1)
-roughness = 0.5
+roughness = 0.7
+metallic = 0.0

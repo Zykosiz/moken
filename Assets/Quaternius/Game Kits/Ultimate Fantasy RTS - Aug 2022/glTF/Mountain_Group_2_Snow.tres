@@ -4,4 +4,5 @@
 resource_name = "Snow"
 cull_mode = 2
 albedo_color = Color(0.6909534, 0.6933202, 0.6519787, 1)
-roughness = 0.5
+roughness = 0.7
+metallic = 0.0

@@ -4,4 +4,5 @@
 resource_name = "Hat"
 cull_mode = 2
 albedo_color = Color(0.9599913, 0.9571526, 0.91384053, 1)
-roughness = 0.5
+roughness = 0.7
+metallic = 0.0

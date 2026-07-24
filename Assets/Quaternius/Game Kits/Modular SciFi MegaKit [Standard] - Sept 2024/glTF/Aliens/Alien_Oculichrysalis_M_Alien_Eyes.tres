@@ -4,4 +4,5 @@
 resource_name = "M_Alien_Eyes"
 cull_mode = 2
 albedo_color = Color(0.013580992, 0.037481364, 0.05113077, 1)
-roughness = 0.5
+roughness = 0.35
+metallic = 0.9

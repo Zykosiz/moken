@@ -4,4 +4,5 @@
 resource_name = "Dirt"
 cull_mode = 2
 albedo_color = Color(0.33998945, 0.30152208, 0.18611772, 1)
-roughness = 0.5
+roughness = 0.7
+metallic = 0.0

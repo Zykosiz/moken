@@ -4,4 +4,5 @@
 resource_name = "Hair"
 cull_mode = 2
 albedo_color = Color(0.54665965, 0.46091458, 0.2627636, 1)
-roughness = 0.5
+roughness = 0.7
+metallic = 0.0

@@ -4,4 +4,5 @@
 resource_name = "Tower"
 cull_mode = 2
 albedo_color = Color(0.27331883, 0.24998426, 0.26501945, 1)
-roughness = 0.5
+roughness = 0.35
+metallic = 0.9

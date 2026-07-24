@@ -7,3 +7,5 @@ albedo_color = Color(0.63295776, 0.59417015, 0.57693106, 1)
 emission_enabled = true
 emission = Color(0.6999895, 0.6574227, 0.63850385, 1)
 emission_energy_multiplier = 0.0
+roughness = 0.35
+metallic = 0.9

@@ -4,4 +4,5 @@
 resource_name = "Gold"
 cull_mode = 2
 albedo_color = Color(0.6862745, 0.5294118, 0.28627452, 1)
-roughness = 0.5
+roughness = 0.35
+metallic = 0.9

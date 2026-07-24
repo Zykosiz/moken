@@ -4,4 +4,5 @@
 resource_name = "Pants"
 cull_mode = 2
 albedo_color = Color(0.1642891, 0.18195018, 0.28665486, 1)
-roughness = 0.5
+roughness = 0.7
+metallic = 0.0

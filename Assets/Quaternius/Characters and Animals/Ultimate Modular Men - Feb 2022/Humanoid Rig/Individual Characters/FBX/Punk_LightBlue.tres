@@ -5,3 +5,5 @@ resource_name = "LightBlue"
 vertex_color_use_as_albedo = true
 albedo_color = Color(0.20000005, 0.24705885, 0.27843142, 1)
 emission_enabled = true
+roughness = 0.7
+metallic = 0.0

@@ -5,3 +5,5 @@ resource_name = "SciFi_Main"
 vertex_color_use_as_albedo = true
 albedo_color = Color(0.25882357, 0.32941177, 0.3215687, 1)
 emission_enabled = true
+roughness = 0.35
+metallic = 0.9

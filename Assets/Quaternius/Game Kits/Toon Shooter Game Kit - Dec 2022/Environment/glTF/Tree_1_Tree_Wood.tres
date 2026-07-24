@@ -4,4 +4,5 @@
 resource_name = "Tree_Wood"
 cull_mode = 2
 albedo_color = Color(0.41330338, 0.32684907, 0.2327908, 1)
-roughness = 0.5
+roughness = 0.35
+metallic = 0.9

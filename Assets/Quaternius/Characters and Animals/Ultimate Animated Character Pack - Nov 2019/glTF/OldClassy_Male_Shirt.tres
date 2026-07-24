@@ -4,4 +4,5 @@
 resource_name = "Shirt"
 cull_mode = 2
 albedo_color = Color(0.81998944, 0.81998944, 0.81998944, 1)
-roughness = 0.5
+roughness = 0.7
+metallic = 0.0

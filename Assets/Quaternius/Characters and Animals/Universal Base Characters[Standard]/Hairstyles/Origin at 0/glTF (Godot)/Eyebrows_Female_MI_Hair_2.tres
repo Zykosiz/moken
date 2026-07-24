@@ -7,7 +7,8 @@
 resource_name = "MI_Hair_2"
 cull_mode = 2
 albedo_texture = ExtResource("1_kgckm")
-roughness = 0.71212125
+roughness = 0.7
 normal_enabled = true
 normal_texture = ExtResource("2_41674")
 metadata/_gltf_primary_texture_coord = 0
+metallic = 0.0

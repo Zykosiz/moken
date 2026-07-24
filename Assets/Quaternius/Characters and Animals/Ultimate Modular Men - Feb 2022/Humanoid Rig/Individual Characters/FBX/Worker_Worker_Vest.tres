@@ -5,3 +5,5 @@ resource_name = "Worker_Vest"
 vertex_color_use_as_albedo = true
 albedo_color = Color(0.7254902, 0.3921569, 0.16470587, 1)
 emission_enabled = true
+roughness = 0.7
+metallic = 0.0
