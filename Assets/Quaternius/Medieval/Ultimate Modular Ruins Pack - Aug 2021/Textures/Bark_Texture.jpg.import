@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://pf2pgl4b3p0l"
-path.s3tc="res://.godot/imported/Bark_Texture.jpg-1765475e474a444c2620d6815d1e41a2.s3tc.ctex"
+path.s3tc="res://.godot/imported/Bark_Texture.jpg-24d055473f65707598b9fb9af8541e72.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Quaternius/Medieval/Ultimate Modular Ruins Pack - Aug 2021/textures/Bark_Texture.jpg"
-dest_files=["res://.godot/imported/Bark_Texture.jpg-1765475e474a444c2620d6815d1e41a2.s3tc.ctex"]
+source_file="res://Assets/Quaternius/Medieval/Ultimate Modular Ruins Pack - Aug 2021/Textures/Bark_Texture.jpg"
+dest_files=["res://.godot/imported/Bark_Texture.jpg-24d055473f65707598b9fb9af8541e72.s3tc.ctex"]
 
 [params]
 

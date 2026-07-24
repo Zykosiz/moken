@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bckg2mxjwg4ai"
-path.s3tc="res://.godot/imported/BirchTree_Leaves.png-17d1503e988b4516fb3756d88beb47bc.s3tc.ctex"
+path.s3tc="res://.godot/imported/BirchTree_Leaves.png-1c1a44734a251239fff48f4eed5fac37.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Quaternius/Nature/Ultimate Stylized Nature - May 2022/textures/BirchTree_Leaves.png"
-dest_files=["res://.godot/imported/BirchTree_Leaves.png-17d1503e988b4516fb3756d88beb47bc.s3tc.ctex"]
+source_file="res://Assets/Quaternius/Nature/Ultimate Stylized Nature - May 2022/Textures/BirchTree_Leaves.png"
+dest_files=["res://.godot/imported/BirchTree_Leaves.png-1c1a44734a251239fff48f4eed5fac37.s3tc.ctex"]
 
 [params]
 

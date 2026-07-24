@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gup6tkvx0dfe"
-path.s3tc="res://.godot/imported/MapleTree_Bark.jpg-80c5aaefc0b21ec281081336e489eaee.s3tc.ctex"
+path.s3tc="res://.godot/imported/MapleTree_Bark.jpg-61e3762cb130c46ef3e19c457c7e9413.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Assets/Quaternius/Nature/Ultimate Stylized Nature - May 2022/textures/MapleTree_Bark.jpg"
-dest_files=["res://.godot/imported/MapleTree_Bark.jpg-80c5aaefc0b21ec281081336e489eaee.s3tc.ctex"]
+source_file="res://Assets/Quaternius/Nature/Ultimate Stylized Nature - May 2022/Textures/MapleTree_Bark.jpg"
+dest_files=["res://.godot/imported/MapleTree_Bark.jpg-61e3762cb130c46ef3e19c457c7e9413.s3tc.ctex"]
 
 [params]
 
