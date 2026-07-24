@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/world/layout/LayoutAssetInstance.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://Assets/Kenney/Pirate Kit/structure-fence-sides.glb" id="2_asset"]
+
+[node name="RetainingWall" type="Node3D"]
+script = ExtResource("1_script")
+source_scene = ExtResource("2_asset")
+source_scale = Vector3(1.2, 1.0, 1.2)
+apply_tint = true
+tint_color = Color(0.58, 0.52, 0.42, 1)
+collision_enabled = true
+collision_size = Vector3(5.2, 2.0, 1.2)
+collision_center = Vector3(0, 1.0, 0)

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/world/layout/LayoutAssetInstance.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://Assets/Quaternius/Home and Buildings/Ultimate Textured Building Pack - Dec 2019/Models with Materials/FBX/2Story_Balcony_Mat.fbx" id="2_asset"]
+
+[node name="BeachHouseLarge" type="Node3D"]
+script = ExtResource("1_script")
+source_scene = ExtResource("2_asset")
+source_scale = Vector3(0.85, 0.85, 0.85)
+apply_tint = true
+tint_color = Color(0.95, 0.82, 0.62, 1)
+collision_enabled = true
+collision_size = Vector3(7.5, 4.5, 6.5)
+collision_center = Vector3(0, 2.25, 0)

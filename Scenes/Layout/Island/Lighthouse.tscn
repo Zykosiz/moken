@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/world/layout/LayoutAssetInstance.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://Assets/Kenney/Pirate Kit/tower-complete-large.glb" id="2_asset"]
+
+[node name="Lighthouse" type="Node3D"]
+script = ExtResource("1_script")
+source_scene = ExtResource("2_asset")
+source_scale = Vector3(1.7, 2.5, 1.7)
+apply_tint = true
+tint_color = Color(0.96, 0.92, 0.78, 1)
+collision_enabled = true
+collision_size = Vector3(7.0, 12.0, 7.0)
+collision_center = Vector3(0, 6.0, 0)

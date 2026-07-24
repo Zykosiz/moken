@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/world/layout/LayoutAssetInstance.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://Assets/Quaternius/Home and Buildings/Ultimate Textured Building Pack - Dec 2019/Models with Materials/FBX/3Story_Balcony_Mat.fbx" id="2_asset"]
+
+[node name="VillageInn" type="Node3D"]
+script = ExtResource("1_script")
+source_scene = ExtResource("2_asset")
+source_scale = Vector3(0.9, 0.9, 0.9)
+apply_tint = true
+tint_color = Color(0.92, 0.78, 0.58, 1)
+collision_enabled = true
+collision_size = Vector3(9.0, 5.0, 8.0)
+collision_center = Vector3(0, 2.5, 0)

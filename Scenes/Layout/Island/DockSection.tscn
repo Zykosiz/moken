@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/world/layout/LayoutAssetInstance.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://Assets/Kenney/Pirate Kit/structure-platform-dock.glb" id="2_asset"]
+
+[node name="DockSection" type="Node3D"]
+script = ExtResource("1_script")
+source_scene = ExtResource("2_asset")
+source_scale = Vector3(1.4, 1.4, 1.4)
+collision_enabled = true
+collision_size = Vector3(4.4, 0.7, 5.2)
+collision_center = Vector3(0, 0.35, 0)

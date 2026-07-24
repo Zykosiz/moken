@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/world/layout/LayoutAssetInstance.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://Assets/Quaternius/Nature/Nature Crops Pack - Jan 2020/FBX/Flowers_Crop.fbx" id="2_asset"]
+
+[node name="GardenCluster" type="Node3D"]
+script = ExtResource("1_script")
+source_scene = ExtResource("2_asset")
+source_scale = Vector3(0.9, 0.9, 0.9)
