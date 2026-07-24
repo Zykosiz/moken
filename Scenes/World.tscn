@@ -9,10 +9,10 @@
 [ext_resource type="Script" uid="uid://c35m6fu3cd6fy" path="res://scripts/world/layout/AuthoredIslandLayout.gd" id="8_layout"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1"]
-sky_top_color = Color(0.08, 0.16, 0.24, 1)
-sky_horizon_color = Color(0.24, 0.32, 0.34, 1)
-ground_bottom_color = Color(0.07, 0.12, 0.12, 1)
-ground_horizon_color = Color(0.18, 0.24, 0.23, 1)
+sky_top_color = Color(0.13, 0.24, 0.33, 1)
+sky_horizon_color = Color(0.34, 0.43, 0.44, 1)
+ground_bottom_color = Color(0.11, 0.17, 0.16, 1)
+ground_horizon_color = Color(0.28, 0.34, 0.32, 1)
 
 [sub_resource type="Sky" id="Sky_1"]
 sky_material = SubResource("ProceduralSkyMaterial_1")
@@ -21,32 +21,32 @@ sky_material = SubResource("ProceduralSkyMaterial_1")
 background_mode = 2
 sky = SubResource("Sky_1")
 ambient_light_source = 2
-ambient_light_sky_contribution = 0.3
-ambient_light_energy = 0.22
+ambient_light_sky_contribution = 0.42
+ambient_light_energy = 0.36
 tonemap_mode = 2
-tonemap_exposure = 0.72
+tonemap_exposure = 0.86
 ssao_enabled = true
-sdfgi_enabled = false
+sdfgi_enabled = true
 glow_enabled = false
 glow_intensity = 0.05
 glow_hdr_threshold = 1.8
 adjustment_enabled = true
-adjustment_brightness = 0.92
-adjustment_contrast = 1.24
-adjustment_saturation = 0.86
+adjustment_brightness = 0.98
+adjustment_contrast = 1.14
+adjustment_saturation = 0.92
 fog_enabled = true
-fog_light_color = Color(0.18, 0.24, 0.25, 1)
-fog_density = 0.004
+fog_light_color = Color(0.28, 0.34, 0.34, 1)
+fog_density = 0.0032
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_terrain"]
 render_priority = 0
 shader = ExtResource("6")
-shader_parameter/albedo_tint = Color(0.68, 0.76, 0.66, 1)
-shader_parameter/roughness_amount = 0.62
+shader_parameter/albedo_tint = Color(0.82, 0.9, 0.78, 1)
+shader_parameter/roughness_amount = 0.55
 shader_parameter/specular_amount = 0.03
-shader_parameter/rim_color = Color(0.28, 0.36, 0.4, 1)
+shader_parameter/rim_color = Color(0.36, 0.45, 0.48, 1)
 shader_parameter/rim_power = 3.0
-shader_parameter/rim_strength = 0.03
+shader_parameter/rim_strength = 0.045
 shader_parameter/color_variation_strength = 0.08
 shader_parameter/color_variation_scale = 3.0
 
@@ -552,9 +552,11 @@ environment = SubResource("Environment_1")
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=1874646109]
 transform = Transform3D(0.81915206, -0.42625040, 0.38379759, 0.00000000, 0.66913062, 0.74314481, -0.57357651, -0.60874861, 0.54811966, 0, 40, 0)
-light_color = Color(0.86, 0.88, 0.9, 1)
-light_energy = 0.72
+light_color = Color(0.92, 0.91, 0.88, 1)
+light_energy = 0.9
+light_indirect_energy = 0.75
 shadow_enabled = true
+shadow_opacity = 0.58
 directional_shadow_max_distance = 220.0
 
 [node name="Island" type="Node3D" parent="." unique_id=487441275]

@@ -1,12 +1,12 @@
 shader_type spatial;
 render_mode cull_disabled, diffuse_toon, specular_toon;
 
-uniform vec4 albedo_tint : source_color = vec4(0.68, 0.76, 0.66, 1.0);
-uniform float roughness_amount : hint_range(0.0, 1.0) = 0.62;
+uniform vec4 albedo_tint : source_color = vec4(0.82, 0.9, 0.78, 1.0);
+uniform float roughness_amount : hint_range(0.0, 1.0) = 0.55;
 uniform float specular_amount : hint_range(0.0, 1.0) = 0.03;
-uniform vec4 rim_color : source_color = vec4(0.28, 0.36, 0.4, 1.0);
+uniform vec4 rim_color : source_color = vec4(0.36, 0.45, 0.48, 1.0);
 uniform float rim_power : hint_range(0.5, 8.0) = 3.0;
-uniform float rim_strength : hint_range(0.0, 1.0) = 0.03;
+uniform float rim_strength : hint_range(0.0, 1.0) = 0.045;
 uniform float color_variation_strength : hint_range(0.0, 0.3) = 0.08;
 uniform float color_variation_scale : hint_range(0.1, 10.0) = 3.0;
 
