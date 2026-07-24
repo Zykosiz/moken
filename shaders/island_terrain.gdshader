@@ -1,12 +1,13 @@
 shader_type spatial;
 render_mode cull_disabled, diffuse_toon, specular_toon;
 
-uniform float roughness_amount : hint_range(0.0, 1.0) = 0.35;
-uniform float specular_amount : hint_range(0.0, 1.0) = 0.08;
-uniform vec4 rim_color : source_color = vec4(1.0, 0.98, 0.88, 1.0);
+uniform vec4 albedo_tint : source_color = vec4(0.68, 0.76, 0.66, 1.0);
+uniform float roughness_amount : hint_range(0.0, 1.0) = 0.62;
+uniform float specular_amount : hint_range(0.0, 1.0) = 0.03;
+uniform vec4 rim_color : source_color = vec4(0.28, 0.36, 0.4, 1.0);
 uniform float rim_power : hint_range(0.5, 8.0) = 3.0;
-uniform float rim_strength : hint_range(0.0, 1.0) = 0.12;
-uniform float color_variation_strength : hint_range(0.0, 0.3) = 0.06;
+uniform float rim_strength : hint_range(0.0, 1.0) = 0.03;
+uniform float color_variation_strength : hint_range(0.0, 0.3) = 0.08;
 uniform float color_variation_scale : hint_range(0.1, 10.0) = 3.0;
 
 varying vec3 v_color;
@@ -25,7 +26,7 @@ void vertex() {
 
 void fragment() {
 	float grain = hash13(floor(v_world_pos * color_variation_scale)) - 0.5;
-	ALBEDO = clamp(v_color + grain * color_variation_strength, 0.0, 1.0);
+	ALBEDO = clamp((v_color + grain * color_variation_strength) * albedo_tint.rgb, 0.0, 1.0);
 	ROUGHNESS = roughness_amount;
 	SPECULAR = specular_amount;
 

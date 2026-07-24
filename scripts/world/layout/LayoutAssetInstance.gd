@@ -66,17 +66,37 @@ func _make_fallback_visual() -> MeshInstance3D:
 func _apply_tint_recursive(node: Node) -> void:
 	if node is MeshInstance3D:
 		var mesh_instance := node as MeshInstance3D
-		var material := StandardMaterial3D.new()
-		material.albedo_color = tint_color
-		material.roughness = 0.8
 		var surface_count := 1
 		if mesh_instance.mesh != null:
 			surface_count = max(mesh_instance.mesh.get_surface_count(), 1)
 		for surface_index in surface_count:
-			mesh_instance.set_surface_override_material(surface_index, material)
+			mesh_instance.set_surface_override_material(surface_index, _tinted_surface_material(mesh_instance, surface_index))
 
 	for child in node.get_children():
 		_apply_tint_recursive(child)
+
+
+func _tinted_surface_material(mesh_instance: MeshInstance3D, surface_index: int) -> Material:
+	var source_material := mesh_instance.get_surface_override_material(surface_index)
+	if source_material == null and mesh_instance.mesh != null and surface_index < mesh_instance.mesh.get_surface_count():
+		source_material = mesh_instance.mesh.surface_get_material(surface_index)
+
+	var material: StandardMaterial3D
+	if source_material is StandardMaterial3D:
+		material = source_material.duplicate(true) as StandardMaterial3D
+	elif source_material != null:
+		return source_material
+	else:
+		material = StandardMaterial3D.new()
+		material.roughness = 0.8
+
+	material.albedo_color = Color(
+		material.albedo_color.r * tint_color.r,
+		material.albedo_color.g * tint_color.g,
+		material.albedo_color.b * tint_color.b,
+		material.albedo_color.a * tint_color.a
+	)
+	return material
 
 
 func _add_collision() -> void:
