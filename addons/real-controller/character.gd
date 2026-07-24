@@ -72,8 +72,9 @@ var target_camera_distance: float = 3.5
 var is_transitioning_camera: bool = false
 
 func _ready() -> void:
-	## Captures the mouse cursor for first-person camera control.
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	## Mouse starts free; left-click captures it (see _unhandled_input) and
+	## Escape releases it again -- avoids locking the cursor the instant the
+	## scene loads, before the player has clicked into the game window.
 	target_camera_distance = 0.0 if camera_mode == CameraMode.FIRST_PERSON else camera_distance
 	spring_arm.spring_length = target_camera_distance
 	if character:
