@@ -6,6 +6,10 @@
 [ext_resource type="Script" uid="uid://cktsfyae0yyl8" path="res://scripts/world/IslandRocks.gd" id="4_q2d71"]
 [ext_resource type="Shader" uid="uid://ffj070w1hbpi" path="res://shaders/island_terrain.gdshader" id="6"]
 [ext_resource type="Shader" uid="uid://qonedx4uakwv" path="res://shaders/water.gdshader" id="7"]
+[ext_resource type="PackedScene" path="res://Scenes/Characters/NPC/NpcVillager.tscn" id="8_villager"]
+[ext_resource type="PackedScene" path="res://Scenes/Characters/NPC/NpcFisher.tscn" id="9_fisher"]
+[ext_resource type="PackedScene" path="res://Scenes/Characters/NPC/NpcGuard.tscn" id="10_guard"]
+[ext_resource type="Script" path="res://scripts/npc/NpcWander.gd" id="11_wander"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1"]
 sky_top_color = Color(0.3, 0.55, 0.85, 1)
@@ -27,6 +31,10 @@ glow_intensity = 0.4
 fog_enabled = true
 fog_light_color = Color(0.75, 0.86, 0.88, 1)
 fog_density = 0.0025
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_npc_test"]
+vertices = PackedVector3Array(-8, 0, -2, 10, 0, -2, 10, 0, 13, -8, 0, 13)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(0, 2, 3)]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_terrain"]
 render_priority = 0
@@ -2978,6 +2986,39 @@ shape = SubResource("BoxShape3D_1jmuy")
 
 [node name="Water" type="MeshInstance3D" parent="." unique_id=16560797]
 mesh = SubResource("PlaneMesh_water")
+
+[node name="NPCTestNavigation" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_npc_test")
+
+[node name="NPCWaypoints" type="Node3D" parent="."]
+
+[node name="GuardPointA" type="Node3D" parent="NPCWaypoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3, 5)
+
+[node name="GuardPointB" type="Node3D" parent="NPCWaypoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, 11)
+
+[node name="GuardPointC" type="Node3D" parent="NPCWaypoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 3, 4)
+
+[node name="NPCs" type="Node3D" parent="."]
+
+[node name="Villager" parent="NPCs" instance=ExtResource("8_villager")]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, -3, 3, 5)
+terrain_path = NodePath("../../Island/Terrain/TerrainMesh")
+
+[node name="Fisher" parent="NPCs" instance=ExtResource("9_fisher")]
+transform = Transform3D(0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881904, 7, 3, 4)
+terrain_path = NodePath("../../Island/Terrain/TerrainMesh")
+
+[node name="Guard" parent="NPCs" instance=ExtResource("10_guard")]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, -3, 3, 3)
+terrain_path = NodePath("../../Island/Terrain/TerrainMesh")
+
+[node name="Wander" type="Node" parent="NPCs/Guard"]
+script = ExtResource("11_wander")
+enabled = true
+waypoint_paths = [NodePath("../../../NPCWaypoints/GuardPointA"), NodePath("../../../NPCWaypoints/GuardPointB"), NodePath("../../../NPCWaypoints/GuardPointC")]
 
 [node name="Player" parent="." unique_id=1046671912 instance=ExtResource("1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)

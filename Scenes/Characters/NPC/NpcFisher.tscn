@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://Scenes/Characters/NPC/NpcBase.tscn" id="1_base"]
+
+[node name="NpcFisher" instance=ExtResource("1_base")]
+display_name = "Fisher"
+movement_speed = 1.35
+body_color = Color(0.2, 0.42, 0.78, 1)
