@@ -550,8 +550,8 @@ subdivide_depth = 220
 environment = SubResource("Environment_1")
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=1874646109]
-transform = Transform3D(0.82017535, -0.21500513, 0.53175765, 0, 0.92778635, 0.37456912, -0.57429296, -0.30705917, 0.7594286, 0, 40, 0)
-light_color = Color(1, 0.92, 0.78, 1)
+transform = Transform3D(0.81915206, -0.42625040, 0.38379759, 0.00000000, 0.66913062, 0.74314481, -0.57357651, -0.60874861, 0.54811966, 0, 40, 0)
+light_color = Color(1, 0.95, 0.88, 1)
 light_energy = 1.2
 shadow_enabled = true
 directional_shadow_max_distance = 220.0
