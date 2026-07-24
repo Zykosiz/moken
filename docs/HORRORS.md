@@ -4,64 +4,77 @@
 
 Horrors are not simply bosses.
 
-They are reality-distorting entities that define the identity of Moken. Every Horror encounter should feel unique, memorable, and unlike ordinary exploration.
+They are reality-distorting entities that temporarily rewrite how the player experiences a real island or dungeon. Every Horror encounter should feel unique, memorable, and unlike ordinary exploration.
 
-## Design Philosophy
+## Core Structure
 
-A Horror should leave the player asking:
+Every major Horror follows the same broad structure:
 
-"What is this place doing to me?"
+1. The player enters an island or dungeon in Moken's normal third-person view.
+2. A black-mirror-like distortion overtakes the screen and environment.
+3. The same location is transformed into the Horror's altered reality.
+4. The player explores and fights through that location using the new perspective and movement rules.
+5. The Horror is defeated.
+6. Reality returns to normal and the island or dungeon reveals what the Horror had hidden, removed, or changed.
 
-Not:
+The altered section is not a disconnected minigame or unrelated level. It is the same place, rewritten by the Horror.
 
-"How much health does this boss have?"
+## Distorted Perspectives
 
-## Reality Distortion
+A Horror's altered reality may use a completely different perspective or style of movement.
 
-Every Horror should introduce at least one unique distortion.
+Confirmed possibilities include:
 
-Possible distortions include:
+- Bullet hell shooter
+- Hollow Knight-style 2D Metroidvania
+- 2D jump-and-run platformer
+- Classic Zelda-style top-down view
+- First-person shooter
 
-- Camera perspective changes
-- Orthographic or side-view presentation
-- Impossible architecture
-- Altered navigation
-- Distorted scale
-- Endless or looping spaces
-- Audio manipulation
-- Lighting changes
-- Different gameplay rules
-- Changes to player perception
+These are examples, not a complete list. The perspective should serve the Horror and the location rather than exist only as a novelty.
 
-Not every Horror needs every distortion, but every Horror should have its own identity.
+## Location Anchors
 
-## Escalation
+The distorted location should retain recognizable anchors from its normal version.
 
-The player should immediately recognize when entering a Horror's domain.
+Examples include:
 
-Exploration, music, atmosphere, and gameplay should all communicate that something fundamentally different is happening.
+- A lighthouse remains visible but becomes impossibly distant or misplaced.
+- A cave entrance becomes the beginning of a side-view map.
+- A village square becomes a top-down combat or puzzle space.
+- A castle approached in third person becomes the same castle explored in first person.
 
-## World Impact
+These anchors remind the player that reality has changed around them; they have not been transported into an unrelated game.
 
-When a Horror is defeated:
+## Restoration
 
-- The surrounding sea becomes traversable again.
-- Monsters lose influence over the region.
-- Nearby communities visibly benefit.
-- The world feels permanently changed.
+Defeating the Horror restores the normal perspective and changes the real location.
+
+Possible outcomes include:
+
+- Missing people reappear.
+- New secrets or passages become visible.
+- Previously blocked areas open.
+- Buildings, objects, or landmarks return.
+- The surrounding sea becomes safe to cross.
+- Nearby communities regain travel, trade, or communication.
+- A small island that existed only through the Horror's influence disappears entirely.
+
+The restored location is part of the reward. The player should be able to see and explore the consequences of defeating the Horror.
 
 ## Production Principles
 
-Reality distortions do not always require complex technology.
+Each Horror requires a normal location, a distorted interpretation, and a restored state. The distorted version may reuse recognizable geometry, landmarks, themes, and assets where practical.
 
-Simple presentation changes such as camera angle, lighting, movement rules, level layout or visual style can completely change the feeling of an encounter.
-
-The goal is memorable experiences rather than technical complexity.
+The goal is not maximum technical complexity. A strong camera change, movement model, presentation style, and transformed layout can make the same location feel fundamentally different.
 
 ## Canon Rules
 
 - Every Horror is a major event.
-- Every Horror has a distinct identity.
-- No two major Horrors should rely on the same primary gimmick.
-- The player should never know exactly what to expect next.
-- Defeating a Horror always creates meaningful change in the world.
+- Horrors distort an existing island or dungeon rather than launching an unrelated minigame.
+- The distortion transition must be clearly presented on screen.
+- The player moves through the Horror's altered perspective until it is defeated.
+- Recognizable location anchors should connect normal and distorted reality.
+- Defeating a Horror restores the normal world and reveals meaningful changes.
+- Every major Horror should have a distinct altered perspective or primary interaction style.
+- The player should never know exactly how the next Horror will rewrite reality.
