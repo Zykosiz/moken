@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cxx2enskggyt2"]
+
+[ext_resource type="Texture2D" uid="uid://bqvr47hyfu5oe" path="res://Assets/Quaternius/Game Kits/Zombie Apocalypse Kit - March 2024/Environment/glTF/TrashBag_2_Zombie_Atlas.png" id="1_s0b6p"]
+
+[resource]
+resource_name = "Atlas"
+cull_mode = 2
+albedo_texture = ExtResource("1_s0b6p")
+metadata/_gltf_primary_texture_coord = 0

@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://brhxw8oekuo4e"]
+
+[ext_resource type="Texture2D" uid="uid://byxkroe3rjxjn" path="res://Assets/Quaternius/Nature/Stylized Nature MegaKit - July 2024/glTF/Bark_DeadTree.png" id="1_u12cg"]
+[ext_resource type="Texture2D" uid="uid://dxpggw6js1jxf" path="res://Assets/Quaternius/Nature/Stylized Nature MegaKit - July 2024/glTF/Bark_DeadTree_Normal.png" id="2_gp6wc"]
+
+[resource]
+resource_name = "Bark_DeadTree"
+cull_mode = 2
+albedo_texture = ExtResource("1_u12cg")
+normal_enabled = true
+normal_texture = ExtResource("2_gp6wc")
+metadata/_gltf_primary_texture_coord = 0

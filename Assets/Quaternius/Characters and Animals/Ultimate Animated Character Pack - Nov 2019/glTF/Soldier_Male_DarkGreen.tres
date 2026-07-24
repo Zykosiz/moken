@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bnb0ix2pumo7k"]
+
+[resource]
+resource_name = "DarkGreen"
+cull_mode = 2
+albedo_color = Color(0.19681747, 0.22665437, 0.11451199, 1)
+roughness = 0.5

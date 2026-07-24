@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d5uvjn2bohgf"]
+
+[resource]
+resource_name = "RoofTiles"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.13029753, 0.3435872, 0.37781534, 1)
+emission_enabled = true
+emission = Color(0.14835215, 0.38242388, 0.41998708, 1)
+emission_energy_multiplier = 0.0

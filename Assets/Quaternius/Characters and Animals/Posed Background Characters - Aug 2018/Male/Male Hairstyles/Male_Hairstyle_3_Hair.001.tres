@@ -1,0 +1,5 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d31ddcw2fet04"]
+
+[resource]
+resource_name = "Hair.001"
+cull_mode = 2

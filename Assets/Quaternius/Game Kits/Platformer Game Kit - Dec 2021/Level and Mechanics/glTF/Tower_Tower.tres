@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c0pagxcchlada"]
+
+[resource]
+resource_name = "Tower"
+cull_mode = 2
+albedo_color = Color(0.27331883, 0.24998426, 0.26501945, 1)
+roughness = 0.5

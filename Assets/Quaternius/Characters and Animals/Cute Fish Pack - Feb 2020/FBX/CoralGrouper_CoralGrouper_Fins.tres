@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dgt6xgk2w04cx"]
+
+[resource]
+resource_name = "CoralGrouper_Fins"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.693213, 0.42600647, 0.3337781, 1)
+emission_enabled = true
+emission = Color(0.76611584, 0.47287378, 0.3716591, 1)
+emission_energy_multiplier = 0.0

@@ -1,0 +1,5 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dok0r6rvkagcn"]
+
+[resource]
+resource_name = "Hair_White"
+cull_mode = 2

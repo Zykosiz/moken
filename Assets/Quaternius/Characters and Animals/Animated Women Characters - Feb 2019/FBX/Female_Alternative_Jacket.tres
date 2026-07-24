@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cpa118kkkeanb"]
+
+[resource]
+resource_name = "Jacket"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.42033756, 0.16213678, 0.24489295, 1)
+emission_enabled = true
+emission = Color(0.4666525, 0.1832937, 0.2741133, 1)
+emission_energy_multiplier = 0.0

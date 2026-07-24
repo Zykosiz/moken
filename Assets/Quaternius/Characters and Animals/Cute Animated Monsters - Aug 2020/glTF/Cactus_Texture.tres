@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://xx31ub252xgv"]
+
+[ext_resource type="Texture2D" uid="uid://byxihkindc0af" path="res://Assets/Quaternius/Characters and Animals/Cute Animated Monsters - Aug 2020/glTF/Cactus_Cactus_Texture.png" id="1_7tyq4"]
+
+[resource]
+resource_name = "Texture"
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_7tyq4")
+metadata/_gltf_primary_texture_coord = 0

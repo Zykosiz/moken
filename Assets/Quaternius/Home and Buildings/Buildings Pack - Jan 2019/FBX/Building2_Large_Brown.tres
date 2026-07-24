@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bavm7y1nln071"]
+
+[resource]
+resource_name = "Brown"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.3535184, 0.26775685, 0.16659583, 1)
+emission_enabled = true
+emission = Color(0.39332274, 0.29920498, 0.18818723, 1)
+emission_energy_multiplier = 0.0

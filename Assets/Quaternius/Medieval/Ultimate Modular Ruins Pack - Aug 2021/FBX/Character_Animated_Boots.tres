@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://co8xjxfyo4ibs"]
+
+[resource]
+resource_name = "Boots"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.30957535, 0.28813502, 0.24168089, 1)
+emission_enabled = true
+emission = Color(0.34509805, 0.3215687, 0.27058825, 1)
+emission_energy_multiplier = 0.0

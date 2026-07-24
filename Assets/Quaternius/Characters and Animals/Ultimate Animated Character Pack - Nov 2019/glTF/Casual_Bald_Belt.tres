@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dbf815dp80k88"]
+
+[resource]
+resource_name = "Belt"
+cull_mode = 2
+albedo_color = Color(0.28664976, 0.21287587, 0.16011919, 1)
+roughness = 0.5

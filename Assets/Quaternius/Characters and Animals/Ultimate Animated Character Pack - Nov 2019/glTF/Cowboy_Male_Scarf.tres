@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bvgqowxlfuk0v"]
+
+[resource]
+resource_name = "Scarf"
+cull_mode = 2
+albedo_color = Color(0.5133222, 0.09442098, 0.07480629, 1)
+roughness = 0.5

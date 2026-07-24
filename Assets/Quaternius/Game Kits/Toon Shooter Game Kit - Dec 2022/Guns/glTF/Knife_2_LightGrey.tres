@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cois2x1hmfv20"]
+
+[resource]
+resource_name = "LightGrey"
+cull_mode = 2
+albedo_color = Color(0.6466566, 0.6466566, 0.6466566, 1)
+roughness = 0.5

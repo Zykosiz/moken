@@ -1,0 +1,5 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cp4eb0qju2g2l"]
+
+[resource]
+resource_name = "Red_Dark"
+cull_mode = 2

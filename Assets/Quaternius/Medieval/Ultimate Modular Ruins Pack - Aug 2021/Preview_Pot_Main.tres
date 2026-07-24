@@ -1,0 +1,5 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dccqst5xx0cnv"]
+
+[resource]
+resource_name = "Pot_Main"
+cull_mode = 2

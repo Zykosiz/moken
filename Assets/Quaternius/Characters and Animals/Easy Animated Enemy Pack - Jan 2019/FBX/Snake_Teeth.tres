@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b3lg8ii8pfs52"]
+
+[resource]
+resource_name = "Teeth"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.9063318, 0.73588353, 0.5911454, 1)
+emission_enabled = true
+emission = Color(1, 0.812944, 0.65410316, 1)
+emission_energy_multiplier = 0.0

@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cdwvc7g6fr0k7"]
+
+[resource]
+resource_name = "Cyan"
+cull_mode = 2
+albedo_color = Color(0.31000763, 0.5522533, 0.60665643, 1)
+roughness = 0.5

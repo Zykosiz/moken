@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c4d6gc6qwewt6"]
+
+[resource]
+resource_name = "Dress"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.34744325, 0.13445464, 0.116490945, 1)
+emission_enabled = true
+emission = Color(0.38665572, 0.15291433, 0.13320032, 1)
+emission_energy_multiplier = 0.0

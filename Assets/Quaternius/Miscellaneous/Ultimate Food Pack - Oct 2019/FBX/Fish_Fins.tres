@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ppxxgsb8ui28"]
+
+[resource]
+resource_name = "Fins"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.8209809, 0.7514545, 0.60240847, 1)
+emission_enabled = true
+emission = Color(0.9063329, 0.83003205, 0.6664637, 1)
+emission_energy_multiplier = 0.0

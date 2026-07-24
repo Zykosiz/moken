@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b4io0t8lhhmxy"]
+
+[resource]
+resource_name = "CardinalFish_Fins"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.42805582, 0.26903576, 0.24216463, 1)
+emission_enabled = true
+emission = Color(0.47512278, 0.30060846, 0.27111915, 1)
+emission_energy_multiplier = 0.0

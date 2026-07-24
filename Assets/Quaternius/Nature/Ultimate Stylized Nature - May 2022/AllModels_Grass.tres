@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://by82q13jp5jl5"]
+
+[ext_resource type="Texture2D" uid="uid://bqwnki61wjbvj" path="res://Assets/Quaternius/Nature/Ultimate Stylized Nature - May 2022/Textures/Grass.png" id="1_u787y"]
+
+[resource]
+resource_name = "Grass"
+cull_mode = 2
+albedo_texture = ExtResource("1_u787y")
+roughness = 0.5
+metadata/_gltf_primary_texture_coord = 0

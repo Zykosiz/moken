@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c3l7axylr040j"]
+
+[ext_resource type="Texture2D" uid="uid://boec4vbouow1f" path="res://Assets/Quaternius/Game Kits/Ultimate Space Kit - March 2023/Characters/GLTF/Enemy_Flying_Atlas.png" id="1_ym0q0"]
+
+[resource]
+resource_name = "Glub_Main"
+cull_mode = 2
+albedo_texture = ExtResource("1_ym0q0")
+roughness = 0.5
+metadata/_gltf_primary_texture_coord = 0

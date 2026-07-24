@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://vb030gb3mlde"]
+
+[ext_resource type="Texture2D" uid="uid://dl7dp1cyc1y6k" path="res://Assets/Quaternius/Characters and Animals/Ultimate Monsters - Oct 2022/Flying/glTF/Alpaking_Evolved_Atlas_Monsters.png" id="1_dolfj"]
+
+[resource]
+resource_name = "Atlas"
+cull_mode = 2
+albedo_texture = ExtResource("1_dolfj")
+metadata/_gltf_primary_texture_coord = 0

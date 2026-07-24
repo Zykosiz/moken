@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b551s8klqki86"]
+
+[ext_resource type="Texture2D" uid="uid://pf2pgl4b3p0l" path="res://Assets/Quaternius/Medieval/Ultimate Modular Ruins Pack - Aug 2021/Textures/Bark_Texture.jpg" id="1_8i2mq"]
+
+[resource]
+resource_name = "Bark"
+cull_mode = 2
+albedo_texture = ExtResource("1_8i2mq")
+metadata/_gltf_primary_texture_coord = 0

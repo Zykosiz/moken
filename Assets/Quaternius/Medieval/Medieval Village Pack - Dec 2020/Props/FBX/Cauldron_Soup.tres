@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dfu3nr5j2aoqk"]
+
+[resource]
+resource_name = "Soup"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.6208095, 0.58185357, 0.41989386, 1)
+emission_enabled = true
+emission = Color(0.6866576, 0.6439059, 0.46616557, 1)
+emission_energy_multiplier = 0.0

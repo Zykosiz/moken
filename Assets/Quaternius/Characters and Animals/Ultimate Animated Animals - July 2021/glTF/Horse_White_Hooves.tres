@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://5o6dcqx1riff"]
+
+[resource]
+resource_name = "Hooves"
+cull_mode = 2
+albedo_color = Color(0.57332605, 0.5149608, 0.31921616, 1)
+roughness = 0.5

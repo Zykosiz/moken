@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c4yopt4wqt7mc"]
+
+[ext_resource type="Texture2D" uid="uid://dctrjpn1r87ha" path="res://Assets/Quaternius/Nature/Stylized Nature MegaKit - July 2024/glTF/PathRocks_Diffuse.png" id="1_tbaxe"]
+
+[resource]
+resource_name = "PathRocks"
+cull_mode = 2
+albedo_texture = ExtResource("1_tbaxe")
+metadata/_gltf_primary_texture_coord = 0

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bb2yob5qijpvx"]
+
+[resource]
+resource_name = "LightWood"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.752676, 0.5740064, 0.4239239, 1)
+emission_enabled = true
+emission = Color(0.8313727, 0.6352942, 0.4705883, 1)
+emission_energy_multiplier = 0.0

@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b43ma3evvlbfu"]
+
+[resource]
+resource_name = "Eye_White"
+cull_mode = 2
+roughness = 0.5

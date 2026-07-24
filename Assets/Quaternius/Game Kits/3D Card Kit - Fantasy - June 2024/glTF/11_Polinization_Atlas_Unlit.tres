@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dj8fykf8f2d2n"]
+
+[ext_resource type="Texture2D" uid="uid://dd8aaoi3n3xbg" path="res://Assets/Quaternius/Game Kits/3D Card Kit - Fantasy - June 2024/glTF/Cards_Atlas.png" id="1_56uij"]
+
+[resource]
+resource_name = "Atlas_Unlit"
+cull_mode = 2
+albedo_color = Color(0, 0, 0, 1)
+metallic = 1.0
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_operator = 1
+emission_texture = ExtResource("1_56uij")

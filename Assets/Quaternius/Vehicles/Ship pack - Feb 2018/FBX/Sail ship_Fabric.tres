@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b6s3rfhmhqoib"]
+
+[resource]
+resource_name = "Fabric"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.82097995, 0.77650505, 0.6728353, 1)
+emission_enabled = true
+emission = Color(0.90633184, 0.8575235, 0.74375254, 1)
+emission_energy_multiplier = 0.0

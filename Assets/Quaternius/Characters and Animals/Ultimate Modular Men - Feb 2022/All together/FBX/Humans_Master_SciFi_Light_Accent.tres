@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dxrpirwc1lhjo"]
+
+[resource]
+resource_name = "SciFi_Light_Accent"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.57757974, 0.3310157, 0.17021306, 1)
+emission_enabled = true
+emission = Color(0.6392157, 0.3686275, 0.1921569, 1)
+emission_energy_multiplier = 0.0

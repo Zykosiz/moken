@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b8cy42tpnokuh"]
+
+[resource]
+resource_name = "MI_Trim_01"
+cull_mode = 2
+metallic = 1.0

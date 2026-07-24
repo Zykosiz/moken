@@ -1,0 +1,5 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cokxs0j7fphjg"]
+
+[resource]
+resource_name = "Flag"
+cull_mode = 2

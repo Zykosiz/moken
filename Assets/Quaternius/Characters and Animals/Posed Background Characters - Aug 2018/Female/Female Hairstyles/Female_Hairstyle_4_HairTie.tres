@@ -1,0 +1,5 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dvx7hopxl8i63"]
+
+[resource]
+resource_name = "HairTie"
+cull_mode = 2

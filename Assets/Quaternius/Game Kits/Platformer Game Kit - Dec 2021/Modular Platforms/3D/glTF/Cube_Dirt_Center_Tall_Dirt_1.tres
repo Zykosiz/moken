@@ -1,0 +1,5 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cnww6mvu4up4x"]
+
+[resource]
+resource_name = "Dirt_1"
+albedo_color = Color(0.6572569, 0.48178944, 0.316253, 1)

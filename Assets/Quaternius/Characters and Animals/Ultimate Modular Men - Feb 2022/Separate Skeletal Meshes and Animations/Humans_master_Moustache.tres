@@ -1,0 +1,5 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://2f446b8jpeab"]
+
+[resource]
+resource_name = "Moustache"
+cull_mode = 2

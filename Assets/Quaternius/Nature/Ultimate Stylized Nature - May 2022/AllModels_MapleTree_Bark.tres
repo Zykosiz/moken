@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bqsjvdy88dk2g"]
+
+[ext_resource type="Texture2D" uid="uid://gup6tkvx0dfe" path="res://Assets/Quaternius/Nature/Ultimate Stylized Nature - May 2022/Textures/MapleTree_Bark.jpg" id="1_edue2"]
+[ext_resource type="Texture2D" uid="uid://d170odxjhdnfn" path="res://Assets/Quaternius/Nature/Ultimate Stylized Nature - May 2022/Textures/MapleTree_Bark_Normal.png" id="2_gbypc"]
+
+[resource]
+resource_name = "MapleTree_Bark"
+cull_mode = 2
+albedo_texture = ExtResource("1_edue2")
+roughness = 0.5
+normal_enabled = true
+normal_texture = ExtResource("2_gbypc")
+metadata/_gltf_primary_texture_coord = 0

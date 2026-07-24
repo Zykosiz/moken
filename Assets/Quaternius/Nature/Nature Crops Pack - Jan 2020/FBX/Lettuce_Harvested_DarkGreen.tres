@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://clbf8p4wg8red"]
+
+[resource]
+resource_name = "DarkGreen"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.37765864, 0.4021178, 0.3007379, 1)
+emission_enabled = true
+emission = Color(0.41981512, 0.44665745, 0.33539954, 1)
+emission_energy_multiplier = 0.0

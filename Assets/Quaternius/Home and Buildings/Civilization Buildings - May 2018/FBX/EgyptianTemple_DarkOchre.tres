@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bsvpb2bsx1bol"]
+
+[resource]
+resource_name = "DarkOchre"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.6133137, 0.5311256, 0.39891014, 1)
+emission_enabled = true
+emission = Color(0.67843145, 0.58823526, 0.44313726, 1)
+emission_energy_multiplier = 0.0

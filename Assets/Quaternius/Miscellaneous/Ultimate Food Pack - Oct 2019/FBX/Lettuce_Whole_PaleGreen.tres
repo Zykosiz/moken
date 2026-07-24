@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dtthdocqtgb3r"]
+
+[resource]
+resource_name = "PaleGreen"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.46714315, 0.570433, 0.3785076, 1)
+emission_enabled = true
+emission = Color(0.51801866, 0.63137263, 0.4207468, 1)
+emission_energy_multiplier = 0.0

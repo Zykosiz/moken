@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bqn2a512lakap"]
+
+[ext_resource type="Texture2D" uid="uid://dceskit082awu" path="res://Assets/Quaternius/Characters and Animals/Universal Base Characters[Standard]/Base Characters/Godot - UE/T_Superhero_Female_Dark_BaseColor.png" id="1_0gxym"]
+[ext_resource type="Texture2D" uid="uid://bhalaso8ivksl" path="res://Assets/Quaternius/Characters and Animals/Universal Base Characters[Standard]/Base Characters/Godot - UE/T_Superhero_Female_Roughness.png" id="2_dh223"]
+[ext_resource type="Texture2D" uid="uid://b2bq0qgktr5t1" path="res://Assets/Quaternius/Characters and Animals/Universal Base Characters[Standard]/Base Characters/Godot - UE/T_Superhero_Female_Normal.png" id="3_m05y6"]
+
+[resource]
+resource_name = "MI_Superhero_Female"
+cull_mode = 2
+albedo_texture = ExtResource("1_0gxym")
+metallic_texture = ExtResource("2_dh223")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_dh223")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_m05y6")
+metadata/_gltf_primary_texture_coord = 0

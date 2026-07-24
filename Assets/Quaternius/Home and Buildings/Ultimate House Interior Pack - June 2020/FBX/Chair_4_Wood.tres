@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://chxtpj5jtseyl"]
+
+[resource]
+resource_name = "Wood"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.33458906, 0.29528177, 0.2345341, 1)
+emission_enabled = true
+emission = Color(0.37254906, 0.32941177, 0.2627451, 1)
+emission_energy_multiplier = 0.0

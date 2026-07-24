@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dq5t0o0irlu1u"]
+
+[resource]
+resource_name = "Suit"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.12941176, 0.15686274, 0.18039216, 1)
+emission_enabled = true

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ce43ucoyjhvbl"]
+
+[resource]
+resource_name = "LightBlue"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.5132587, 0.6776347, 0.7062219, 1)
+emission_enabled = true
+emission = Color(0.56862754, 0.7490197, 0.7803922, 1)
+emission_energy_multiplier = 0.0

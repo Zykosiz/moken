@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d2ngddfmwiqgt"]
+
+[ext_resource type="Texture2D" uid="uid://2rtrnnyqc7dv" path="res://Assets/Quaternius/Game Kits/Sci-Fi Essentials Kit - Nov 2024/glTF/T_Props_Batch1_BaseColor.png" id="1_h3gs2"]
+[ext_resource type="Texture2D" uid="uid://dmquvpwivshvj" path="res://Assets/Quaternius/Game Kits/Sci-Fi Essentials Kit - Nov 2024/glTF/T_Props_Batch1_ORM.png" id="2_t3kqi"]
+[ext_resource type="Texture2D" uid="uid://xc1m887wcl8n" path="res://Assets/Quaternius/Game Kits/Sci-Fi Essentials Kit - Nov 2024/glTF/T_Props_Batch1_Normal.png" id="3_kp7m4"]
+
+[resource]
+resource_name = "MI_Props_Batch1"
+cull_mode = 2
+albedo_texture = ExtResource("1_h3gs2")
+metallic = 1.0
+metallic_texture = ExtResource("2_t3kqi")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_t3kqi")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_kp7m4")
+metadata/_gltf_primary_texture_coord = 0

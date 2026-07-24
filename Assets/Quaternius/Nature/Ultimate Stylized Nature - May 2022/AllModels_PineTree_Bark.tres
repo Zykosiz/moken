@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b7djx26njcn5q"]
+
+[ext_resource type="Texture2D" uid="uid://cp8bq8ue0xf5t" path="res://Assets/Quaternius/Nature/Ultimate Stylized Nature - May 2022/glTF/PineTree_Bark.jpg" id="1_ii7mq"]
+[ext_resource type="Texture2D" uid="uid://1bf0a5wd2kpp" path="res://Assets/Quaternius/Nature/Ultimate Stylized Nature - May 2022/glTF/PineTree_Bark_Normal.png" id="2_dcr5j"]
+
+[resource]
+resource_name = "PineTree_Bark"
+cull_mode = 2
+albedo_texture = ExtResource("1_ii7mq")
+roughness = 0.5
+normal_enabled = true
+normal_texture = ExtResource("2_dcr5j")
+metadata/_gltf_primary_texture_coord = 0

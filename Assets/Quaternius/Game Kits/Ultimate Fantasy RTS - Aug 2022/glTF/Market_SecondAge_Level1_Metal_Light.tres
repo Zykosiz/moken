@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b2korpw7txaqe"]
+
+[resource]
+resource_name = "Metal_Light"
+cull_mode = 2
+albedo_color = Color(0.47332168, 0.47332168, 0.47332168, 1)
+roughness = 0.5

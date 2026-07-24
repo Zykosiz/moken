@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cwj7chgc73tmy"]
+
+[ext_resource type="Texture2D" uid="uid://kervymekkon3" path="res://Assets/Quaternius/Space/Ultimate Spaceships - May 2021/Striker/glTF/Striker_Striker_Orange.png" id="1_8vpvd"]
+
+[resource]
+resource_name = "Texture"
+cull_mode = 2
+albedo_texture = ExtResource("1_8vpvd")
+metadata/_gltf_primary_texture_coord = 0

@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cgonb7ith7sli"]
+
+[resource]
+resource_name = "Top"
+cull_mode = 2
+albedo_color = Color(0.3066548, 0.21980497, 0.10360155, 1)
+roughness = 0.5

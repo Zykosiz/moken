@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cx8dixrn5jb82"]
+
+[ext_resource type="Texture2D" uid="uid://d3dqyf4meex6n" path="res://Assets/Quaternius/Nature/Ultimate Stylized Nature - May 2022/glTF/NormalTree_Bark.jpg" id="1_nwlyi"]
+[ext_resource type="Texture2D" uid="uid://jmcnl0qhhbi0" path="res://Assets/Quaternius/Nature/Ultimate Stylized Nature - May 2022/glTF/NormalTree_Bark_Normal.png" id="2_xuis2"]
+
+[resource]
+resource_name = "NormalTree_Bark"
+cull_mode = 2
+albedo_texture = ExtResource("1_nwlyi")
+roughness = 0.5
+normal_enabled = true
+normal_texture = ExtResource("2_xuis2")
+metadata/_gltf_primary_texture_coord = 0

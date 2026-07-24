@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cq6q2bocr80w8"]
+
+[resource]
+resource_name = "Eyes_White"
+cull_mode = 2
+albedo_color = Color(0.93999046, 0.93999046, 0.93999046, 1)
+roughness = 0.5

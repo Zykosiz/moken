@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dlha7tpxyitxi"]
+
+[resource]
+resource_name = "Bottom"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.7659282, 0.8209862, 0.7871531, 1)
+emission_enabled = true
+emission = Color(0.8459161, 0.9063387, 0.8692092, 1)
+emission_energy_multiplier = 0.0

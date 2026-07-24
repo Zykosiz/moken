@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://rx46yw5u6n3r"]
+
+[resource]
+resource_name = "Mushroom1"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.6329585, 0.61910474, 0.55455035, 1)
+emission_enabled = true
+emission = Color(0.69999033, 0.68478674, 0.6139425, 1)
+emission_energy_multiplier = 0.0

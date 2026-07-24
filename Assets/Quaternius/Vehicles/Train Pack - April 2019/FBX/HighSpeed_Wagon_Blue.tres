@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://oun843w5oj45"]
+
+[resource]
+resource_name = "Blue"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.32618046, 0.4909188, 0.5479118, 1)
+emission_enabled = true
+emission = Color(0.3633211, 0.5441109, 0.6066571, 1)
+emission_energy_multiplier = 0.0

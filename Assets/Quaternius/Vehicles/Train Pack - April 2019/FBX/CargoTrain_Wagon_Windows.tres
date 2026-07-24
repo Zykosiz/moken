@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c7jl1nxb5qna0"]
+
+[resource]
+resource_name = "Windows"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.19557415, 0.19557415, 0.19557415, 1)
+emission_enabled = true
+emission = Color(0.21998906, 0.21998906, 0.21998906, 1)
+emission_energy_multiplier = 0.0

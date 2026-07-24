@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c8fau7wfv4d40"]
+
+[resource]
+resource_name = "Light.002"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.8209806, 0.6939307, 0.13419375, 1)
+emission_enabled = true
+emission = Color(0.9063326, 0.7669034, 0.15262802, 1)
+emission_energy_multiplier = 0.0

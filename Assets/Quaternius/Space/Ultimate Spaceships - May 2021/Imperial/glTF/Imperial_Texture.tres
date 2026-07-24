@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://chu64y6ugqb0d"]
+
+[ext_resource type="Texture2D" uid="uid://esae7684w30l" path="res://Assets/Quaternius/Space/Ultimate Spaceships - May 2021/Imperial/glTF/Imperial_Imperial_Orange.png" id="1_afl6c"]
+
+[resource]
+resource_name = "Texture"
+cull_mode = 2
+albedo_texture = ExtResource("1_afl6c")
+metadata/_gltf_primary_texture_coord = 0

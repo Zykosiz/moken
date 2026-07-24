@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bl01woidp5whw"]
+
+[resource]
+resource_name = "Clownfish_Main"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.48059455, 0.25678053, 0.15141551, 1)
+emission_enabled = true
+emission = Color(0.5327807, 0.28715912, 0.17152779, 1)
+emission_energy_multiplier = 0.0

@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://damf0bt80nyac"]
+
+[resource]
+resource_name = "Gold"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.5647059, 0.454902, 0.21960786, 1)
+emission_enabled = true

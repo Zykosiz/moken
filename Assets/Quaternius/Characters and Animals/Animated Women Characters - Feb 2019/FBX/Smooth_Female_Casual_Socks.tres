@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cbbpmkran4wca"]
+
+[resource]
+resource_name = "Socks"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.3292226, 0.3069458, 0.3069458, 1)
+emission_enabled = true
+emission = Color(0.36665967, 0.34221232, 0.34221232, 1)
+emission_energy_multiplier = 0.0

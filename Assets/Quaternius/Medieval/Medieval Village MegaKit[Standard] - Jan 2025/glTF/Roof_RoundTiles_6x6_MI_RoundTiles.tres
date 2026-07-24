@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bywanug0uypd4"]
+
+[ext_resource type="Texture2D" uid="uid://dt1agegu5ab0l" path="res://Assets/Quaternius/Medieval/Medieval Village MegaKit[Standard] - Jan 2025/glTF/T_RoundTiles_BaseColor.png" id="1_3c8di"]
+[ext_resource type="Texture2D" uid="uid://br3afydebjbir" path="res://Assets/Quaternius/Medieval/Medieval Village MegaKit[Standard] - Jan 2025/glTF/T_RoundTiles_Roughness.png" id="2_2ecbl"]
+[ext_resource type="Texture2D" uid="uid://cn4ptdgk471qy" path="res://Assets/Quaternius/Medieval/Medieval Village MegaKit[Standard] - Jan 2025/glTF/T_RoundTiles_Normal.png" id="3_vvunm"]
+
+[resource]
+resource_name = "MI_RoundTiles"
+cull_mode = 2
+albedo_texture = ExtResource("1_3c8di")
+metallic_texture = ExtResource("2_2ecbl")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_2ecbl")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_vvunm")
+metadata/_gltf_primary_texture_coord = 0

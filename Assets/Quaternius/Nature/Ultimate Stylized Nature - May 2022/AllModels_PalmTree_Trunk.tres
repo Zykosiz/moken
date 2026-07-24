@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bedtqlc8yvbn6"]
+
+[ext_resource type="Texture2D" uid="uid://cvgj2yau03sk5" path="res://Assets/Quaternius/Nature/Ultimate Stylized Nature - May 2022/glTF/PalmTree_Trunk.jpg" id="1_4rbv4"]
+[ext_resource type="Texture2D" uid="uid://b3j02galva82o" path="res://Assets/Quaternius/Nature/Ultimate Stylized Nature - May 2022/glTF/PalmTree_Trunk_Normal.png" id="2_4oxny"]
+
+[resource]
+resource_name = "PalmTree_Trunk"
+cull_mode = 2
+albedo_texture = ExtResource("1_4rbv4")
+roughness = 0.5
+normal_enabled = true
+normal_texture = ExtResource("2_4oxny")
+metadata/_gltf_primary_texture_coord = 0

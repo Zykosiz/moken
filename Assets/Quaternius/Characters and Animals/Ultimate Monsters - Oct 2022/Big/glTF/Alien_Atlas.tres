@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cad4qclu136cy"]
+
+[ext_resource type="Texture2D" uid="uid://oklplsxmrj0t" path="res://Assets/Quaternius/Characters and Animals/Ultimate Monsters - Oct 2022/Big/glTF/Alien_Atlas_Monsters.png" id="1_6cdim"]
+
+[resource]
+resource_name = "Atlas"
+cull_mode = 2
+albedo_texture = ExtResource("1_6cdim")
+metadata/_gltf_primary_texture_coord = 0

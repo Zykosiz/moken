@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cqhp0b7q7jfjs"]
+
+[resource]
+resource_name = "Flatfish_Main"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.3152608, 0.09289224, 0.077484615, 1)
+emission_enabled = true
+emission = Color(0.35133752, 0.10730224, 0.09039338, 1)
+emission_energy_multiplier = 0.0

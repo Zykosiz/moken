@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c7858doc4s3bs"]
+
+[ext_resource type="Texture2D" uid="uid://hc83i65sjdkw" path="res://Assets/Quaternius/Characters and Animals/Cute Animated Monsters - Aug 2020/glTF/Tree_Tree_Texture.png" id="1_74u6k"]
+
+[resource]
+resource_name = "Texture"
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_74u6k")
+metadata/_gltf_primary_texture_coord = 0

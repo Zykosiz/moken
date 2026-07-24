@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d0i1ftla111qg"]
+
+[resource]
+resource_name = "Brown_02"
+cull_mode = 2
+albedo_color = Color(0.4599905, 0.39118376, 0.25109947, 1)
+roughness = 0.5

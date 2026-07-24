@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://i244enygjuuq"]
+
+[resource]
+resource_name = "Cover3"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.5479118, 0.43684372, 0.22327054, 1)
+emission_enabled = true
+emission = Color(0.6066571, 0.48476693, 0.25038412, 1)
+emission_energy_multiplier = 0.0

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c4w8h3ey7f8cw"]
+
+[resource]
+resource_name = "BrickRed"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.4932367, 0.34951922, 0.2915682, 1)
+emission_enabled = true
+emission = Color(0.54665464, 0.3889339, 0.32533637, 1)
+emission_energy_multiplier = 0.0

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cj3wghtiryd7t"]
+
+[resource]
+resource_name = "Pole.002"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.59651273, 0.59651273, 0.59651273, 1)
+emission_enabled = true
+emission = Color(0.6599935, 0.6599935, 0.6599935, 1)
+emission_energy_multiplier = 0.0

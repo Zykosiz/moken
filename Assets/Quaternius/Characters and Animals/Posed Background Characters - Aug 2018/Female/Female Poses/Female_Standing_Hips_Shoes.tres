@@ -1,0 +1,5 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://yhs07qpg32b1"]
+
+[resource]
+resource_name = "Shoes"
+cull_mode = 2

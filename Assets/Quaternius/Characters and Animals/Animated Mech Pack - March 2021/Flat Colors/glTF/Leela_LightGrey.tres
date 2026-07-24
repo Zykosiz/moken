@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b7stnpj3f7p5f"]
+
+[resource]
+resource_name = "LightGrey"
+cull_mode = 2
+albedo_color = Color(0.57332337, 0.57332337, 0.57332337, 1)
+roughness = 0.5

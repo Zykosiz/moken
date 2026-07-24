@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ucs7356ypkkm"]
+
+[resource]
+resource_name = "Couch_Mustard"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.38996503, 0.3317482, 0.19978093, 1)
+emission_enabled = true
+emission = Color(0.4333206, 0.36943138, 0.22460574, 1)
+emission_energy_multiplier = 0.0

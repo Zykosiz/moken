@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://mbsyljktjqgt"]
+
+[ext_resource type="Texture2D" uid="uid://dd6nyojvmhqh7" path="res://Assets/Quaternius/Game Kits/Cube World - Aug 2023/Environment/glTF/Key_Atlas.png" id="1_6fkf5"]
+
+[resource]
+resource_name = "Atlas"
+cull_mode = 2
+albedo_texture = ExtResource("1_6fkf5")
+roughness = 0.5
+texture_filter = 2
+metadata/_gltf_primary_texture_coord = 0

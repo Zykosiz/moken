@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bc7gdvbn75doa"]
+
+[resource]
+resource_name = "Blobfish_Light"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.5101486, 0.37180653, 0.38955152, 1)
+emission_enabled = true
+emission = Color(0.5652143, 0.4133928, 0.43286678, 1)
+emission_energy_multiplier = 0.0

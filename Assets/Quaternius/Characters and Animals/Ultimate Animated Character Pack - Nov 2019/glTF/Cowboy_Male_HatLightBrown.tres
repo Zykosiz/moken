@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c2d4qs5u22hvq"]
+
+[resource]
+resource_name = "HatLightBrown"
+cull_mode = 2
+albedo_color = Color(0.9063318, 0.64674306, 0.46828187, 1)
+roughness = 0.5

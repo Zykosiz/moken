@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b0ctg48og26is"]
+
+[resource]
+resource_name = "Clothes"
+cull_mode = 2
+albedo_color = Color(0.20544724, 0.36665604, 0.15780868, 1)
+roughness = 0.5

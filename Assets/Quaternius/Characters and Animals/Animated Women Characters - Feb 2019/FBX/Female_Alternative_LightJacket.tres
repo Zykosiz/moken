@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://baucb0jacq5v1"]
+
+[resource]
+resource_name = "LightJacket"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.5053879, 0.23247899, 0.25198814, 1)
+emission_enabled = true
+emission = Color(0.5599898, 0.26048976, 0.2818998, 1)
+emission_energy_multiplier = 0.0

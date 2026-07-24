@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c3sicl8226pnt"]
+
+[resource]
+resource_name = "Wall_Highlights"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.5114627, 0.45703882, 0.3873486, 1)
+emission_enabled = true
+emission = Color(0.56665653, 0.50692976, 0.43044922, 1)
+emission_energy_multiplier = 0.0

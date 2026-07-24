@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://btcrlhtwq25w5"]
+
+[resource]
+resource_name = "Swat_Black"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.17021306, 0.15949285, 0.14877267, 1)
+emission_enabled = true
+emission = Color(0.1921569, 0.18039216, 0.16862744, 1)
+emission_energy_multiplier = 0.0

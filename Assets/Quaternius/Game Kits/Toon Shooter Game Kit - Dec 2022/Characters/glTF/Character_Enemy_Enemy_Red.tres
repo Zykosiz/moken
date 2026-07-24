@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dn58uakqafi1r"]
+
+[resource]
+resource_name = "Enemy_Red"
+cull_mode = 2
+albedo_color = Color(0.5999932, 0.11132966, 0.1342782, 1)
+roughness = 0.5

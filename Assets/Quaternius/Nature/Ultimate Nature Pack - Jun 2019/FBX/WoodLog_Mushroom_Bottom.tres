@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cbmnxw60wk2bn"]
+
+[resource]
+resource_name = "Mushroom_Bottom"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.5843605, 0.50036764, 0.46996498, 1)
+emission_enabled = true
+emission = Color(0.64665717, 0.5544804, 0.5211154, 1)
+emission_energy_multiplier = 0.0

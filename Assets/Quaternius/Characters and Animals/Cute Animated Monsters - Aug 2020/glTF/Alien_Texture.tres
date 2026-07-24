@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b4jn0c6y07inh"]
+
+[ext_resource type="Texture2D" uid="uid://xb3i8e0sl6i0" path="res://Assets/Quaternius/Characters and Animals/Cute Animated Monsters - Aug 2020/glTF/Alien_Alien_Texture.png" id="1_na4vd"]
+
+[resource]
+resource_name = "Texture"
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_na4vd")
+metadata/_gltf_primary_texture_coord = 0

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ctmwe68mpxtwr"]
+
+[resource]
+resource_name = "Top"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.32071662, 0.45070797, 0.55398995, 1)
+emission_enabled = true
+emission = Color(0.35732493, 0.4999821, 0.6133274, 1)
+emission_energy_multiplier = 0.0

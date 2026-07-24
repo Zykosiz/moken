@@ -1,0 +1,5 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://e2nlojdy26fp"]
+
+[resource]
+resource_name = "SciFi_MainDark"
+cull_mode = 2

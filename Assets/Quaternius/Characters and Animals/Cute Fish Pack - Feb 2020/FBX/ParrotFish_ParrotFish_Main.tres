@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c5f6gnt1mda8l"]
+
+[resource]
+resource_name = "ParrotFish_Main"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.07147758, 0.456083, 0.408447, 1)
+emission_enabled = true
+emission = Color(0.08380103, 0.50588083, 0.45360342, 1)
+emission_energy_multiplier = 0.0

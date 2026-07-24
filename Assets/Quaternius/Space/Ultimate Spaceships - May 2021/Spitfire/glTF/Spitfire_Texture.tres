@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://j4xhaxcux55x"]
+
+[ext_resource type="Texture2D" uid="uid://coowt6hm5kbpe" path="res://Assets/Quaternius/Space/Ultimate Spaceships - May 2021/Spitfire/glTF/Spitfire_Spitfire_Orange.png" id="1_7y2pl"]
+
+[resource]
+resource_name = "Texture"
+cull_mode = 2
+albedo_texture = ExtResource("1_7y2pl")
+metadata/_gltf_primary_texture_coord = 0

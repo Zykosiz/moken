@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://4oo2oqrytjkc"]
+
+[resource]
+resource_name = "Lionfish_Main"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.61399454, 0.26675805, 0.15937419, 1)
+emission_enabled = true
+emission = Color(0.6791786, 0.29810888, 0.18026192, 1)
+emission_energy_multiplier = 0.0

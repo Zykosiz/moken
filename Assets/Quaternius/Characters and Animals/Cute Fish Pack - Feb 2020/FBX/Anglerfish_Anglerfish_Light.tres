@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d074cq1ke2tls"]
+
+[resource]
+resource_name = "Anglerfish_Light"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.43708715, 0.22447912, 0.16619694, 1)
+emission_enabled = true
+emission = Color(0.48503414, 0.25171044, 0.18774948, 1)
+emission_energy_multiplier = 0.0

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cm1t56e1jd4wc"]
+
+[resource]
+resource_name = "Couch_BeigeDark"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.31099567, 0.2920824, 0.27947688, 1)
+emission_enabled = true
+emission = Color(0.3466568, 0.32590064, 0.3120669, 1)
+emission_energy_multiplier = 0.0

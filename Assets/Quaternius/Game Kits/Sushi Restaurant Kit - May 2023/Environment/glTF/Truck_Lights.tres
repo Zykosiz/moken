@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://vb6ibuatiy3w"]
+
+[resource]
+resource_name = "Lights"
+cull_mode = 2
+metallic = 1.0
+emission_enabled = true
+emission = Color(1, 1, 0.9588503, 1)

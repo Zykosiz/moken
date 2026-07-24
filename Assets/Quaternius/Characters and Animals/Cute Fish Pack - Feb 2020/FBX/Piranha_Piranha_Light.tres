@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cqtkkjeobljtr"]
+
+[resource]
+resource_name = "Piranha_Light"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.32297856, 0.15737313, 0.100382596, 1)
+emission_enabled = true
+emission = Color(0.35980725, 0.17806591, 0.11552244, 1)
+emission_energy_multiplier = 0.0

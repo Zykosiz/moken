@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://chxj0fm7ocd7w"]
+
+[ext_resource type="Texture2D" uid="uid://bg4byv03p13ye" path="res://Assets/Quaternius/Medieval/Medieval Village MegaKit[Standard] - Jan 2025/glTF/T_WoodTrim_BaseColor.png" id="1_6ucpy"]
+[ext_resource type="Texture2D" uid="uid://dpihmo0jf6yeo" path="res://Assets/Quaternius/Medieval/Medieval Village MegaKit[Standard] - Jan 2025/glTF/T_WoodTrim_Roughness.png" id="2_yuivv"]
+[ext_resource type="Texture2D" uid="uid://m043lc8oepru" path="res://Assets/Quaternius/Medieval/Medieval Village MegaKit[Standard] - Jan 2025/glTF/T_WoodTrim_Normal.png" id="3_asymr"]
+
+[resource]
+resource_name = "MI_WoodTrim"
+cull_mode = 2
+albedo_texture = ExtResource("1_6ucpy")
+metallic_texture = ExtResource("2_yuivv")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_yuivv")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_asymr")
+metadata/_gltf_primary_texture_coord = 0

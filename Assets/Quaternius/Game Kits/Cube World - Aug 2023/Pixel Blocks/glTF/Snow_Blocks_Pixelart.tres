@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cvss644pk86vw"]
+
+[ext_resource type="Texture2D" uid="uid://7er8vnaa356p" path="res://Assets/Quaternius/Game Kits/Cube World - Aug 2023/Pixel Blocks/glTF/Snow_Blocks_PixelArt.png" id="1_jjul6"]
+
+[resource]
+resource_name = "Blocks_Pixelart"
+cull_mode = 2
+albedo_texture = ExtResource("1_jjul6")
+roughness = 0.5
+texture_filter = 2
+metadata/_gltf_primary_texture_coord = 0

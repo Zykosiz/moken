@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b2amo1opfxoe8"]
+
+[resource]
+resource_name = "Bag"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.5175376, 0.46260533, 0.35432687, 1)
+emission_enabled = true
+emission = Color(0.57332337, 0.51303864, 0.39421, 1)
+emission_energy_multiplier = 0.0

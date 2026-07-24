@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ckfw24h8ba4ll"]
+
+[ext_resource type="Texture2D" uid="uid://8mr6a0jf50mb" path="res://Assets/Quaternius/Characters and Animals/Ultimate Monsters - Oct 2022/Blob/glTF/Wizard_Atlas_Monsters.png" id="1_d0jqu"]
+
+[resource]
+resource_name = "Atlas"
+cull_mode = 2
+albedo_texture = ExtResource("1_d0jqu")
+metadata/_gltf_primary_texture_coord = 0

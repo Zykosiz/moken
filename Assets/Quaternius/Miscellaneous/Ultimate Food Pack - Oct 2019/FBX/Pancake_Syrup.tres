@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cpsogtgwdpfgk"]
+
+[resource]
+resource_name = "Syrup"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.6147303, 0.4262361, 0.24479991, 1)
+emission_enabled = true
+emission = Color(0.6799861, 0.47312576, 0.2740112, 1)
+emission_energy_multiplier = 0.0

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cfabd2up6ymhl"]
+
+[resource]
+resource_name = "Butterfly_Light"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.730153, 0.6038709, 0.31076184, 1)
+emission_enabled = true
+emission = Color(0.80665505, 0.66806865, 0.3464002, 1)
+emission_energy_multiplier = 0.0

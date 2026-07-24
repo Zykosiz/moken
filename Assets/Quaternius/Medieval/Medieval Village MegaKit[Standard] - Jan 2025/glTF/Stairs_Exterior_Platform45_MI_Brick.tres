@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://w42nskiu67ym"]
+
+[ext_resource type="Texture2D" uid="uid://v8htp6wcqikk" path="res://Assets/Quaternius/Medieval/Medieval Village MegaKit[Standard] - Jan 2025/glTF/T_Brick_BaseColor.png" id="1_hkham"]
+[ext_resource type="Texture2D" uid="uid://4vastdqfo6l2" path="res://Assets/Quaternius/Medieval/Medieval Village MegaKit[Standard] - Jan 2025/glTF/T_Brick_Roughness.png" id="2_wxalb"]
+[ext_resource type="Texture2D" uid="uid://h4lhuvn74ynt" path="res://Assets/Quaternius/Medieval/Medieval Village MegaKit[Standard] - Jan 2025/glTF/T_Brick_Normal.png" id="3_pqw01"]
+
+[resource]
+resource_name = "MI_Brick"
+cull_mode = 2
+albedo_texture = ExtResource("1_hkham")
+metallic_texture = ExtResource("2_wxalb")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_wxalb")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_pqw01")
+metadata/_gltf_primary_texture_coord = 0

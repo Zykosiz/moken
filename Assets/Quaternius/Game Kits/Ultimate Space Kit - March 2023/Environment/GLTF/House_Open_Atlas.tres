@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cj3q5rtu8t4g1"]
+
+[ext_resource type="Texture2D" uid="uid://c8nrn2tuwl06p" path="res://Assets/Quaternius/Game Kits/Ultimate Space Kit - March 2023/Environment/GLTF/House_Open_Atlas.png" id="1_ld8ge"]
+
+[resource]
+resource_name = "Atlas"
+cull_mode = 2
+albedo_texture = ExtResource("1_ld8ge")
+roughness = 0.5
+metadata/_gltf_primary_texture_coord = 0

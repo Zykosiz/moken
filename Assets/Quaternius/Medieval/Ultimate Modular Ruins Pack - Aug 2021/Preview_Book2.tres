@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cox6pt2oobked"]
+
+[resource]
+resource_name = "Book2"
+cull_mode = 2
+vertex_color_use_as_albedo = true

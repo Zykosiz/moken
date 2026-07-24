@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bcpl7hqpitjpg"]
+
+[resource]
+resource_name = "Sofa"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.15913025, 0.15913025, 0.15913025, 1)
+emission_enabled = true
+emission = Color(0.17999423, 0.17999423, 0.17999423, 1)
+emission_energy_multiplier = 0.0

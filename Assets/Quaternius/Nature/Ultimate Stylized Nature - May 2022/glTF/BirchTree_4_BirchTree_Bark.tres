@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cvca5psqi183y"]
+
+[ext_resource type="Texture2D" uid="uid://cls6p3nyv4prd" path="res://Assets/Quaternius/Nature/Ultimate Stylized Nature - May 2022/glTF/BirchTree_Bark.jpg" id="1_rx340"]
+[ext_resource type="Texture2D" uid="uid://dxjnhahidran0" path="res://Assets/Quaternius/Nature/Ultimate Stylized Nature - May 2022/glTF/BirchTree_Bark_Normal.png" id="2_l3bgo"]
+
+[resource]
+resource_name = "BirchTree_Bark"
+cull_mode = 2
+albedo_texture = ExtResource("1_rx340")
+roughness = 0.5
+normal_enabled = true
+normal_texture = ExtResource("2_l3bgo")
+metadata/_gltf_primary_texture_coord = 0

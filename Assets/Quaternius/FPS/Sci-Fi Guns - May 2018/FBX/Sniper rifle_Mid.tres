@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bps6ffwkuasn4"]
+
+[resource]
+resource_name = "Mid"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.16253355, 0.16374727, 0.23809628, 1)
+emission_enabled = true
+emission = Color(0.18372913, 0.1850611, 0.26665437, 1)
+emission_energy_multiplier = 0.0

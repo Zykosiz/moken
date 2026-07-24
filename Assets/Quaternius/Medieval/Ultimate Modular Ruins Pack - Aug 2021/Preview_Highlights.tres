@@ -1,0 +1,5 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://lxrk2t24lcfo"]
+
+[resource]
+resource_name = "Highlights"
+cull_mode = 2

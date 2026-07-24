@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://0eogak41jnrc"]
+
+[ext_resource type="Texture2D" uid="uid://byxfrtstnvkv7" path="res://Assets/Quaternius/Characters and Animals/Ultimate Monsters - Oct 2022/Big/glTF/Tribal_Atlas_Monsters.png" id="1_xft16"]
+
+[resource]
+resource_name = "Atlas"
+cull_mode = 2
+albedo_texture = ExtResource("1_xft16")
+metadata/_gltf_primary_texture_coord = 0

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://kb3qs88xpadm"]
+
+[resource]
+resource_name = "Skin"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.6633345, 0.5418334, 0.40007535, 1)
+emission_enabled = true
+emission = Color(0.7333261, 0.5999865, 0.444416, 1)
+emission_energy_multiplier = 0.0

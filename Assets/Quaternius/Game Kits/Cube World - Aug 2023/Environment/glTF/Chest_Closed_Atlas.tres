@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bgmymulay13co"]
+
+[ext_resource type="Texture2D" uid="uid://i23k8vcx1wpp" path="res://Assets/Quaternius/Game Kits/Cube World - Aug 2023/Environment/glTF/Chest_Closed_Atlas.png" id="1_ha1og"]
+
+[resource]
+resource_name = "Atlas"
+cull_mode = 2
+albedo_texture = ExtResource("1_ha1og")
+roughness = 0.5
+texture_filter = 2
+metadata/_gltf_primary_texture_coord = 0

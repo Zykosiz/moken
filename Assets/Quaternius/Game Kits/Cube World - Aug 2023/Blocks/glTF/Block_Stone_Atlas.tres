@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d11mrg81335c5"]
+
+[ext_resource type="Texture2D" uid="uid://b8r01h0fwxrm4" path="res://Assets/Quaternius/Game Kits/Cube World - Aug 2023/Blocks/glTF/Block_Stone_Atlas.png" id="1_ooe4x"]
+
+[resource]
+resource_name = "Atlas"
+cull_mode = 2
+albedo_texture = ExtResource("1_ooe4x")
+roughness = 0.5
+texture_filter = 2
+metadata/_gltf_primary_texture_coord = 0

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dmstbqv64fd80"]
+
+[resource]
+resource_name = "DarkBlue"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.22026739, 0.27802986, 0.31099555, 1)
+emission_enabled = true
+emission = Color(0.24708833, 0.3104789, 0.34665665, 1)
+emission_energy_multiplier = 0.0

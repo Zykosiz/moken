@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bq83t6xkfpny3"]
+
+[ext_resource type="Texture2D" uid="uid://cpx67f8iwxnj8" path="res://Assets/Quaternius/Characters and Animals/Cute Animated Monsters - Aug 2020/glTF/YellowDragon_YellowDragon_Texture.png" id="1_8u4no"]
+
+[resource]
+resource_name = "Texture"
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_8u4no")
+metadata/_gltf_primary_texture_coord = 0

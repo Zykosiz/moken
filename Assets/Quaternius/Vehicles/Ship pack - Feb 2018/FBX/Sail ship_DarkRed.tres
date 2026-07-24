@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dcm0y7dxaqobd"]
+
+[resource]
+resource_name = "DarkRed"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.6511849, 0.22232652, 0.24788763, 1)
+emission_enabled = true
+emission = Color(0.71999264, 0.24934807, 0.27739978, 1)
+emission_energy_multiplier = 0.0

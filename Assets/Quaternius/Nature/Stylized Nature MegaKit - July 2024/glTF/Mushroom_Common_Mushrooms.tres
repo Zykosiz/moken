@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ceffusr6qygmm"]
+
+[ext_resource type="Texture2D" uid="uid://dryrn3firvveu" path="res://Assets/Quaternius/Nature/Stylized Nature MegaKit - July 2024/glTF/Mushrooms.png" id="1_mt2cg"]
+
+[resource]
+resource_name = "Mushrooms"
+cull_mode = 2
+albedo_texture = ExtResource("1_mt2cg")
+metadata/_gltf_primary_texture_coord = 0

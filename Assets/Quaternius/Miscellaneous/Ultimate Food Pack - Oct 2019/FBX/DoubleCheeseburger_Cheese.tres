@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dacjcmkho28jg"]
+
+[resource]
+resource_name = "Cheese"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.68155706, 0.67587024, 0.23419915, 1)
+emission_enabled = true
+emission = Color(0.75332415, 0.7470832, 0.2623775, 1)
+emission_energy_multiplier = 0.0

@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cjq1tg3pipid7"]
+
+[ext_resource type="Texture2D" uid="uid://bgd0cs0x76685" path="res://Assets/Quaternius/Characters and Animals/Universal Base Characters[Standard]/Hairstyles/Origin at 0/glTF (Godot)/T_Hair_2_BaseColor.png" id="1_dehh8"]
+[ext_resource type="Texture2D" uid="uid://ch1tpqtguw1ok" path="res://Assets/Quaternius/Characters and Animals/Universal Base Characters[Standard]/Hairstyles/Origin at 0/glTF (Godot)/T_Hair_2_Normal.png" id="2_80xty"]
+
+[resource]
+resource_name = "MI_Hair_2"
+cull_mode = 2
+albedo_texture = ExtResource("1_dehh8")
+roughness = 0.71212125
+normal_enabled = true
+normal_texture = ExtResource("2_80xty")
+metadata/_gltf_primary_texture_coord = 0

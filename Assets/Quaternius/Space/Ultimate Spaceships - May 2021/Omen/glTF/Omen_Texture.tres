@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b4gdkccco5kow"]
+
+[ext_resource type="Texture2D" uid="uid://berrwmcndoog7" path="res://Assets/Quaternius/Space/Ultimate Spaceships - May 2021/Omen/glTF/Omen_Omen_Orange.png" id="1_5hw8a"]
+
+[resource]
+resource_name = "Texture"
+cull_mode = 2
+albedo_texture = ExtResource("1_5hw8a")
+metadata/_gltf_primary_texture_coord = 0

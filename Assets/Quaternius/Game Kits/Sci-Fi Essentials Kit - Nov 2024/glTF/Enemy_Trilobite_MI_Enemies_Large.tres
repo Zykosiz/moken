@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dhwlld524eo7c"]
+
+[ext_resource type="Texture2D" uid="uid://bgnjly51cdi0e" path="res://Assets/Quaternius/Game Kits/Sci-Fi Essentials Kit - Nov 2024/glTF/T_Enemies_Large_BaseColor.png" id="1_v2kts"]
+[ext_resource type="Texture2D" uid="uid://n1g5s5xlfwty" path="res://Assets/Quaternius/Game Kits/Sci-Fi Essentials Kit - Nov 2024/glTF/T_Enemies_Large_ORM.png" id="2_an5va"]
+[ext_resource type="Texture2D" uid="uid://cb8xywf3ap5i1" path="res://Assets/Quaternius/Game Kits/Sci-Fi Essentials Kit - Nov 2024/glTF/T_Enemies_Large_Normal.png" id="3_7vdoy"]
+
+[resource]
+resource_name = "MI_Enemies_Large"
+cull_mode = 2
+albedo_texture = ExtResource("1_v2kts")
+metallic = 1.0
+metallic_texture = ExtResource("2_an5va")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_an5va")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_7vdoy")
+metadata/_gltf_primary_texture_coord = 0

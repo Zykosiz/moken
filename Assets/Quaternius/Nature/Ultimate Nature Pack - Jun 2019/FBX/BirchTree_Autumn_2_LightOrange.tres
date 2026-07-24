@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b8xrgh8lqaldu"]
+
+[resource]
+resource_name = "LightOrange"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.69370633, 0.55007577, 0.32112524, 1)
+emission_enabled = true
+emission = Color(0.76665723, 0.6090318, 0.35777336, 1)
+emission_energy_multiplier = 0.0

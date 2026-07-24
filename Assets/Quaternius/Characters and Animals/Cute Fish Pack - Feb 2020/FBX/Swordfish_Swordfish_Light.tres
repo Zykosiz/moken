@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://djcl85a3tiytq"]
+
+[resource]
+resource_name = "Swordfish_Light"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.50686383, 0.50686383, 0.50686383, 1)
+emission_enabled = true
+emission = Color(0.5616095, 0.5616095, 0.5616095, 1)
+emission_energy_multiplier = 0.0

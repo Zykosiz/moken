@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c2pngkqfm63qm"]
+
+[resource]
+resource_name = "Orange"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.59332424, 0.40490535, 0.20665567, 1)
+emission_enabled = true

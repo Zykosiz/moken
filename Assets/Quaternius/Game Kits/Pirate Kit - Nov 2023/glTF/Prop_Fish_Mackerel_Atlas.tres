@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://4f08hpif1kvg"]
+
+[ext_resource type="Texture2D" uid="uid://cv1bwbjueyhn2" path="res://Assets/Quaternius/Game Kits/Pirate Kit - Nov 2023/glTF/Prop_Fish_Mackerel_Atlas_Pirate.png" id="1_n0f3c"]
+
+[resource]
+resource_name = "Atlas"
+cull_mode = 2
+albedo_texture = ExtResource("1_n0f3c")
+metadata/_gltf_primary_texture_coord = 0

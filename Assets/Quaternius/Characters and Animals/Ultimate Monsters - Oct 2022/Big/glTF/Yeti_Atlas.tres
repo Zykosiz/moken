@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bbvkp0rx7erbo"]
+
+[ext_resource type="Texture2D" uid="uid://d3ttb4h43uiye" path="res://Assets/Quaternius/Characters and Animals/Ultimate Monsters - Oct 2022/Big/glTF/Yeti_Atlas_Monsters.png" id="1_o4ktm"]
+
+[resource]
+resource_name = "Atlas"
+cull_mode = 2
+albedo_texture = ExtResource("1_o4ktm")
+metadata/_gltf_primary_texture_coord = 0

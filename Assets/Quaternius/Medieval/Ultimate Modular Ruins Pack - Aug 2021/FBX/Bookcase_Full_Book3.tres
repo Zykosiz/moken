@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://rutiq85euhw0"]
+
+[resource]
+resource_name = "Book3"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.28757283, 0.1614495, 0.40802273, 1)
+emission_enabled = true
+emission = Color(0.32095173, 0.18253948, 0.4531378, 1)
+emission_energy_multiplier = 0.0

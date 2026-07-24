@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bqtpe653hde03"]
+
+[resource]
+resource_name = "Humphead_Dark"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.12945905, 0.18588524, 0.14727849, 1)
+emission_enabled = true
+emission = Color(0.14743197, 0.20935613, 0.16698767, 1)
+emission_energy_multiplier = 0.0

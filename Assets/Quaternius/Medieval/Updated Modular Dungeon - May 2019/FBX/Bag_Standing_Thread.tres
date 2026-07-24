@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dqx5pubmd44j8"]
+
+[resource]
+resource_name = "Thread"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.20746118, 0.21203075, 0.43249017, 1)
+emission_enabled = true
+emission = Color(0.23303434, 0.23804915, 0.47998923, 1)
+emission_energy_multiplier = 0.0

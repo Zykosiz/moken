@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bdxi71uia86ui"]
+
+[resource]
+resource_name = "LightGold"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.81520027, 0.7451429, 0.4525503, 1)
+emission_enabled = true
+emission = Color(0.89998907, 0.8231056, 0.5020039, 1)
+emission_energy_multiplier = 0.0

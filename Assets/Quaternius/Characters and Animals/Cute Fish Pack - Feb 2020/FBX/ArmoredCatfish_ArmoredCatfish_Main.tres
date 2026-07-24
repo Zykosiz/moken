@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dcy57tuq5m8j1"]
+
+[resource]
+resource_name = "ArmoredCatfish_Main"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.12595876, 0.12595876, 0.12595876, 1)
+emission_enabled = true
+emission = Color(0.14359063, 0.14359063, 0.14359063, 1)
+emission_energy_multiplier = 0.0

@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c04dha27c0psu"]
+
+[resource]
+resource_name = "Metal_Light"
+cull_mode = 2
+vertex_color_use_as_albedo = true

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dx1ff6fh48on2"]
+
+[resource]
+resource_name = "Pants"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.24417631, 0.23675033, 0.2400372, 1)
+emission_enabled = true
+emission = Color(0.27332684, 0.26517728, 0.26878443, 1)
+emission_energy_multiplier = 0.0

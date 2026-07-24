@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b7w86cbuy2ine"]
+
+[resource]
+resource_name = "Brick"
+cull_mode = 2
+albedo_color = Color(0.54665667, 0.29199007, 0.15679339, 1)
+roughness = 0.5

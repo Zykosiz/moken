@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://e2ya42ct8jgg"]
+
+[ext_resource type="Texture2D" uid="uid://lrk8sbyfaxvp" path="res://Assets/Quaternius/Game Kits/Ultimate Space Kit - March 2023/Items/GLTF/Pickup_Crate_Atlas.png" id="1_7jr7q"]
+
+[resource]
+resource_name = "Atlas"
+cull_mode = 2
+albedo_texture = ExtResource("1_7jr7q")
+roughness = 0.5
+metadata/_gltf_primary_texture_coord = 0

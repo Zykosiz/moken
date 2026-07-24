@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://60rleq6iwho7"]
+
+[resource]
+resource_name = "RedSnapper_Light"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.6754817, 0.66944695, 0.577358, 1)
+emission_enabled = true
+emission = Color(0.74665684, 0.74003404, 0.6389724, 1)
+emission_energy_multiplier = 0.0

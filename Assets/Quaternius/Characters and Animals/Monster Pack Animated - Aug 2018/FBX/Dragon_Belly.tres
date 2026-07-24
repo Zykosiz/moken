@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dsm0l45k75jnb"]
+
+[resource]
+resource_name = "Belly"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.5479145, 0.46244544, 0.146289, 1)
+emission_enabled = true
+emission = Color(0.60666007, 0.5128632, 0.1659018, 1)
+emission_energy_multiplier = 0.0

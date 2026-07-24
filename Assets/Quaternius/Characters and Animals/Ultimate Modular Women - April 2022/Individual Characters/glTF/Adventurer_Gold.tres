@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://befrh6ns4brn7"]
+
+[resource]
+resource_name = "Gold"
+cull_mode = 2
+albedo_color = Color(0.6862745, 0.5294118, 0.28627452, 1)
+roughness = 0.5

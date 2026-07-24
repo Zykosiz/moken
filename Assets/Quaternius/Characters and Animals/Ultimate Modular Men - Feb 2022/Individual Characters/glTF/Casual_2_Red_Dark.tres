@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://chddo6tj77l50"]
+
+[resource]
+resource_name = "Red_Dark"
+cull_mode = 2
+albedo_color = Color(0.49019614, 0.15294117, 0.2039216, 1)
+roughness = 0.5

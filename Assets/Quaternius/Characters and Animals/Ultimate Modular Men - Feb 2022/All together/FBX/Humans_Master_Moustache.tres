@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dfddxe2arl8yq"]
+
+[resource]
+resource_name = "Moustache"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.39604124, 0.2270083, 0.013558579, 1)
+emission_enabled = true
+emission = Color(0.43998885, 0.25448605, 0.016948223, 1)
+emission_energy_multiplier = 0.0

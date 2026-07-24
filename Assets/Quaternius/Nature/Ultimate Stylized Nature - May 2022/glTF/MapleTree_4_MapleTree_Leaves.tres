@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c5j6wecw31j56"]
+
+[ext_resource type="Texture2D" uid="uid://beq6w35ptqcn0" path="res://Assets/Quaternius/Nature/Ultimate Stylized Nature - May 2022/glTF/MapleTree_Leaves.png" id="1_1gbni"]
+
+[resource]
+resource_name = "MapleTree_Leaves"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_1gbni")
+roughness = 0.5
+metadata/_gltf_primary_texture_coord = 0

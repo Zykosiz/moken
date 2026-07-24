@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://pfi1u7x16qvf"]
+
+[resource]
+resource_name = "BrakeLight"
+cull_mode = 2
+metallic = 1.0

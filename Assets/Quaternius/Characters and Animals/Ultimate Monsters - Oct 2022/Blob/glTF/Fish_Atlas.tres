@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://clqhthakx1wql"]
+
+[ext_resource type="Texture2D" uid="uid://kbntllu4t1r5" path="res://Assets/Quaternius/Characters and Animals/Ultimate Monsters - Oct 2022/Blob/glTF/Fish_Atlas_Monsters.png" id="1_ih1si"]
+
+[resource]
+resource_name = "Atlas"
+cull_mode = 2
+albedo_texture = ExtResource("1_ih1si")
+metadata/_gltf_primary_texture_coord = 0

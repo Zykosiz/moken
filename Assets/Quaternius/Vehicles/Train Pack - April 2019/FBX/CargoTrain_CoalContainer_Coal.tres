@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://6cuaed8bsk5c"]
+
+[resource]
+resource_name = "Coal"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.14697662, 0.14697662, 0.14697662, 1)
+emission_enabled = true
+emission = Color(0.16665639, 0.16665639, 0.16665639, 1)
+emission_energy_multiplier = 0.0

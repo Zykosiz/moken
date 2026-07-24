@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bcll5mcxn6bef"]
+
+[resource]
+resource_name = "Socks"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.29277265, 0.27635056, 0.27253592, 1)
+emission_enabled = true
+emission = Color(0.32665816, 0.308636, 0.3044497, 1)
+emission_energy_multiplier = 0.0

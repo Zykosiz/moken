@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bhfu52haoyyao"]
+
+[ext_resource type="Texture2D" uid="uid://b22jnitobwsys" path="res://Assets/Quaternius/Game Kits/Ultimate Space Kit - March 2023/Environment/GLTF/SolarPanel_Ground_Atlas.png" id="1_su8jj"]
+
+[resource]
+resource_name = "Atlas"
+cull_mode = 2
+albedo_texture = ExtResource("1_su8jj")
+roughness = 0.5
+metadata/_gltf_primary_texture_coord = 0

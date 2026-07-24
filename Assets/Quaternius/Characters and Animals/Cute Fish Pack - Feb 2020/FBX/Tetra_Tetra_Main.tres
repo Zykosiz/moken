@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b7xg6h6eg6qdq"]
+
+[resource]
+resource_name = "Tetra_Main"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.3361133, 0.3206238, 0.2874185, 1)
+emission_enabled = true
+emission = Color(0.3742218, 0.35722303, 0.32078236, 1)
+emission_energy_multiplier = 0.0

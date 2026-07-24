@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://mq1xyiifrt3x"]
+
+[resource]
+resource_name = "SunFish_Dark"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.2696075, 0.30063462, 0.31641126, 1)
+emission_enabled = true
+emission = Color(0.30123594, 0.33528617, 0.35260004, 1)
+emission_energy_multiplier = 0.0

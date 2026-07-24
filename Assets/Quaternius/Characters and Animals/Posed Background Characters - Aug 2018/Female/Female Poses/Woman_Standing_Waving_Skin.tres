@@ -1,0 +1,5 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cbp3o4qntieuu"]
+
+[resource]
+resource_name = "Skin"
+cull_mode = 2

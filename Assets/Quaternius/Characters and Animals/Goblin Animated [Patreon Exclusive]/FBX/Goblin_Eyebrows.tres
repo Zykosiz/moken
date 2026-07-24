@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dind3gjfmjlgf"]
+
+[resource]
+resource_name = "Eyebrows"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.1347975, 0.079141475, 0.059329703, 1)
+emission_enabled = true
+emission = Color(0.15329058, 0.09221167, 0.07046953, 1)
+emission_energy_multiplier = 0.0

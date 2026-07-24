@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b6aosk5523uox"]
+
+[resource]
+resource_name = "ParrotFish_Teeth"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.4751932, 0.50686383, 0.48810554, 1)
+emission_enabled = true
+emission = Color(0.5268531, 0.5616095, 0.5410235, 1)
+emission_energy_multiplier = 0.0

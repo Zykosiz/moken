@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c4r3ohvfqkcdr"]
+
+[resource]
+resource_name = "LimeGreen"
+cull_mode = 2
+albedo_color = Color(0.27633488, 0.40665433, 0.26350793, 1)
+roughness = 0.5

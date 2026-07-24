@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dtorp2w1q4woy"]
+
+[resource]
+resource_name = "Sail"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.73623204, 0.6910879, 0.5744656, 1)
+emission_enabled = true
+emission = Color(0.8133265, 0.7637836, 0.63579816, 1)
+emission_energy_multiplier = 0.0

@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b0ycq1ohqkcfq"]
+
+[ext_resource type="Texture2D" uid="uid://ddbe0svetv1ul" path="res://Assets/Quaternius/Game Kits/Cube World - Aug 2023/Pixel Blocks/glTF/Bricks_Grey_Blocks_PixelArt.png" id="1_oq11o"]
+
+[resource]
+resource_name = "Blocks_Pixelart"
+cull_mode = 2
+albedo_texture = ExtResource("1_oq11o")
+roughness = 0.5
+texture_filter = 2
+metadata/_gltf_primary_texture_coord = 0

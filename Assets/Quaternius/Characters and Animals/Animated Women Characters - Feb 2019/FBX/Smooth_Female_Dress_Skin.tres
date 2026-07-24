@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://jsrnled2kp31"]
+
+[resource]
+resource_name = "Skin"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.5722108, 0.50611323, 0.37023503, 1)
+emission_enabled = true
+emission = Color(0.63332367, 0.5607858, 0.41166818, 1)
+emission_energy_multiplier = 0.0

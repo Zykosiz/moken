@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://sq4i1as0jvub"]
+
+[resource]
+resource_name = "DarkWood"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.2927692, 0.2384676, 0.16174205, 1)
+emission_enabled = true
+emission = Color(0.32665443, 0.2670619, 0.1828605, 1)
+emission_energy_multiplier = 0.0

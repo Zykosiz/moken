@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c58hio8w51o64"]
+
+[resource]
+resource_name = "Puffefish_Black"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.2016489, 0.19049837, 0.12723391, 1)
+emission_enabled = true
+emission = Color(0.22665572, 0.21441871, 0.14499003, 1)
+emission_energy_multiplier = 0.0

@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dyt2m2xnxd85f"]
+
+[ext_resource type="Texture2D" uid="uid://ho7m6xrsp7cl" path="res://Assets/Quaternius/Medieval/Medieval Village MegaKit[Standard] - Jan 2025/glTF/T_Plaster_BaseColor.png" id="1_awh83"]
+[ext_resource type="Texture2D" uid="uid://d2houhov33u4y" path="res://Assets/Quaternius/Medieval/Medieval Village MegaKit[Standard] - Jan 2025/glTF/T_Plaster_ORM.png" id="2_1utmj"]
+[ext_resource type="Texture2D" uid="uid://8ksu3jyniqb6" path="res://Assets/Quaternius/Medieval/Medieval Village MegaKit[Standard] - Jan 2025/glTF/T_Plaster_Normal.png" id="3_5wjvs"]
+
+[resource]
+resource_name = "MI_Plaster"
+cull_mode = 2
+albedo_texture = ExtResource("1_awh83")
+metallic = 1.0
+metallic_texture = ExtResource("2_1utmj")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_1utmj")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_5wjvs")
+metadata/_gltf_primary_texture_coord = 0

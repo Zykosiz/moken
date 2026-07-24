@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cp45v7f01fd2n"]
+
+[resource]
+resource_name = "ComforterLight"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.38996226, 0.21338205, 0.2915631, 1)
+emission_enabled = true
+emission = Color(0.43331757, 0.2395321, 0.32533082, 1)
+emission_energy_multiplier = 0.0

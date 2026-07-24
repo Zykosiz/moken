@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://tplegkkotnfn"]
+
+[resource]
+resource_name = "Headlights"
+cull_mode = 2
+metallic = 1.0

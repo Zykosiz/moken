@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://11icgyd8mq2w"]
+
+[ext_resource type="Texture2D" uid="uid://dnkh2imwey3jk" path="res://Assets/Quaternius/Characters and Animals/Ultimate Monsters - Oct 2022/Big/glTF/Orc_Atlas_Monsters.png" id="1_4u572"]
+
+[resource]
+resource_name = "Atlas"
+cull_mode = 2
+albedo_texture = ExtResource("1_4u572")
+metadata/_gltf_primary_texture_coord = 0

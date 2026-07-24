@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c7p3ywdkmduhv"]
+
+[resource]
+resource_name = "Cushin"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.5296877, 0.49639294, 0.4754049, 1)
+emission_enabled = true
+emission = Color(0.5866573, 0.5501184, 0.52708536, 1)
+emission_energy_multiplier = 0.0

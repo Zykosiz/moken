@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cnyji0fvqbslh"]
+
+[ext_resource type="Texture2D" uid="uid://dd8aaoi3n3xbg" path="res://Assets/Quaternius/Game Kits/3D Card Kit - Fantasy - June 2024/glTF/Cards_Atlas.png" id="1_fy4xl"]
+
+[resource]
+resource_name = "Atlas_Diffuse"
+cull_mode = 2
+albedo_texture = ExtResource("1_fy4xl")
+metadata/_gltf_primary_texture_coord = 0

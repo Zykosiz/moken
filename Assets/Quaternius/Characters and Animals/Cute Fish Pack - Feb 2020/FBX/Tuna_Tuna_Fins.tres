@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://biohgv42nuxyj"]
+
+[resource]
+resource_name = "Tuna_Fins"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.5470883, 0.50687504, 0.32181635, 1)
+emission_enabled = true
+emission = Color(0.6057533, 0.5616219, 0.3585318, 1)
+emission_energy_multiplier = 0.0

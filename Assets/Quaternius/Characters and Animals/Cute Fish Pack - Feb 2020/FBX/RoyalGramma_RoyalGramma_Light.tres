@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b8uvfdsi3rawq"]
+
+[resource]
+resource_name = "RoyalGramma_Light"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.6324636, 0.54394203, 0.20404159, 1)
+emission_enabled = true
+emission = Color(0.6994473, 0.6023004, 0.22928151, 1)
+emission_energy_multiplier = 0.0

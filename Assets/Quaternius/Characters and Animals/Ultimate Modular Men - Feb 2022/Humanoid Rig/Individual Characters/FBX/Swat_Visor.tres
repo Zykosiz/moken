@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bq0r6jtkcngay"]
+
+[resource]
+resource_name = "Visor"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.08627452, 0.08627452, 0.08627452, 1)
+emission_enabled = true

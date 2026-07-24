@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cn8cwt4vs2de"]
+
+[ext_resource type="Texture2D" uid="uid://uwm2utj3lsqx" path="res://Assets/Quaternius/Game Kits/Sci-Fi Essentials Kit - Nov 2024/glTF/T_Props_Crates_BaseColor.png" id="1_wffsa"]
+[ext_resource type="Texture2D" uid="uid://brr2mgulixhco" path="res://Assets/Quaternius/Game Kits/Sci-Fi Essentials Kit - Nov 2024/glTF/T_Props_Crates_ORM.png" id="2_07ha5"]
+[ext_resource type="Texture2D" uid="uid://caucsl22egdhl" path="res://Assets/Quaternius/Game Kits/Sci-Fi Essentials Kit - Nov 2024/glTF/T_Props_Crates_Normal.png" id="3_x6pas"]
+
+[resource]
+resource_name = "MI_Props_Crates"
+cull_mode = 2
+albedo_texture = ExtResource("1_wffsa")
+metallic = 1.0
+metallic_texture = ExtResource("2_07ha5")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_07ha5")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_x6pas")
+metadata/_gltf_primary_texture_coord = 0

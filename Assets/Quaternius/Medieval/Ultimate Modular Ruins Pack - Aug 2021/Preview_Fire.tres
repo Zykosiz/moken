@@ -1,0 +1,5 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b0b3o8yhk08dv"]
+
+[resource]
+resource_name = "Fire"
+cull_mode = 2

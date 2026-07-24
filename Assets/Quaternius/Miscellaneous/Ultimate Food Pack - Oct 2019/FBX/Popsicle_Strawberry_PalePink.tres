@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ch3fcgx0a5th0"]
+
+[resource]
+resource_name = "PalePink"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.6694044, 0.39953956, 0.5343894, 1)
+emission_enabled = true
+emission = Color(0.7399874, 0.44382805, 0.5918171, 1)
+emission_energy_multiplier = 0.0

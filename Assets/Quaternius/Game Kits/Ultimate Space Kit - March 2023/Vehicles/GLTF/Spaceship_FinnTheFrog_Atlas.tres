@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://0nm6goj6htr7"]
+
+[ext_resource type="Texture2D" uid="uid://cwd2h7pj62bu4" path="res://Assets/Quaternius/Game Kits/Ultimate Space Kit - March 2023/Vehicles/GLTF/Spaceship_FinnTheFrog_Atlas.png" id="1_pmbbv"]
+
+[resource]
+resource_name = "Atlas"
+cull_mode = 2
+albedo_texture = ExtResource("1_pmbbv")
+roughness = 0.5
+metadata/_gltf_primary_texture_coord = 0

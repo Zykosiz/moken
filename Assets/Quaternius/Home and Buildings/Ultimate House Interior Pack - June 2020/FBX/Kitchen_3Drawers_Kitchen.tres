@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://df871nbkyn0gc"]
+
+[resource]
+resource_name = "Kitchen"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.35543504, 0.40211716, 0.37446743, 1)
+emission_enabled = true
+emission = Color(0.39542615, 0.44665676, 0.416313, 1)
+emission_energy_multiplier = 0.0

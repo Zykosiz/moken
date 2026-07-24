@@ -1,0 +1,5 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bkipwem83w4c8"]
+
+[resource]
+resource_name = "Beige"
+cull_mode = 2

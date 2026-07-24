@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c800t0nrb4a55"]
+
+[resource]
+resource_name = "Rust2"
+cull_mode = 2
+albedo_color = Color(0.47332168, 0.42126098, 0.3507848, 1)
+roughness = 0.5

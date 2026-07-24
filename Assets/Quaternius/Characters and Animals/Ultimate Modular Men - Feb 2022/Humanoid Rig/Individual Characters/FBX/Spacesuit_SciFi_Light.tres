@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://boas646r2u1m6"]
+
+[resource]
+resource_name = "SciFi_Light"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.6999895, 0.6574227, 0.63850385, 1)
+emission_enabled = true

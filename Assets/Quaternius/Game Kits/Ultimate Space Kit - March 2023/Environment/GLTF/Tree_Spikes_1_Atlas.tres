@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c4yed8x8focv3"]
+
+[ext_resource type="Texture2D" uid="uid://c62endexmda7o" path="res://Assets/Quaternius/Game Kits/Ultimate Space Kit - March 2023/Environment/GLTF/Tree_Spikes_1_Atlas.png" id="1_5nn8i"]
+
+[resource]
+resource_name = "Atlas"
+cull_mode = 2
+albedo_texture = ExtResource("1_5nn8i")
+roughness = 0.5
+metadata/_gltf_primary_texture_coord = 0

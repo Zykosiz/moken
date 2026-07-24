@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bymd6puvod0ks"]
+
+[resource]
+resource_name = "Jacket"
+cull_mode = 2
+albedo_color = Color(0.5133222, 0.27891755, 0.12415912, 1)
+roughness = 0.5

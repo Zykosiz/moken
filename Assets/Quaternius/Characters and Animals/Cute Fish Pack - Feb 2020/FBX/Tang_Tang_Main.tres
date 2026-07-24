@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ch4fjnqu7m55u"]
+
+[resource]
+resource_name = "Tang_Main"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.19159608, 0.3136477, 0.53313315, 1)
+emission_enabled = true
+emission = Color(0.21562341, 0.34956723, 0.5904384, 1)
+emission_energy_multiplier = 0.0

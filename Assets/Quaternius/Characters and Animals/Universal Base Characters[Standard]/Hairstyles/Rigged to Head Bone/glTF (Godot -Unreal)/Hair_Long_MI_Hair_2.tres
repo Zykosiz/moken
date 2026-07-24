@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d0x3h8164am4l"]
+
+[ext_resource type="Texture2D" uid="uid://bfabas0me0mgh" path="res://Assets/Quaternius/Characters and Animals/Universal Base Characters[Standard]/Hairstyles/Rigged to Head Bone/glTF (Godot -Unreal)/T_Hair_2_BaseColor.png" id="1_xt4s8"]
+[ext_resource type="Texture2D" uid="uid://h4eeug55ni0h" path="res://Assets/Quaternius/Characters and Animals/Universal Base Characters[Standard]/Hairstyles/Rigged to Head Bone/glTF (Godot -Unreal)/T_Hair_2_Normal.png" id="2_swyir"]
+
+[resource]
+resource_name = "MI_Hair_2"
+cull_mode = 2
+albedo_texture = ExtResource("1_xt4s8")
+roughness = 0.71212125
+normal_enabled = true
+normal_texture = ExtResource("2_swyir")
+metadata/_gltf_primary_texture_coord = 0

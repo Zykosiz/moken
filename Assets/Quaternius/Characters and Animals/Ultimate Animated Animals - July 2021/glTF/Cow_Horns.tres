@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://1xl08bhql24g"]
+
+[resource]
+resource_name = "Horns"
+cull_mode = 2
+albedo_color = Color(0.6733236, 0.63140196, 0.4571132, 1)
+roughness = 0.5

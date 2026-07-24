@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cltbg2jqgcpdd"]
+
+[resource]
+resource_name = "Leather"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.29277012, 0.2412542, 0.12961666, 1)
+emission_enabled = true
+emission = Color(0.32665542, 0.27012, 0.14760494, 1)
+emission_energy_multiplier = 0.0

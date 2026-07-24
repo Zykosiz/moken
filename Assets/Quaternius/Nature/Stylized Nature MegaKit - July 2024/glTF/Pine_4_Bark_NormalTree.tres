@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bfohbfi0yo6lg"]
+
+[ext_resource type="Texture2D" uid="uid://dm15aji2pnkmo" path="res://Assets/Quaternius/Nature/Stylized Nature MegaKit - July 2024/glTF/Bark_NormalTree.png" id="1_l6bis"]
+[ext_resource type="Texture2D" uid="uid://dnwv2hu6l0hmy" path="res://Assets/Quaternius/Nature/Stylized Nature MegaKit - July 2024/glTF/Bark_NormalTree_Normal.png" id="2_fkeyw"]
+
+[resource]
+resource_name = "Bark_NormalTree"
+transparency = 2
+alpha_scissor_threshold = 0.2
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_l6bis")
+normal_enabled = true
+normal_texture = ExtResource("2_fkeyw")
+metadata/_gltf_primary_texture_coord = 0

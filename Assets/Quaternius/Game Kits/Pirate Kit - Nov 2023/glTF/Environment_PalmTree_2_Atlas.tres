@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://6e6dolq1qemb"]
+
+[ext_resource type="Texture2D" uid="uid://qrgu6m3etfg" path="res://Assets/Quaternius/Game Kits/Pirate Kit - Nov 2023/glTF/Environment_PalmTree_2_Atlas_Pirate.png" id="1_be44a"]
+
+[resource]
+resource_name = "Atlas"
+cull_mode = 2
+albedo_texture = ExtResource("1_be44a")
+metadata/_gltf_primary_texture_coord = 0

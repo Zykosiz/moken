@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bfv2i5wp1f21a"]
+
+[resource]
+resource_name = "Hay"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.6876314, 0.5948705, 0.3415281, 1)
+emission_enabled = true
+emission = Color(0.7599905, 0.65819126, 0.38016418, 1)
+emission_energy_multiplier = 0.0

@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d4da1xx6rm6n7"]
+
+[resource]
+resource_name = "M_Alien_Orange"
+cull_mode = 2
+albedo_color = Color(0.6138927, 0.25449535, 0.1194282, 1)
+roughness = 0.43700787

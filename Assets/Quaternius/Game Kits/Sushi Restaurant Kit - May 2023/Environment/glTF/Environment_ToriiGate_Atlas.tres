@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://1sqb0yyy5438"]
+
+[ext_resource type="Texture2D" uid="uid://befj3l0tg3s38" path="res://Assets/Quaternius/Game Kits/Sushi Restaurant Kit - May 2023/Environment/glTF/Environment_ToriiGate_Sushi_Atlas.png" id="1_v8hww"]
+
+[resource]
+resource_name = "Atlas"
+cull_mode = 2
+albedo_texture = ExtResource("1_v8hww")
+roughness = 0.5
+metadata/_gltf_primary_texture_coord = 0

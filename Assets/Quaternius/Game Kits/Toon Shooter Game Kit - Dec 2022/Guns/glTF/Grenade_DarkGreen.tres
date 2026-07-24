@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://fjs1pqu2thud"]
+
+[resource]
+resource_name = "DarkGreen"
+cull_mode = 2
+metallic = 1.0

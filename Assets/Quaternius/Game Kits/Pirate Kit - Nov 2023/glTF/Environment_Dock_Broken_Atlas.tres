@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://be38l0kpahnrq"]
+
+[ext_resource type="Texture2D" uid="uid://ch73n7ee0udfl" path="res://Assets/Quaternius/Game Kits/Pirate Kit - Nov 2023/glTF/Environment_Dock_Broken_Atlas_Pirate.png" id="1_nwryv"]
+
+[resource]
+resource_name = "Atlas"
+cull_mode = 2
+albedo_texture = ExtResource("1_nwryv")
+metadata/_gltf_primary_texture_coord = 0

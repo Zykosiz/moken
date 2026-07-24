@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ciqb5jnpn7rby"]
+
+[resource]
+resource_name = "Pink"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.36566657, 0.097001664, 0.35568672, 1)
+emission_enabled = true
+emission = Color(0.40665463, 0.11181209, 0.39570233, 1)
+emission_energy_multiplier = 0.0

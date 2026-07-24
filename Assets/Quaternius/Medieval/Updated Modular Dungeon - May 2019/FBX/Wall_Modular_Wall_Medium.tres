@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bpoq5p7trjpvr"]
+
+[resource]
+resource_name = "Wall_Medium"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.42034096, 0.3492952, 0.27544704, 1)
+emission_enabled = true
+emission = Color(0.46665624, 0.38868806, 0.30764443, 1)
+emission_energy_multiplier = 0.0

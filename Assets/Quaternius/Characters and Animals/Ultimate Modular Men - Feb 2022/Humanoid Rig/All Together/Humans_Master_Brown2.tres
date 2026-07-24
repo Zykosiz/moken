@@ -1,0 +1,5 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://drmqys7yh1d8v"]
+
+[resource]
+resource_name = "Brown2"
+cull_mode = 2

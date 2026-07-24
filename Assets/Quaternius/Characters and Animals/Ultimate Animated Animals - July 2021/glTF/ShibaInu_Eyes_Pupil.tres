@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://8gu6dd8ui3ed"]
+
+[resource]
+resource_name = "Eyes_Pupil"
+cull_mode = 2
+albedo_color = Color(0.19332235, 0.14441045, 0.0817131, 1)
+roughness = 0.5

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b6jdi4wokhybk"]
+
+[resource]
+resource_name = "Main_Light"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.7199901, 0.6644786, 0.5759921, 1)
+roughness = 0.5

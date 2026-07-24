@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://jk5udh1h0unq"]
+
+[resource]
+resource_name = "Shirt"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.14519928, 0.13090572, 0.14519928, 1)
+emission_enabled = true
+emission = Color(0.16470587, 0.14901961, 0.16470587, 1)
+emission_energy_multiplier = 0.0

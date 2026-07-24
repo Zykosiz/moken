@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://mc47v24x0cuo"]
+
+[ext_resource type="Texture2D" uid="uid://dhtv4vnxpnchr" path="res://Assets/Quaternius/Game Kits/Cube World - Aug 2023/Environment/glTF/DeadTree_1_Atlas.png" id="1_lel1a"]
+
+[resource]
+resource_name = "Atlas"
+cull_mode = 2
+albedo_texture = ExtResource("1_lel1a")
+roughness = 0.5
+texture_filter = 2
+metadata/_gltf_primary_texture_coord = 0

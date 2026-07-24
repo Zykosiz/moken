@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bsetuwqpvfivs"]
+
+[resource]
+resource_name = "MI_WindowGlass"
+transparency = 4
+cull_mode = 2
+albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 0.095454514)
+roughness = 0.5

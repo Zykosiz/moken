@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cweldja7ti07d"]
+
+[resource]
+resource_name = "Beige"
+cull_mode = 2
+albedo_color = Color(0.6, 0.49803928, 0.29803923, 1)
+roughness = 0.5

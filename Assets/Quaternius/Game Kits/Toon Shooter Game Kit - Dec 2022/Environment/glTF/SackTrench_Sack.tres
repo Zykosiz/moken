@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ch632byrdmcbf"]
+
+[resource]
+resource_name = "Sack"
+cull_mode = 2
+albedo_color = Color(0.62665653, 0.5811058, 0.46702644, 1)
+roughness = 0.5

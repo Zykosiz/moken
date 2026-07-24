@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cxujs1cwpc34d"]
+
+[resource]
+resource_name = "LightBlue"
+cull_mode = 2
+albedo_color = Color(0.12787874, 0.48318005, 0.57998973, 1)
+roughness = 0.5

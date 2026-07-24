@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bk4frggeocbb2"]
+
+[resource]
+resource_name = "Barrel"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.38446727, 0.80113477, 0.9063318, 1)
+emission_enabled = true
+emission = Color(0.42728716, 0.884553, 1, 1)
+emission_energy_multiplier = 0.0

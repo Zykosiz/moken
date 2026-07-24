@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bbptsu3c0v82j"]
+
+[ext_resource type="Texture2D" uid="uid://d0gt471160wm" path="res://Assets/Quaternius/Characters and Animals/Cute Animated Monsters - Aug 2020/glTF/Deer_Deer_Texture.png" id="1_yfvde"]
+
+[resource]
+resource_name = "Texture"
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_yfvde")
+metadata/_gltf_primary_texture_coord = 0

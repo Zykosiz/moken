@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bnwb1vjn0db4v"]
+
+[resource]
+resource_name = "Hair"
+cull_mode = 2
+albedo_color = Color(0.67332596, 0.62612635, 0.5330901, 1)
+roughness = 0.5

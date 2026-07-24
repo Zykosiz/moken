@@ -1,0 +1,5 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b0v6cjsovhu1p"]
+
+[resource]
+resource_name = "Earrings"
+cull_mode = 2

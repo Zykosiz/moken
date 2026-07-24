@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://xbok0c7jhid2"]
+
+[ext_resource type="Texture2D" uid="uid://47w7twlb3y10" path="res://Assets/Quaternius/Nature/Ultimate Stylized Nature - May 2022/Textures/Bush_Leaves.png" id="1_gp120"]
+
+[resource]
+resource_name = "Bush_Leaves"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_gp120")
+roughness = 0.5
+metadata/_gltf_primary_texture_coord = 0

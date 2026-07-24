@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cous6oxkoci6c"]
+
+[ext_resource type="Texture2D" uid="uid://dkdkjmm41bafj" path="res://Assets/Quaternius/Nature/Stylized Nature MegaKit - July 2024/glTF/Leaves_TwistedTree_C.png" id="1_m71hc"]
+
+[resource]
+resource_name = "Leaves_TwistedTree"
+transparency = 2
+alpha_scissor_threshold = 0.2
+alpha_antialiasing_mode = 0
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_m71hc")
+metadata/_gltf_primary_texture_coord = 0

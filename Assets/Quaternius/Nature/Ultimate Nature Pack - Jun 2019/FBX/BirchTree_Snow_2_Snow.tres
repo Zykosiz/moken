@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bkkq4d1swhmen"]
+
+[resource]
+resource_name = "Snow"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.6669145, 0.63475406, 0.68120813, 1)
+emission_enabled = true
+emission = Color(0.7372549, 0.70196086, 0.75294125, 1)
+emission_energy_multiplier = 0.0

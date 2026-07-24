@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bcddog2htvug0"]
+
+[ext_resource type="Texture2D" uid="uid://cunmb0ldp3rw6" path="res://Assets/Quaternius/Game Kits/Cube World - Aug 2023/Tools/glTF/Pickaxe_Diamond_Atlas.png" id="1_0mki7"]
+
+[resource]
+resource_name = "Atlas"
+cull_mode = 2
+albedo_texture = ExtResource("1_0mki7")
+roughness = 0.5
+texture_filter = 2
+metadata/_gltf_primary_texture_coord = 0

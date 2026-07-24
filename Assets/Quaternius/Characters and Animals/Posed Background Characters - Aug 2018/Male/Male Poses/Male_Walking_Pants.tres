@@ -1,0 +1,5 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://6svo7esrqoy1"]
+
+[resource]
+resource_name = "Pants"
+cull_mode = 2

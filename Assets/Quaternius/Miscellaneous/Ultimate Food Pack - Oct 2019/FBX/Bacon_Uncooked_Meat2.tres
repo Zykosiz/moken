@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://do6qnfmcob2vm"]
+
+[resource]
+resource_name = "Meat2"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.5311256, 0.30600193, 0.2774148, 1)
+emission_enabled = true
+emission = Color(0.58823526, 0.34117648, 0.30980393, 1)
+emission_energy_multiplier = 0.0

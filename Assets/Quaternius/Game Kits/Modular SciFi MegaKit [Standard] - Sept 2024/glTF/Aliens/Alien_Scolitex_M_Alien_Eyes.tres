@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://br2pqn1f8wn4"]
+
+[resource]
+resource_name = "M_Alien_Eyes"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.013580992, 0.037481364, 0.05113077, 1)
+roughness = 0.5

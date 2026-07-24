@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bctu0jthb718j"]
+
+[resource]
+resource_name = "Tongue"
+cull_mode = 2
+albedo_color = Color(0.67332333, 0.28219786, 0.34247303, 1)
+roughness = 0.5

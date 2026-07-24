@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://5030sh2m8oi8"]
+
+[resource]
+resource_name = "Muzzle"
+cull_mode = 2
+albedo_color = Color(0.23332492, 0.19253871, 0.15536347, 1)
+roughness = 0.5

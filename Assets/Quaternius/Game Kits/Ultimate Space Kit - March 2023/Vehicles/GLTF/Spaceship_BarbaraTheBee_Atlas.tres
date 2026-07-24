@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://db66oh0axie04"]
+
+[ext_resource type="Texture2D" uid="uid://c6b7ga8gno7rn" path="res://Assets/Quaternius/Game Kits/Ultimate Space Kit - March 2023/Vehicles/GLTF/Spaceship_BarbaraTheBee_Atlas.png" id="1_6uh1x"]
+
+[resource]
+resource_name = "Atlas"
+cull_mode = 2
+albedo_texture = ExtResource("1_6uh1x")
+roughness = 0.5
+metadata/_gltf_primary_texture_coord = 0

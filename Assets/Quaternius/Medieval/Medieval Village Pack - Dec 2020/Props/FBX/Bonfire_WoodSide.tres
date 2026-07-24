@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dfnhqiaaj8y1g"]
+
+[resource]
+resource_name = "WoodSide"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.602584, 0.5412553, 0.3791477, 1)
+emission_enabled = true
+emission = Color(0.6666564, 0.599352, 0.42144927, 1)
+emission_energy_multiplier = 0.0

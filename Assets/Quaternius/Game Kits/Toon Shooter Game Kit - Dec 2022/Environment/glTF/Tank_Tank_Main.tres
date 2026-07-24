@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bkw4uwhgmwc4y"]
+
+[resource]
+resource_name = "Tank_Main"
+cull_mode = 2
+albedo_color = Color(0.71998954, 0.589652, 0.09489191, 1)
+roughness = 0.5

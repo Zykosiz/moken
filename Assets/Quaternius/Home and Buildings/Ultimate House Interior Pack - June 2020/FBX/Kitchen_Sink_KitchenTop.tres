@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d0k5u2j3uaom1"]
+
+[resource]
+resource_name = "KitchenTop"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.50538635, 0.5029809, 0.49576458, 1)
+emission_enabled = true
+emission = Color(0.55998814, 0.5573483, 0.5494288, 1)
+emission_energy_multiplier = 0.0

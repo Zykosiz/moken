@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dacadl0qbilsu"]
+
+[resource]
+resource_name = "Mattress"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.27958667, 0.2498136, 0.28669578, 1)
+emission_enabled = true
+emission = Color(0.31218746, 0.2795134, 0.31998923, 1)
+emission_energy_multiplier = 0.0

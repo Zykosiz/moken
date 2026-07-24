@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://xbj22c30jioe"]
+
+[resource]
+resource_name = "Turbot_Fins"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.4543252, 0.42372623, 0.3140811, 1)
+emission_enabled = true
+emission = Color(0.5039518, 0.4703714, 0.35004285, 1)
+emission_energy_multiplier = 0.0

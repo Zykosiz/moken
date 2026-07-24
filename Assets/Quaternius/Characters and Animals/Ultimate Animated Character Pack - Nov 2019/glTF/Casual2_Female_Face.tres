@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c7u3lg41b1ri3"]
+
+[resource]
+resource_name = "Face"
+cull_mode = 2
+albedo_color = Color(1, 1, 0.9733248, 1)
+roughness = 0.5

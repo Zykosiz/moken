@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cvgeo4bwt0ykp"]
+
+[ext_resource type="Texture2D" uid="uid://dqgilhw7dbw86" path="res://Assets/Quaternius/Game Kits/Sci-Fi Essentials Kit - Nov 2024/glTF/T_Trim_01_BaseColor_Red.png" id="1_fj57q"]
+[ext_resource type="Texture2D" uid="uid://bq78dyfvf4qpy" path="res://Assets/Quaternius/Game Kits/Sci-Fi Essentials Kit - Nov 2024/glTF/T_Trim_01_ORM.png" id="2_3xy3o"]
+[ext_resource type="Texture2D" uid="uid://egoi5c4nbp1d" path="res://Assets/Quaternius/Game Kits/Sci-Fi Essentials Kit - Nov 2024/glTF/T_Trim_01_Normal.png" id="3_clhbl"]
+
+[resource]
+resource_name = "MI_Trim_01"
+cull_mode = 2
+albedo_texture = ExtResource("1_fj57q")
+metallic = 1.0
+metallic_texture = ExtResource("2_3xy3o")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_3xy3o")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_clhbl")
+metadata/_gltf_primary_texture_coord = 0

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c33jsfmh1h671"]
+
+[resource]
+resource_name = "Marble"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.63295895, 0.6089044, 0.5367408, 1)
+emission_enabled = true
+emission = Color(0.69999087, 0.6735925, 0.59439754, 1)
+emission_energy_multiplier = 0.0

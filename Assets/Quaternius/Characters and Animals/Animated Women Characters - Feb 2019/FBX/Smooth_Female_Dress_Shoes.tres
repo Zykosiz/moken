@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d35b7xt0tcufi"]
+
+[resource]
+resource_name = "Shoes"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.29884523, 0.18849817, 0.14132233, 1)
+emission_enabled = true
+emission = Color(0.33332247, 0.21222365, 0.16045119, 1)
+emission_energy_multiplier = 0.0

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://qlp3ofof21ue"]
+
+[resource]
+resource_name = "DarkMetal"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.24892429, 0.22471423, 0.3049195, 1)
+emission_enabled = true
+emission = Color(0.27853742, 0.25196844, 0.33998862, 1)
+emission_energy_multiplier = 0.0

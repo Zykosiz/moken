@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b7oekegathcv3"]
+
+[resource]
+resource_name = "LightMetal"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.4081914, 0.4081914, 0.4081914, 1)
+emission_enabled = true
+emission = Color(0.4533229, 0.4533229, 0.4533229, 1)
+emission_energy_multiplier = 0.0

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cewuu871hrlot"]
+
+[resource]
+resource_name = "Wheels"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.2441719, 0.21934398, 0.1996179, 1)
+emission_enabled = true
+emission = Color(0.273322, 0.24607493, 0.22442684, 1)
+emission_energy_multiplier = 0.0

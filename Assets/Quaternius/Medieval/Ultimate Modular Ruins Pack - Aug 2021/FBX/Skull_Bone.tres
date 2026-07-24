@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b1wacqq0kgqbt"]
+
+[resource]
+resource_name = "Bone"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.63049453, 0.57438236, 0.45547593, 1)
+emission_enabled = true
+emission = Color(0.6972863, 0.6357068, 0.50521463, 1)
+emission_energy_multiplier = 0.0

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://be635a7lw06f2"]
+
+[ext_resource type="Texture2D" uid="uid://ivy0vtxlsejf" path="res://Assets/Quaternius/Nature/Stylized Nature MegaKit - July 2024/glTF/Grass.png" id="1_vi4qn"]
+
+[resource]
+resource_name = "Grass"
+cull_mode = 2
+albedo_texture = ExtResource("1_vi4qn")
+metadata/_gltf_primary_texture_coord = 0

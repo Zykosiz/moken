@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dlsql8nv6m76i"]
+
+[resource]
+resource_name = "Purple"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.22954375, 0.08383468, 0.36566797, 1)
+emission_enabled = true
+emission = Color(0.25726852, 0.09736217, 0.40665615, 1)
+emission_energy_multiplier = 0.0

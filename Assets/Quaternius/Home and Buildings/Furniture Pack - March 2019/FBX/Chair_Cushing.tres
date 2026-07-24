@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dnd8iyusr4v70"]
+
+[resource]
+resource_name = "Cushing"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.63903415, 0.6118862, 0.57712287, 1)
+emission_enabled = true
+emission = Color(0.70665807, 0.67686486, 0.6387144, 1)
+emission_energy_multiplier = 0.0

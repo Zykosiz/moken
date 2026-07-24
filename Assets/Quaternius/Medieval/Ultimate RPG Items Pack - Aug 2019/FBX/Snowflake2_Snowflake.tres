@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b6fu7uo57kmnb"]
+
+[resource]
+resource_name = "Snowflake"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.38536382, 0.8209799, 0.70376766, 1)
+emission_enabled = true
+emission = Color(0.42827109, 0.9063318, 0.7776989, 1)
+emission_energy_multiplier = 0.0

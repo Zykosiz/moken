@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cak63avcv3287"]
+
+[resource]
+resource_name = "M_Alien_Body_Blue"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.30139515, 0.46048, 0.6136363, 1)
+roughness = 0.43700787

@@ -1,0 +1,5 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cbppxq8cdbc1s"]
+
+[resource]
+resource_name = "Purple"
+cull_mode = 2

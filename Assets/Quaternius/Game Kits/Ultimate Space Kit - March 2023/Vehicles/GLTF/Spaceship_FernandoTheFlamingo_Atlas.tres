@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dmud0oiimxgki"]
+
+[ext_resource type="Texture2D" uid="uid://cf3ntuqe0o2t0" path="res://Assets/Quaternius/Game Kits/Ultimate Space Kit - March 2023/Vehicles/GLTF/Spaceship_FernandoTheFlamingo_Atlas.png" id="1_wttis"]
+
+[resource]
+resource_name = "Atlas"
+cull_mode = 2
+albedo_texture = ExtResource("1_wttis")
+roughness = 0.5
+metadata/_gltf_primary_texture_coord = 0

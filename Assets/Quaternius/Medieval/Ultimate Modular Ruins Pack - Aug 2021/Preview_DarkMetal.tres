@@ -1,0 +1,5 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://lkye0i0a16yn"]
+
+[resource]
+resource_name = "DarkMetal"
+cull_mode = 2

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b2qaggg2sa6vb"]
+
+[resource]
+resource_name = "Lure_Green"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.24733558, 0.6329593, 0.36672685, 1)
+emission_enabled = true
+emission = Color(0.27679393, 0.6999912, 0.40781817, 1)
+emission_energy_multiplier = 0.0
