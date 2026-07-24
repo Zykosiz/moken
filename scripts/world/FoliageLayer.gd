@@ -60,7 +60,7 @@ func _generate() -> void:
 	_scatter_layer(
 		palm_root, PALM_MESHES, palm_count,
 		palm_mask_range.x, palm_mask_range.y, palm_max_slope_deg, palm_scale_range,
-		random_seed, true, palm_collision_factory, 2.1
+		random_seed, true, palm_collision_factory, 2.1, 0.4
 	)
 
 	if undergrowth_count > 0:
@@ -68,7 +68,7 @@ func _generate() -> void:
 		_scatter_layer(
 			undergrowth_root, UNDERGROWTH_MESHES, undergrowth_count,
 			undergrowth_mask_range.x, undergrowth_mask_range.y, undergrowth_max_slope_deg, undergrowth_scale_range,
-			random_seed + 97, false
+			random_seed + 97, false, Callable(), 0.0, 0.8
 		)
 
 
@@ -162,6 +162,23 @@ func _build_combined_collision(layer_root: Node3D, entries: Array) -> void:
 		col.owner = get_tree().edited_scene_root
 
 
+
+# Blends an upright basis toward the sampled terrain normal so scattered
+# instances tilt to sit flush with sloped ground instead of always standing
+# perfectly vertical (which reads as "floating"/"placed" on any slope).
+# align_to_normal 0.0 keeps the old pure-upright behavior; 1.0 fully matches
+# the terrain's tilt. yaw is still applied around the resulting up axis so
+# facing direction stays randomized per instance.
+func _oriented_basis(normal: Vector3, yaw: float, align_to_normal: float) -> Basis:
+	if align_to_normal <= 0.0:
+		return Basis(Vector3.UP, yaw)
+	var up := Vector3.UP.slerp(normal, align_to_normal).normalized()
+	var reference := Vector3.FORWARD if absf(up.dot(Vector3.FORWARD)) < 0.99 else Vector3.RIGHT
+	var right := reference.cross(up).normalized()
+	var forward := up.cross(right).normalized()
+	return Basis(right, up, forward).rotated(up, yaw)
+
+
 func _scatter_layer(
 	layer_root: Node3D,
 	mesh_paths: Array,
@@ -173,7 +190,8 @@ func _scatter_layer(
 	seed_value: int,
 	add_collision: bool = false,
 	collision_shape_factory: Callable = Callable(),
-	collision_y_offset: float = 0.0
+	collision_y_offset: float = 0.0,
+	align_to_normal: float = 0.0
 ) -> void:
 	var meshes: Array[Mesh] = []
 	for path in mesh_paths:
@@ -210,16 +228,18 @@ func _scatter_layer(
 		if sample.is_empty():
 			continue
 		var pos: Vector3 = sample["position"]
+		var normal: Vector3 = sample.get("normal", Vector3.UP)
 		var yaw := rng.randf_range(0.0, TAU)
 		var s := rng.randf_range(scale_range.x, scale_range.y)
-		var basis := Basis(Vector3.UP, yaw).scaled(Vector3.ONE * s)
+		var basis := _oriented_basis(normal, yaw, align_to_normal).scaled(Vector3.ONE * s)
 		var xform := Transform3D(basis, pos)
 		var mesh_index := rng.randi_range(0, meshes.size() - 1)
 		transforms_per_mesh[mesh_index].append(xform)
 
 		if add_collision and collision_shape_factory.is_valid():
 			var shape_info: Dictionary = collision_shape_factory.call(s)
-			var collision_xform := Transform3D(Basis(Vector3.UP, yaw), pos + Vector3.UP * collision_y_offset * s)
+			var collision_basis := _oriented_basis(normal, yaw, align_to_normal)
+			var collision_xform := Transform3D(collision_basis, pos + Vector3.UP * collision_y_offset * s)
 			collision_entries.append({"transform": collision_xform, "kind": shape_info.kind, "dims": shape_info.dims})
 
 	for i in meshes.size():
