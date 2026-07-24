@@ -56,7 +56,7 @@ func _generate() -> void:
 	_scatter_layer(
 		coastal_root, COASTAL_ROCK_MESHES, coastal_rock_count,
 		coastal_mask_range.x, coastal_mask_range.y, coastal_max_slope_deg, coastal_scale_range,
-		random_seed + 11, true, coastal_collision_factory, 0.5, 1.0
+		random_seed + 11, true, coastal_collision_factory, 0.5, 0.8
 	)
 
 	var inland_root := _new_layer_root("InlandRocks")
@@ -65,7 +65,7 @@ func _generate() -> void:
 	_scatter_layer(
 		inland_root, INLAND_ROCK_MESHES, inland_rock_count,
 		inland_mask_range.x, inland_mask_range.y, inland_max_slope_deg, inland_scale_range,
-		random_seed + 53, true, inland_collision_factory, 0.6, 1.0
+		random_seed + 53, true, inland_collision_factory, 0.6, 0.8
 	)
 
 
@@ -93,7 +93,7 @@ func _load_mesh(path: String) -> Mesh:
 	var mesh_instance := _find_mesh_instance(instance)
 	var result: Mesh = null
 	if mesh_instance != null:
-		result = mesh_instance.mesh
+		result = _smooth_shaded_mesh(mesh_instance.mesh)
 	instance.queue_free()
 	return result
 
@@ -106,6 +106,46 @@ func _find_mesh_instance(node: Node) -> MeshInstance3D:
 		if found != null:
 			return found
 	return null
+
+
+# Kenney's rock meshes are flat-shaded: every face has its own duplicated
+# vertices with a per-face normal (confirmed -- adjacent faces sharing a
+# position differ in normal by up to ~130 degrees). Combined with slope
+# alignment tilting rocks to face the sun at unusual angles, a single flat
+# facet catching hard directional light edge-on reads as a bright "shard"
+# rather than part of a rounded rock. Recomputes a smooth per-position
+# averaged normal and assigns it to every vertex sharing that position --
+# geometry, UVs, and the surface material are untouched, only shading softens.
+func _smooth_shaded_mesh(mesh: Mesh) -> Mesh:
+	if mesh == null or mesh.get_surface_count() == 0:
+		return mesh
+
+	var arrays := mesh.surface_get_arrays(0)
+	var verts: PackedVector3Array = arrays[Mesh.ARRAY_VERTEX]
+	var normals: PackedVector3Array = arrays[Mesh.ARRAY_NORMAL]
+	if verts.is_empty() or normals.is_empty():
+		return mesh
+
+	var position_sums: Dictionary = {}
+	for i in verts.size():
+		var key: Vector3 = (verts[i] * 1000.0).round() / 1000.0
+		position_sums[key] = position_sums.get(key, Vector3.ZERO) + normals[i]
+
+	var smoothed := PackedVector3Array()
+	smoothed.resize(normals.size())
+	for i in verts.size():
+		var key: Vector3 = (verts[i] * 1000.0).round() / 1000.0
+		var summed: Vector3 = position_sums[key]
+		smoothed[i] = summed.normalized() if summed.length() > 0.0001 else normals[i]
+
+	arrays[Mesh.ARRAY_NORMAL] = smoothed
+
+	var new_mesh := ArrayMesh.new()
+	new_mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES, arrays)
+	var mat := mesh.surface_get_material(0)
+	if mat != null:
+		new_mesh.surface_set_material(0, mat)
+	return new_mesh
 
 
 # Local-space (centered at origin) triangle soup for one collision entry, built from
