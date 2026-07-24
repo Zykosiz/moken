@@ -24,6 +24,14 @@ window/stretch/aspect="expand"
 
 enabled=PackedStringArray("res://addons/godot_mcp/plugin.cfg")
 
+[importer_defaults]
+
+scene={
+"materials/extract": 1,
+"materials/extract_format": 0,
+"materials/extract_path": ""
+}
+
 [input]
 
 move_forward={
