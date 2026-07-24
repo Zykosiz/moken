@@ -91,9 +91,13 @@ func _process_node(node: Node, model_path: String, seen_materials: Dictionary) -
 			if mat == null:
 				_skipped_count += 1
 				continue
-			if not mat.resource_path.is_empty():
-				# Already an external resource (previously extracted, or a
-				# shared/override material someone assigned manually).
+			if mat.resource_path.ends_with(".tres") or mat.resource_path.ends_with(".res"):
+				# Already a real standalone resource file (previously
+				# extracted, or a shared/override material someone assigned
+				# manually). Generated/embedded materials from glTF imports
+				# get a non-empty but synthetic path like
+				# "res://model.gltf::StandardMaterial3D_xxxx" -- that does
+				# NOT count as extracted, so we don't just check is_empty().
 				continue
 			if seen_materials.has(mat):
 				continue
