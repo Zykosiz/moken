@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b3nr4qtmoppl4"]
+
+[ext_resource type="Texture2D" uid="uid://b30kxwip2lquu" path="res://Assets/Quaternius/Home and Buildings/Downtown City MegaKit[Standard]/Exports/glTF (Godot)/T_MetalConcrete_BaseColor.png" id="1_5vdje"]
+[ext_resource type="Texture2D" uid="uid://5mw8hs1ivofo" path="res://Assets/Quaternius/Home and Buildings/Downtown City MegaKit[Standard]/Exports/glTF (Godot)/T_MetalConcrete_ORM.png" id="2_2cyhh"]
+[ext_resource type="Texture2D" uid="uid://466tytc7kngx" path="res://Assets/Quaternius/Home and Buildings/Downtown City MegaKit[Standard]/Exports/glTF (Godot)/T_MetalConcrete_Normal.png" id="3_upsab"]
+
+[resource]
+resource_name = "MI_Trim_MetalConcrete"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_5vdje")
+metallic = 1.0
+metallic_texture = ExtResource("2_2cyhh")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_2cyhh")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_upsab")
+metadata/_gltf_primary_texture_coord = 0

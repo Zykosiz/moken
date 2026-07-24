@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://clloymxw1iksn"]
+
+[ext_resource type="Texture2D" uid="uid://xvc178qk4sl0" path="res://Assets/Quaternius/Home and Buildings/Downtown City MegaKit[Standard]/Exports/glTF (Godot)/T_Dirt_BaseColor.png" id="1_i5nrs"]
+[ext_resource type="Texture2D" uid="uid://btrgves5fk16t" path="res://Assets/Quaternius/Home and Buildings/Downtown City MegaKit[Standard]/Exports/glTF (Godot)/T_Dirt_ORM.png" id="2_qt2ge"]
+[ext_resource type="Texture2D" uid="uid://cxxoxhyy8rhgm" path="res://Assets/Quaternius/Home and Buildings/Downtown City MegaKit[Standard]/Exports/glTF (Godot)/T_Dirt_Normal.png" id="3_2hibw"]
+
+[resource]
+resource_name = "MI_Dirt"
+cull_mode = 2
+albedo_texture = ExtResource("1_i5nrs")
+metallic = 1.0
+metallic_texture = ExtResource("2_qt2ge")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_qt2ge")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_2hibw")
+metadata/_gltf_primary_texture_coord = 0

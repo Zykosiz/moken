@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dm3bsdcm0nxp"]
+
+[ext_resource type="Texture2D" uid="uid://bejjo87ae6pjr" path="res://Assets/Quaternius/Medieval/Fantasy Props MegaKit[Standard] - June 2025/Exports/glTF/T_Trim_Furniture_BaseColor.png" id="1_r8kjm"]
+[ext_resource type="Texture2D" uid="uid://c215jks7ytcwd" path="res://Assets/Quaternius/Medieval/Fantasy Props MegaKit[Standard] - June 2025/Exports/glTF/T_Trim_Furniture_ORM.png" id="2_62cg1"]
+[ext_resource type="Texture2D" uid="uid://b50wsjqmn37ds" path="res://Assets/Quaternius/Medieval/Fantasy Props MegaKit[Standard] - June 2025/Exports/glTF/T_Trim_Furniture_Normal.png" id="3_kjkmx"]
+
+[resource]
+resource_name = "MI_Trim_Furniture"
+cull_mode = 2
+albedo_texture = ExtResource("1_r8kjm")
+metallic = 1.0
+metallic_texture = ExtResource("2_62cg1")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_62cg1")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_kjkmx")
+metadata/_gltf_primary_texture_coord = 0

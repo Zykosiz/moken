@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d0cnv8n2tk34q"]
+
+[ext_resource type="Texture2D" uid="uid://c8rkm6cjxtncm" path="res://Assets/Quaternius/Home and Buildings/Downtown City MegaKit[Standard]/Exports/glTF (Godot)/T_Concrete_Asphalt_BaseColor.png" id="1_hk2qt"]
+[ext_resource type="Texture2D" uid="uid://b71p67ek07rnp" path="res://Assets/Quaternius/Home and Buildings/Downtown City MegaKit[Standard]/Exports/glTF (Godot)/T_Concrete_ORM.png" id="2_jufky"]
+[ext_resource type="Texture2D" uid="uid://bbl377vmadrhe" path="res://Assets/Quaternius/Home and Buildings/Downtown City MegaKit[Standard]/Exports/glTF (Godot)/T_Concrete_Normal.png" id="3_h7l3e"]
+
+[resource]
+resource_name = "MI_Asphalt"
+cull_mode = 2
+albedo_texture = ExtResource("1_hk2qt")
+metallic = 1.0
+metallic_texture = ExtResource("2_jufky")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_jufky")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_h7l3e")
+metadata/_gltf_primary_texture_coord = 0

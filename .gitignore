@@ -26,12 +26,13 @@ Assets/Quaternius/**
 !Assets/Quaternius/**/*.import
 !Assets/Quaternius/**/*.tres
 
-# Build/export output
-android/
-build/
-builds/
-exports/
-dist/
+# Build/export output (root-level only -- some asset packs have their own
+# nested "Exports" folders that must stay subject to the Assets/ rules above)
+/android/
+/build/
+/builds/
+/exports/
+/dist/
 *.apk
 *.aab
 *.exe

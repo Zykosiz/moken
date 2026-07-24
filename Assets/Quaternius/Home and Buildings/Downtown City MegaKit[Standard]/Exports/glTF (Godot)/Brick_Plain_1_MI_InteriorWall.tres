@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ydtx7rwkvb2a"]
+
+[ext_resource type="Texture2D" uid="uid://7bs1x870um2i" path="res://Assets/Quaternius/Home and Buildings/Downtown City MegaKit[Standard]/Exports/glTF (Godot)/T_RedBrick_BaseColor.png" id="1_fm081"]
+[ext_resource type="Texture2D" uid="uid://dbl25et8uivw1" path="res://Assets/Quaternius/Home and Buildings/Downtown City MegaKit[Standard]/Exports/glTF (Godot)/T_RedBrick_ORM.png" id="2_nars0"]
+[ext_resource type="Texture2D" uid="uid://cbx2ymeaj36qq" path="res://Assets/Quaternius/Home and Buildings/Downtown City MegaKit[Standard]/Exports/glTF (Godot)/T_RedBrick_Normal.png" id="3_r27nj"]
+
+[resource]
+resource_name = "MI_InteriorWall"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_fm081")
+metallic = 1.0
+metallic_texture = ExtResource("2_nars0")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_nars0")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_r27nj")
+metadata/_gltf_primary_texture_coord = 0

@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d6gq5mn36ltf"]
+
+[ext_resource type="Texture2D" uid="uid://cstmvi7a3l7l4" path="res://Assets/Quaternius/Home and Buildings/Downtown City MegaKit[Standard]/Exports/glTF (Godot)/T_Ornaments_BaseColor.png" id="1_s57co"]
+[ext_resource type="Texture2D" uid="uid://snwowcdh5ctl" path="res://Assets/Quaternius/Home and Buildings/Downtown City MegaKit[Standard]/Exports/glTF (Godot)/T_Ornaments_ORM.png" id="2_bloa4"]
+[ext_resource type="Texture2D" uid="uid://wnwxwgf5faou" path="res://Assets/Quaternius/Home and Buildings/Downtown City MegaKit[Standard]/Exports/glTF (Godot)/T_Ornaments_Normal.png" id="3_ml8g0"]
+
+[resource]
+resource_name = "MI_Ornaments"
+cull_mode = 2
+albedo_texture = ExtResource("1_s57co")
+metallic = 1.0
+metallic_texture = ExtResource("2_bloa4")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_bloa4")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_ml8g0")
+metadata/_gltf_primary_texture_coord = 0

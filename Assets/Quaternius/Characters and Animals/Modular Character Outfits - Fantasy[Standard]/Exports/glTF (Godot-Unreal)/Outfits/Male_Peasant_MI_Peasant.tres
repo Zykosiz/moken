@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://u1moraxrl8tc"]
+
+[ext_resource type="Texture2D" uid="uid://d1ybibabu0rfc" path="res://Assets/Quaternius/Characters and Animals/Modular Character Outfits - Fantasy[Standard]/Exports/glTF (Godot-Unreal)/Outfits/T_Peasant_BaseColor.png" id="1_e1chl"]
+[ext_resource type="Texture2D" uid="uid://d16hg4yoqunym" path="res://Assets/Quaternius/Characters and Animals/Modular Character Outfits - Fantasy[Standard]/Exports/glTF (Godot-Unreal)/Outfits/T_Peasant_ORM.png" id="2_6cx4e"]
+[ext_resource type="Texture2D" uid="uid://dpsf1hi6yvekx" path="res://Assets/Quaternius/Characters and Animals/Modular Character Outfits - Fantasy[Standard]/Exports/glTF (Godot-Unreal)/Outfits/T_Peasant_Normal.png" id="3_anegy"]
+
+[resource]
+resource_name = "MI_Peasant"
+cull_mode = 2
+albedo_texture = ExtResource("1_e1chl")
+metallic = 1.0
+metallic_texture = ExtResource("2_6cx4e")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_6cx4e")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_anegy")
+metadata/_gltf_primary_texture_coord = 0

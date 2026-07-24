@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://sgxggofj5s86"]
+
+[ext_resource type="Texture2D" uid="uid://b4hfxe01foydl" path="res://Assets/Quaternius/Home and Buildings/Downtown City MegaKit[Standard]/Exports/glTF (Godot)/T_Street_Decals.png" id="1_di4tp"]
+
+[resource]
+resource_name = "MI_StreetDecals"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_di4tp")
+roughness = 0.5
+metadata/_gltf_primary_texture_coord = 0

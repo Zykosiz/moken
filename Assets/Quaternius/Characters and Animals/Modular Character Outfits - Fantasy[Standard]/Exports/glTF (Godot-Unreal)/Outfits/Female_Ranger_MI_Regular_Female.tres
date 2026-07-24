@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cm61bpom042f2"]
+
+[ext_resource type="Texture2D" uid="uid://dr0x3girnhtlw" path="res://Assets/Quaternius/Characters and Animals/Modular Character Outfits - Fantasy[Standard]/Exports/glTF (Godot-Unreal)/Outfits/T_Regular_Female_Dark_BaseColor.png" id="1_tb3gi"]
+[ext_resource type="Texture2D" uid="uid://d352gllngnq3y" path="res://Assets/Quaternius/Characters and Animals/Modular Character Outfits - Fantasy[Standard]/Exports/glTF (Godot-Unreal)/Outfits/T_Regular_Female_Roughness.png" id="2_dof8x"]
+[ext_resource type="Texture2D" uid="uid://7eed5736gbw0" path="res://Assets/Quaternius/Characters and Animals/Modular Character Outfits - Fantasy[Standard]/Exports/glTF (Godot-Unreal)/Outfits/T_Regular_Female_Normal.png" id="3_e8xw0"]
+
+[resource]
+resource_name = "MI_Regular_Female"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_tb3gi")
+metallic_texture = ExtResource("2_dof8x")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_dof8x")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_e8xw0")
+metadata/_gltf_primary_texture_coord = 0

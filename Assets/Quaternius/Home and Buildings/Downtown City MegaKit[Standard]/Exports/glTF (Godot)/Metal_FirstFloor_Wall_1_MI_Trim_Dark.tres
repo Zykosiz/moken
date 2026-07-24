@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://btta73njoket5"]
+
+[ext_resource type="Texture2D" uid="uid://6qdfhi42ync8" path="res://Assets/Quaternius/Home and Buildings/Downtown City MegaKit[Standard]/Exports/glTF (Godot)/T_Trim_BaseColor.png" id="1_wmstf"]
+[ext_resource type="Texture2D" uid="uid://ck7v85hhmrev1" path="res://Assets/Quaternius/Home and Buildings/Downtown City MegaKit[Standard]/Exports/glTF (Godot)/T_Trim_ORM.png" id="2_fqdn2"]
+[ext_resource type="Texture2D" uid="uid://c5pp4o7eoya2l" path="res://Assets/Quaternius/Home and Buildings/Downtown City MegaKit[Standard]/Exports/glTF (Godot)/T_Trim_Normal.png" id="3_oqg1r"]
+
+[resource]
+resource_name = "MI_Trim_Dark"
+cull_mode = 2
+albedo_texture = ExtResource("1_wmstf")
+metallic = 1.0
+metallic_texture = ExtResource("2_fqdn2")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_fqdn2")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_oqg1r")
+metadata/_gltf_primary_texture_coord = 0

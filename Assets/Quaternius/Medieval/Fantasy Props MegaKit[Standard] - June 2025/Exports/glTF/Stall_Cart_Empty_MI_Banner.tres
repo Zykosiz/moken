@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://djv5m1pxg3ahk"]
+
+[ext_resource type="Texture2D" uid="uid://1fkam5efqlam" path="res://Assets/Quaternius/Medieval/Fantasy Props MegaKit[Standard] - June 2025/Exports/glTF/T_Trim_Cloth_BaseColor.png" id="1_xgsgf"]
+[ext_resource type="Texture2D" uid="uid://1hrxifig1ers" path="res://Assets/Quaternius/Medieval/Fantasy Props MegaKit[Standard] - June 2025/Exports/glTF/T_Trim_Cloth_ORM.png" id="2_ma58l"]
+[ext_resource type="Texture2D" uid="uid://b40drjgfgkbup" path="res://Assets/Quaternius/Medieval/Fantasy Props MegaKit[Standard] - June 2025/Exports/glTF/T_Trim_Cloth_Normal.png" id="3_n7gcx"]
+
+[resource]
+resource_name = "MI_Banner"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_xgsgf")
+metallic = 1.0
+metallic_texture = ExtResource("2_ma58l")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_ma58l")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_n7gcx")
+metadata/_gltf_primary_texture_coord = 0

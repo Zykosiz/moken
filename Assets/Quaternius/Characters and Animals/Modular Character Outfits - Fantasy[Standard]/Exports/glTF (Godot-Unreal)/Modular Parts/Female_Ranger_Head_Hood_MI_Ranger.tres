@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://x60al62x8lr5"]
+
+[ext_resource type="Texture2D" uid="uid://kthqjjngxxpo" path="res://Assets/Quaternius/Characters and Animals/Modular Character Outfits - Fantasy[Standard]/Exports/glTF (Godot-Unreal)/Modular Parts/T_Ranger_BaseColor.png" id="1_hirca"]
+[ext_resource type="Texture2D" uid="uid://dhvphvugyydhq" path="res://Assets/Quaternius/Characters and Animals/Modular Character Outfits - Fantasy[Standard]/Exports/glTF (Godot-Unreal)/Modular Parts/T_Ranger_ORM.png" id="2_p5rh7"]
+[ext_resource type="Texture2D" uid="uid://cr6mvhi07wep6" path="res://Assets/Quaternius/Characters and Animals/Modular Character Outfits - Fantasy[Standard]/Exports/glTF (Godot-Unreal)/Modular Parts/T_Ranger_Normal.png" id="3_gd1j4"]
+
+[resource]
+resource_name = "MI_Ranger"
+cull_mode = 2
+albedo_texture = ExtResource("1_hirca")
+metallic = 1.0
+metallic_texture = ExtResource("2_p5rh7")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_p5rh7")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_gd1j4")
+metadata/_gltf_primary_texture_coord = 0
