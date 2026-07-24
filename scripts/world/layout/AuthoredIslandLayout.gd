@@ -207,8 +207,8 @@ func _make_district(parent: Node3D, district_name: String, center: Vector2, radi
 	mesh.radial_segments = 32
 	marker.mesh = mesh
 	marker.material_override = _district_material
-	marker.global_position = _to_world(center, 0.03)
 	root.add_child(marker)
+	marker.global_position = _to_world(center, 0.03)
 
 
 func _make_path(parent: Node3D, path_name: String, points: Array, width: float, material: Material) -> void:
@@ -237,10 +237,10 @@ func _make_path_between(parent: Node3D, from_point: Vector2, to_point: Vector2, 
 		mesh.size = Vector3(width, 0.08, length)
 		mesh_instance.mesh = mesh
 		mesh_instance.material_override = material
+		parent.add_child(mesh_instance)
 		mesh_instance.global_position = _to_world(center, 0.05)
 		var direction := b - a
 		mesh_instance.rotation.y = atan2(direction.x, direction.y)
-		parent.add_child(mesh_instance)
 
 
 func _populate_harbour(parent: Node3D, center: Vector2) -> void:
@@ -361,8 +361,8 @@ func _place_building(parent: Node3D, scene: PackedScene, node_name: String, xz: 
 		return null
 	var sampled: TERRAIN_PLACEMENT.FootprintResult = TERRAIN_PLACEMENT.find_nearby_valid_building(_terrain, xz, yaw, footprint, max_height_delta, 14.0, 2.0, 0.62)
 	node.name = node_name
-	TERRAIN_PLACEMENT.apply_upright(node, sampled, 0.1, scale_value)
 	parent.add_child(node)
+	TERRAIN_PLACEMENT.apply_upright(node, sampled, 0.1, scale_value)
 	_make_foundation(parent, "%sFoundation" % node_name, sampled, footprint + Vector2(1.0, 1.0), 0.34)
 	return node
 
@@ -383,10 +383,10 @@ func _place_prop(
 		return null
 	var sampled: TERRAIN_PLACEMENT.FootprintResult = TERRAIN_PLACEMENT.sample_footprint(_terrain, xz, yaw, Vector2(2.0, 2.0))
 	node.name = node_name
+	parent.add_child(node)
 	node.global_position = Vector3(xz.x, sampled.center_height + surface_offset, xz.y)
 	node.rotation = Vector3(0.0, yaw, 0.0)
 	node.scale = scale_value
-	parent.add_child(node)
 	if add_collision:
 		_make_collision_box(node, "PlacementCollision", Vector3(0.0, collision_size.y * 0.5, 0.0), 0.0, collision_size)
 	return node
@@ -407,8 +407,8 @@ func _place_natural(
 	if node == null:
 		return null
 	node.name = node_name
-	TERRAIN_PLACEMENT.apply_surface(node, _terrain, xz, yaw, 0.08, scale_value, normal_alignment_strength)
 	parent.add_child(node)
+	TERRAIN_PLACEMENT.apply_surface(node, _terrain, xz, yaw, 0.08, scale_value, normal_alignment_strength)
 	if add_collision:
 		_make_collision_box(node, "PlacementCollision", Vector3(0.0, collision_size.y * 0.5, 0.0), 0.0, collision_size)
 	return node
@@ -420,22 +420,22 @@ func _place_retaining(parent: Node3D, scene: PackedScene, node_name: String, xz:
 		return null
 	var sampled: TERRAIN_PLACEMENT.FootprintResult = TERRAIN_PLACEMENT.sample_footprint(_terrain, xz, yaw, Vector2(7.0, 1.4))
 	node.name = node_name
+	parent.add_child(node)
 	node.global_position = Vector3(xz.x, sampled.average_height + 0.08, xz.y)
 	node.rotation = Vector3(0.0, yaw, 0.0)
 	node.scale = scale_value
-	parent.add_child(node)
 	return node
-	
+
 
 func _place_dock(parent: Node3D, scene: PackedScene, node_name: String, xz: Vector2, yaw: float, scale_value: Vector3, collision_size: Vector3) -> Node3D:
 	var node: Node3D = scene.instantiate() as Node3D
 	if node == null:
 		return null
 	node.name = node_name
+	parent.add_child(node)
 	node.global_position = Vector3(xz.x, WATER_DOCK_HEIGHT, xz.y)
 	node.rotation = Vector3(0.0, yaw, 0.0)
 	node.scale = scale_value
-	parent.add_child(node)
 	_make_collision_box(node, "DockDeckCollision", Vector3(0.0, collision_size.y * 0.5, 0.0), 0.0, collision_size)
 	return node
 
@@ -445,10 +445,10 @@ func _place_water_scene(parent: Node3D, scene: PackedScene, node_name: String, x
 	if node == null:
 		return null
 	node.name = node_name
+	parent.add_child(node)
 	node.global_position = Vector3(xz.x, WATER_DOCK_HEIGHT - 0.12, xz.y)
 	node.rotation.y = yaw
 	node.scale = scale_value
-	parent.add_child(node)
 	return node
 
 
@@ -457,9 +457,9 @@ func _place_npc(parent: Node3D, scene: PackedScene, node_name: String, xz: Vecto
 	if node == null:
 		return
 	node.name = node_name
+	parent.add_child(node)
 	node.global_position = _to_world(xz, 1.0)
 	node.set("terrain_path", NodePath("../../../Terrain/TerrainMesh"))
-	parent.add_child(node)
 
 
 func _make_foundation(parent: Node3D, node_name: String, sampled: TERRAIN_PLACEMENT.FootprintResult, size: Vector2, minimum_height: float) -> void:
@@ -471,9 +471,9 @@ func _make_foundation(parent: Node3D, node_name: String, sampled: TERRAIN_PLACEM
 	mesh.size = Vector3(size.x, foundation_height, size.y)
 	mesh_instance.mesh = mesh
 	mesh_instance.material_override = _stone_material
+	parent.add_child(mesh_instance)
 	mesh_instance.global_position = Vector3(sampled.center.x, foundation_y, sampled.center.y)
 	mesh_instance.rotation.y = sampled.yaw
-	parent.add_child(mesh_instance)
 	_make_collision_box(mesh_instance, "FoundationCollision", Vector3.ZERO, 0.0, Vector3(size.x, foundation_height, size.y))
 
 
@@ -506,8 +506,8 @@ func _make_plaza(parent: Node3D, node_name: String, xz: Vector2, radius: float) 
 	mesh.radial_segments = 32
 	mesh_instance.mesh = mesh
 	mesh_instance.material_override = _stone_material
-	mesh_instance.global_position = _to_world(xz, 0.04)
 	parent.add_child(mesh_instance)
+	mesh_instance.global_position = _to_world(xz, 0.04)
 
 
 func _make_anchor_visual(parent: Node3D, node_name: String, xz: Vector2, color: Color, radius: float, height_offset: float = 0.5) -> void:
@@ -523,15 +523,15 @@ func _make_anchor_visual(parent: Node3D, node_name: String, xz: Vector2, color: 
 	material.albedo_color = color
 	material.roughness = 0.8
 	mesh_instance.material_override = material
-	mesh_instance.global_position = _to_world(xz, height_offset)
 	parent.add_child(mesh_instance)
+	mesh_instance.global_position = _to_world(xz, height_offset)
 
 
 func _make_marker(parent: Node3D, marker_name: String, xz: Vector2) -> void:
 	var marker := Marker3D.new()
 	marker.name = marker_name
-	marker.global_position = _to_world(xz, 0.35)
 	parent.add_child(marker)
+	marker.global_position = _to_world(xz, 0.35)
 	_make_anchor_visual(parent, "%sVisual" % marker_name, xz, _anchor_material.albedo_color, 0.8, 0.35)
 
 

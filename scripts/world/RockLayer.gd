@@ -1,5 +1,5 @@
 @tool
-class_name IslandRocks
+class_name IslandRockLayer
 extends Node3D
 
 const COASTAL_ROCK_MESHES: Array[String] = [
@@ -47,14 +47,12 @@ func _set_regenerate(value: bool) -> void:
 func _generate() -> void:
 	_clear()
 	if _terrain == null or not _terrain.has_method("sample_scatter_point"):
-		push_warning("IslandRocks: terrain_path is not assigned to a valid IslandTerrain node.")
+		push_warning("IslandRockLayer: terrain_path is not assigned to a valid terrain node.")
 		return
 
 	var coastal_root := _new_layer_root("CoastalRocks")
-	var coastal_collision_factory := func(s: float) -> Shape3D:
-		var shape := BoxShape3D.new()
-		shape.size = Vector3(1.6, 1.1, 1.6) * s
-		return shape
+	var coastal_collision_factory := func(s: float) -> Dictionary:
+		return {"kind": "box", "dims": Vector3(1.6, 1.1, 1.6) * s}
 	_scatter_layer(
 		coastal_root, COASTAL_ROCK_MESHES, coastal_rock_count,
 		coastal_mask_range.x, coastal_mask_range.y, coastal_max_slope_deg, coastal_scale_range,
@@ -62,10 +60,8 @@ func _generate() -> void:
 	)
 
 	var inland_root := _new_layer_root("InlandRocks")
-	var inland_collision_factory := func(s: float) -> Shape3D:
-		var shape := BoxShape3D.new()
-		shape.size = Vector3(1.8, 1.4, 1.8) * s
-		return shape
+	var inland_collision_factory := func(s: float) -> Dictionary:
+		return {"kind": "box", "dims": Vector3(1.8, 1.4, 1.8) * s}
 	_scatter_layer(
 		inland_root, INLAND_ROCK_MESHES, inland_rock_count,
 		inland_mask_range.x, inland_mask_range.y, inland_max_slope_deg, inland_scale_range,
@@ -90,7 +86,7 @@ func _new_layer_root(layer_name: String) -> Node3D:
 
 func _load_mesh(path: String) -> Mesh:
 	if not ResourceLoader.exists(path):
-		push_warning("IslandRocks: missing asset %s" % path)
+		push_warning("IslandRockLayer: missing asset %s" % path)
 		return null
 	var packed: PackedScene = load(path)
 	var instance := packed.instantiate()
@@ -110,6 +106,57 @@ func _find_mesh_instance(node: Node) -> MeshInstance3D:
 		if found != null:
 			return found
 	return null
+
+
+# Local-space (centered at origin) triangle soup for one collision entry, built from
+# Godot's own PrimitiveMesh generators so winding/normals are guaranteed correct -
+# no hand-rolled box geometry to get wrong.
+func _shape_faces(kind: String, dims: Variant) -> PackedVector3Array:
+	match kind:
+		"box":
+			var box := BoxMesh.new()
+			box.size = dims
+			return box.get_faces()
+		"cylinder":
+			var cyl := CylinderMesh.new()
+			cyl.top_radius = dims.x
+			cyl.bottom_radius = dims.x
+			cyl.height = dims.y
+			cyl.radial_segments = 8
+			return cyl.get_faces()
+	return PackedVector3Array()
+
+
+# Combines every scattered instance's collision geometry into a single
+# ConcavePolygonShape3D under one StaticBody3D, instead of one body+shape pair per
+# instance. Cuts hundreds of collision nodes down to one per layer.
+func _build_combined_collision(layer_root: Node3D, entries: Array) -> void:
+	if entries.is_empty():
+		return
+
+	var combined := PackedVector3Array()
+	for entry in entries:
+		var local_faces: PackedVector3Array = _shape_faces(entry.kind, entry.dims)
+		var xform: Transform3D = entry.transform
+		for v in local_faces:
+			combined.append(xform * v)
+
+	if combined.is_empty():
+		return
+
+	var body := StaticBody3D.new()
+	body.name = "%s_Collision" % layer_root.name
+	layer_root.add_child(body)
+	if Engine.is_editor_hint() and get_tree() and get_tree().edited_scene_root:
+		body.owner = get_tree().edited_scene_root
+
+	var col := CollisionShape3D.new()
+	var shape := ConcavePolygonShape3D.new()
+	shape.set_faces(combined)
+	col.shape = shape
+	body.add_child(col)
+	if Engine.is_editor_hint() and get_tree() and get_tree().edited_scene_root:
+		col.owner = get_tree().edited_scene_root
 
 
 func _scatter_layer(
@@ -146,20 +193,14 @@ func _scatter_layer(
 		mmi.multimesh = mm
 		multimeshes.append(mmi)
 
-	var collision_root: Node3D = null
-	if add_collision:
-		collision_root = Node3D.new()
-		collision_root.name = "%s_Collision" % layer_root.name
-		layer_root.add_child(collision_root)
-		if Engine.is_editor_hint() and get_tree() and get_tree().edited_scene_root:
-			collision_root.owner = get_tree().edited_scene_root
-
 	var rng := RandomNumberGenerator.new()
 	rng.seed = seed_value
 
 	var transforms_per_mesh: Array = []
 	for i in meshes.size():
 		transforms_per_mesh.append([])
+
+	var collision_entries: Array = []
 
 	for i in count:
 		var sample: Dictionary = _terrain.call("sample_scatter_point", rng, min_mask, max_mask, max_slope_deg)
@@ -174,15 +215,9 @@ func _scatter_layer(
 		transforms_per_mesh[mesh_index].append(xform)
 
 		if add_collision and collision_shape_factory.is_valid():
-			var body := StaticBody3D.new()
-			var col := CollisionShape3D.new()
-			col.shape = collision_shape_factory.call(s)
-			body.add_child(col)
-			collision_root.add_child(body)
-			if Engine.is_editor_hint() and get_tree() and get_tree().edited_scene_root:
-				body.owner = get_tree().edited_scene_root
-				col.owner = get_tree().edited_scene_root
-			body.transform = Transform3D(Basis(Vector3.UP, yaw), pos + Vector3.UP * collision_y_offset * s)
+			var shape_info: Dictionary = collision_shape_factory.call(s)
+			var collision_xform := Transform3D(Basis(Vector3.UP, yaw), pos + Vector3.UP * collision_y_offset * s)
+			collision_entries.append({"transform": collision_xform, "kind": shape_info.kind, "dims": shape_info.dims})
 
 	for i in meshes.size():
 		var list: Array = transforms_per_mesh[i]
@@ -190,3 +225,6 @@ func _scatter_layer(
 		mmi.multimesh.instance_count = list.size()
 		for j in list.size():
 			mmi.multimesh.set_instance_transform(j, list[j])
+
+	if add_collision:
+		_build_combined_collision(layer_root, collision_entries)
