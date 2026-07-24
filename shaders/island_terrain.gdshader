@@ -1,5 +1,5 @@
 shader_type spatial;
-render_mode cull_back, diffuse_toon, specular_toon;
+render_mode cull_disabled, diffuse_toon, specular_toon;
 
 uniform float roughness_amount : hint_range(0.0, 1.0) = 0.35;
 uniform float specular_amount : hint_range(0.0, 1.0) = 0.08;

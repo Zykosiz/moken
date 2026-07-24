@@ -179,11 +179,11 @@ func _generate_mesh() -> void:
 			var i2 := i0 + vertex_count
 			var i3 := i2 + 1
 			surface_tool.add_index(i0)
-			surface_tool.add_index(i2)
-			surface_tool.add_index(i1)
 			surface_tool.add_index(i1)
 			surface_tool.add_index(i2)
+			surface_tool.add_index(i1)
 			surface_tool.add_index(i3)
+			surface_tool.add_index(i2)
 
 	var array_mesh := surface_tool.commit()
 	mesh = array_mesh
