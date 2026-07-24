@@ -1,0 +1,47 @@
+# Godot editor caches and generated imports
+.godot/
+.mono/
+
+# Local/editor configuration
+.codex/
+.mcp.json
+
+# External asset and reference packs
+Assets/
+Reference/
+
+# Build/export output
+android/
+build/
+builds/
+exports/
+dist/
+*.apk
+*.aab
+*.exe
+*.pck
+*.zip
+
+# Godot export secrets/config
+export.cfg
+export_presets.cfg
+
+# Python MCP server local state
+python/venv/
+python/.env
+python/__pycache__/
+python/tools/__pycache__/
+__pycache__/
+*.py[cod]
+
+# Logs and temporary files
+Logs/
+logs/
+*.log
+*.tmp
+*.temp
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
