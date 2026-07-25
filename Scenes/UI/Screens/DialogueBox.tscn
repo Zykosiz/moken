@@ -18,18 +18,6 @@ grow_vertical = 2
 mouse_filter = 2
 theme = ExtResource("4_theme")
 
-[node name="PortraitFrame" parent="Root" instance=ExtResource("2_portrait")]
-mouse_filter = 2
-anchor_left = 0.08
-anchor_top = 1.0
-anchor_right = 0.08
-anchor_bottom = 1.0
-offset_left = 0.0
-offset_top = -260.0
-offset_right = 180.0
-offset_bottom = -40.0
-shard_variant = 2
-
 [node name="TextPane" parent="Root" instance=ExtResource("3_panel")]
 mouse_filter = 2
 anchor_left = 0.08
@@ -41,11 +29,26 @@ offset_top = -260.0
 offset_right = 0.0
 offset_bottom = -40.0
 base_opacity = 0.62
-content_margin = 55
+content_margin = 24
 shard_variant = 0
 
-[node name="DialogueText" type="RichTextLabel" parent="Root/TextPane/ContentMargin"]
+[node name="VBox" type="VBoxContainer" parent="Root/TextPane/ContentMargin"]
 layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="SpeakerLabel" type="Label" parent="Root/TextPane/ContentMargin/VBox"]
+layout_mode = 2
+mouse_filter = 2
+horizontal_alignment = 0
+theme_override_colors/font_color = Color(1, 0.85, 0.6, 1)
+theme_override_colors/font_outline_color = Color(0.03, 0.05, 0.07, 0.95)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 20
+text = "Speaker"
+
+[node name="DialogueText" type="RichTextLabel" parent="Root/TextPane/ContentMargin/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
 mouse_filter = 2
 bbcode_enabled = false
 fit_content = false
@@ -57,27 +60,14 @@ theme_override_colors/font_outline_color = Color(0.03, 0.05, 0.07, 0.95)
 theme_override_constants/outline_size = 7
 theme_override_font_sizes/normal_font_size = 20
 
-[node name="NameShard" parent="Root" instance=ExtResource("3_panel")]
+[node name="PortraitFrame" parent="Root" instance=ExtResource("2_portrait")]
 mouse_filter = 2
 anchor_left = 0.08
 anchor_top = 1.0
 anchor_right = 0.08
 anchor_bottom = 1.0
-offset_left = 120.0
-offset_top = -310.0
-offset_right = 310.0
-offset_bottom = -255.0
-base_opacity = 0.65
-content_margin = 8
-shard_variant = 1
-
-[node name="SpeakerLabel" type="Label" parent="Root/NameShard/ContentMargin"]
-layout_mode = 2
-mouse_filter = 2
-horizontal_alignment = 1
-vertical_alignment = 1
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0.03, 0.05, 0.07, 0.95)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 20
-text = "Speaker"
+offset_left = 0.0
+offset_top = -400.0
+offset_right = 160.0
+offset_bottom = -230.0
+shard_variant = 2

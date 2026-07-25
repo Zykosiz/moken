@@ -10,9 +10,8 @@ const CHARACTERS_PER_SECOND := 45.0
 @onready var _root: Control = $Root
 @onready var _portrait_frame: PortraitFrame = $Root/PortraitFrame
 @onready var _text_pane: GlassPanel = $Root/TextPane
-@onready var _dialogue_label: RichTextLabel = $Root/TextPane/ContentMargin/DialogueText
-@onready var _name_shard: GlassPanel = $Root/NameShard
-@onready var _speaker_label: Label = $Root/NameShard/ContentMargin/SpeakerLabel
+@onready var _speaker_label: Label = $Root/TextPane/ContentMargin/VBox/SpeakerLabel
+@onready var _dialogue_label: RichTextLabel = $Root/TextPane/ContentMargin/VBox/DialogueText
 
 var _reveal_time: float = 0.0
 var _is_revealing: bool = false
@@ -37,6 +36,7 @@ func close() -> void:
 func show_line(line: DialogueLine) -> void:
 	_speaker_label.text = line.speaker_name
 	_portrait_frame.portrait_texture = line.portrait
+	_portrait_frame.visible = line.portrait != null
 	_dialogue_label.text = line.text
 	_dialogue_label.visible_characters = 0
 
