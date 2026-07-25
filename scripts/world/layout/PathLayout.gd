@@ -2,109 +2,85 @@
 class_name PathLayout
 extends RefCounted
 
-## Path tile placement along point sequences — split out of
-## AuthoredIslandLayout.gd unchanged.
+## Path placement along point sequences — split out of AuthoredIslandLayout.gd.
+## Renders as a single terrain-following flat-colored ribbon rather than
+## individual tile meshes, which read as visual clutter once tiled across a
+## long path. See docs/ISLAND_LAYOUT.md.
 
 const TERRAIN_PLACEMENT: GDScript = preload("res://scripts/world/TerrainPlacement.gd")
 const PLACEMENT: GDScript = preload("res://scripts/world/layout/PlacementPrimitives.gd")
 
-const PATH_TILES: Array[PackedScene] = [
-	preload("res://Scenes/Layout/Island/PathTileRockA.tscn"),
-	preload("res://Scenes/Layout/Island/PathTileRockB.tscn"),
-	preload("res://Scenes/Layout/Island/PathTileRockC.tscn"),
-]
+const SAMPLE_SPACING := 1.5
+const SURFACE_OFFSET := 0.05
 
 
 static func make_path(parent: Node3D, terrain: Node, scene_root: Node, path_name: String, points: Array, width: float, material: Material) -> void:
-	var root := Node3D.new()
-	root.name = path_name
-	parent.add_child(root)
-	PLACEMENT.own_node(root, scene_root)
+	var surface := SurfaceTool.new()
+	surface.begin(Mesh.PRIMITIVE_TRIANGLES)
 
-	var tint_color := Color.WHITE
-	if material is StandardMaterial3D:
-		tint_color = (material as StandardMaterial3D).albedo_color
-
-	var tile_index := 0
+	var uv_distance := 0.0
 	for i in range(points.size() - 1):
-		var include_end: bool = i == points.size() - 2
-		tile_index = make_path_between(root, terrain, scene_root, path_name, points[i], points[i + 1], width, tint_color, tile_index, include_end)
+		uv_distance = _add_segment(surface, terrain, points[i], points[i + 1], width, uv_distance)
+
+	surface.generate_normals()
+	var mesh := surface.commit()
+
+	var mesh_instance := MeshInstance3D.new()
+	mesh_instance.name = path_name
+	mesh_instance.mesh = mesh
+	mesh_instance.material_override = material
+	parent.add_child(mesh_instance)
+	PLACEMENT.own_node(mesh_instance, scene_root)
 
 
-static func make_path_between(parent: Node3D, terrain: Node, scene_root: Node, path_name: String, from_point: Vector2, to_point: Vector2, width: float, tint_color: Color, start_index: int, include_end: bool) -> int:
+## Appends one terrain-sampled quad strip to the ribbon and returns the
+## running UV distance so consecutive segments tile continuously along a
+## multi-point path instead of resetting their texture coordinates.
+static func _add_segment(surface: SurfaceTool, terrain: Node, from_point: Vector2, to_point: Vector2, width: float, start_uv_distance: float) -> float:
 	var distance: float = from_point.distance_to(to_point)
-	var direction: Vector2 = (to_point - from_point).normalized()
-	var base_yaw: float = atan2(direction.x, direction.y)
-	var perpendicular: Vector2 = Vector2(direction.y, -direction.x)
-	var tile_target_size: float = clampf(width * 0.42, 1.0, 2.0)
-	var spacing: float = tile_target_size * 0.8
-	var step_count: int = maxi(1, int(round(distance / spacing)))
-	var last_step: int = step_count if include_end else step_count - 1
+	if distance < 0.01:
+		return start_uv_distance
 
-	var index := start_index
-	for step in range(last_step + 1):
+	var direction: Vector2 = (to_point - from_point).normalized()
+	var perpendicular: Vector2 = Vector2(direction.y, -direction.x) * (width * 0.5)
+	var step_count: int = maxi(1, int(round(distance / SAMPLE_SPACING)))
+	var step_distance: float = distance / float(step_count)
+
+	var previous_left := Vector3.ZERO
+	var previous_right := Vector3.ZERO
+	var previous_uv := start_uv_distance
+	var uv_distance := start_uv_distance
+
+	for step in range(step_count + 1):
 		var t: float = float(step) / float(step_count)
 		var xz: Vector2 = from_point.lerp(to_point, t)
+		var left: float = TERRAIN_PLACEMENT.terrain_height(terrain, xz + perpendicular)
+		var right: float = TERRAIN_PLACEMENT.terrain_height(terrain, xz - perpendicular)
+		var left_point := Vector3(xz.x + perpendicular.x, left + SURFACE_OFFSET, xz.y + perpendicular.y)
+		var right_point := Vector3(xz.x - perpendicular.x, right + SURFACE_OFFSET, xz.y - perpendicular.y)
 
-		var rng := RandomNumberGenerator.new()
-		rng.seed = hash("%s_tile_%d" % [path_name, index])
-		var yaw_jitter: float = rng.randf_range(-0.35, 0.35)
-		var scale_jitter: float = rng.randf_range(0.88, 1.12)
-		var lateral_jitter: float = rng.randf_range(-0.3, 0.3) * tile_target_size * 0.3
-		xz += perpendicular * lateral_jitter
-		var tile_scene: PackedScene = PATH_TILES[rng.randi_range(0, PATH_TILES.size() - 1)]
+		if step > 0:
+			_add_quad(surface, previous_left, previous_right, left_point, right_point, previous_uv, uv_distance)
 
-		place_path_tile(parent, terrain, scene_root, "%s_Tile%02d" % [path_name, index], tile_scene, xz, base_yaw + yaw_jitter, tile_target_size * scale_jitter, tint_color)
-		index += 1
+		previous_left = left_point
+		previous_right = right_point
+		previous_uv = uv_distance
+		uv_distance += step_distance
 
-	return index
-
-
-static func place_path_tile(parent: Node3D, terrain: Node, scene_root: Node, node_name: String, tile_scene: PackedScene, xz: Vector2, yaw: float, target_size: float, tint_color: Color) -> void:
-	var node: Node3D = tile_scene.instantiate() as Node3D
-	if node == null:
-		return
-	node.name = node_name
-	node.set("apply_tint", true)
-	node.set("tint_color", tint_color)
-	parent.add_child(node)
-	PLACEMENT.own_node(node, scene_root)
-
-	var footprint: Vector3 = measure_local_footprint(node)
-	var base_size: float = maxf(maxf(footprint.x, footprint.z), 0.01)
-	var scale_value: Vector3 = Vector3.ONE * (target_size / base_size)
-
-	TERRAIN_PLACEMENT.apply_surface(node, terrain, xz, yaw, 0.05, scale_value, 0.35)
+	return uv_distance
 
 
-static func measure_local_footprint(node: Node3D) -> Vector3:
-	var mesh_instance := find_mesh_instance(node)
-	if mesh_instance == null:
-		return Vector3.ONE
-	var aabb: AABB = mesh_instance.get_aabb()
-	var relative_xform: Transform3D = node.global_transform.affine_inverse() * mesh_instance.global_transform
-	var result := AABB()
-	var first := true
-	for i in range(8):
-		var corner: Vector3 = aabb.position + Vector3(
-			aabb.size.x * float(i & 1),
-			aabb.size.y * float((i >> 1) & 1),
-			aabb.size.z * float((i >> 2) & 1)
-		)
-		var world_corner: Vector3 = relative_xform * corner
-		if first:
-			result = AABB(world_corner, Vector3.ZERO)
-			first = false
-		else:
-			result = result.expand(world_corner)
-	return result.size
+static func _add_quad(surface: SurfaceTool, a_left: Vector3, a_right: Vector3, b_left: Vector3, b_right: Vector3, u0: float, u1: float) -> void:
+	surface.set_uv(Vector2(0.0, u0))
+	surface.add_vertex(a_left)
+	surface.set_uv(Vector2(1.0, u0))
+	surface.add_vertex(a_right)
+	surface.set_uv(Vector2(1.0, u1))
+	surface.add_vertex(b_right)
 
-
-static func find_mesh_instance(node: Node) -> MeshInstance3D:
-	if node is MeshInstance3D:
-		return node as MeshInstance3D
-	for child in node.get_children():
-		var found := find_mesh_instance(child)
-		if found != null:
-			return found
-	return null
+	surface.set_uv(Vector2(0.0, u0))
+	surface.add_vertex(a_left)
+	surface.set_uv(Vector2(1.0, u1))
+	surface.add_vertex(b_right)
+	surface.set_uv(Vector2(0.0, u1))
+	surface.add_vertex(b_left)

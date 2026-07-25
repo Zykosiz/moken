@@ -19,6 +19,8 @@ height = 0.24
 albedo_color = Color(0.15, 0.85, 1, 1)
 
 [node name="NpcBase" type="CharacterBody3D"]
+floor_max_angle = 1.0472
+floor_snap_length = 0.5
 script = ExtResource("1_base")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="DialogueSequence" format=3 uid="uid://cgeglil6ywat6"]
+
+[ext_resource type="Script" uid="uid://bsykum8g6nad" path="res://scripts/dialogue/DialogueLine.gd" id="1_line"]
+[ext_resource type="Script" uid="uid://bu1gfy6c7178i" path="res://scripts/dialogue/DialogueSequence.gd" id="2_sequence"]
+
+[sub_resource type="Resource" id="Resource_1"]
+script = ExtResource("1_line")
+speaker_name = "Vyla"
+text = "Halvard! He's up. Barely."
+
+[sub_resource type="Resource" id="Resource_2"]
+script = ExtResource("1_line")
+speaker_name = "Halvard"
+text = "Punctual as ever, I see."
+
+[sub_resource type="Resource" id="Resource_3"]
+script = ExtResource("1_line")
+speaker_name = "Zako"
+text = "I'm here, aren't I."
+
+[sub_resource type="Resource" id="Resource_4"]
+script = ExtResource("1_line")
+speaker_name = "Halvard"
+text = "Barely counts. Come inside — we've got a lot to go over before I'm anyone's problem but yours."
+
+[sub_resource type="Resource" id="Resource_5"]
+script = ExtResource("1_line")
+speaker_name = "Vyla"
+text = "That's my cue. I've got things to do that don't involve listening to two lighthouse keepers talk about maintenance schedules."
+
+[sub_resource type="Resource" id="Resource_6"]
+script = ExtResource("1_line")
+speaker_name = "Halvard"
+text = "Go on, then."
+
+[sub_resource type="Resource" id="Resource_7"]
+script = ExtResource("1_line")
+speaker_name = "Vyla"
+text = "...See you at dinner, Zako."
+
+[sub_resource type="Resource" id="Resource_8"]
+script = ExtResource("1_line")
+speaker_name = "Zako"
+text = "Wouldn't miss it."
+
+[resource]
+script = ExtResource("2_sequence")
+lines = Array[ExtResource("1_line")]([SubResource("Resource_1"), SubResource("Resource_2"), SubResource("Resource_3"), SubResource("Resource_4"), SubResource("Resource_5"), SubResource("Resource_6"), SubResource("Resource_7"), SubResource("Resource_8")])

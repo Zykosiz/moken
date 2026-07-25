@@ -11,6 +11,8 @@ radius = 1.6
 [node name="Player" unique_id=1015841286 instance=ExtResource("1_real")]
 jump_velocity = 8.0
 camera_distance = 6.5
+floor_max_angle = 1.0472
+floor_snap_length = 0.5
 
 [node name="GeneralSkeleton" parent="character" parent_id_path=PackedInt32Array(1251024955) index="1" unique_id=1635208342]
 bones/1/position = Vector3(-0.014261888, 1.0070575, 0.031545002)

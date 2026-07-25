@@ -16,6 +16,9 @@ var _box: DialogueBox
 var _sequence: DialogueSequence
 var _current_index: int = -1
 var _player: Node3D
+var _freeze_player: bool = true
+var _auto_advance_delay: float = 0.0
+var _auto_advance_token: int = 0
 
 
 func _ready() -> void:
@@ -23,18 +26,27 @@ func _ready() -> void:
 	add_child(_box)
 
 
-func play_sequence(sequence: DialogueSequence) -> void:
+## auto_advance_delay > 0 makes each line advance on its own after that many
+## seconds of read time past the reveal finishing, so a fully scripted
+## sequence (e.g. the opening) never stalls waiting on player input —
+## pressing "interact" still skips ahead immediately as normal.
+## freeze_player = false lets a sequence play out over real player movement
+## (e.g. the opening's walk-and-talk beat) instead of pausing it.
+func play_sequence(sequence: DialogueSequence, auto_advance_delay: float = 0.0, freeze_player: bool = true) -> void:
 	if is_active or sequence == null or sequence.lines.is_empty():
 		return
 
 	_sequence = sequence
 	_current_index = -1
 	is_active = true
+	_auto_advance_delay = auto_advance_delay
+	_freeze_player = freeze_player
 
 	_player = _find_player()
-	if _player != null:
+	if _player != null and _freeze_player:
 		_player.frozen = true
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	if _freeze_player:
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 	_box.open()
 	dialogue_started.emit()
@@ -51,21 +63,35 @@ func advance() -> void:
 
 
 func _advance_to_next_line() -> void:
+	_auto_advance_token += 1
 	_current_index += 1
 	if _current_index >= _sequence.lines.size():
 		_finish()
 		return
-	_box.show_line(_sequence.lines[_current_index])
+	var line: DialogueLine = _sequence.lines[_current_index]
+	_box.show_line(line)
+	if _auto_advance_delay > 0.0:
+		_schedule_auto_advance(_auto_advance_token, line.text)
+
+
+func _schedule_auto_advance(token: int, text: String) -> void:
+	var reveal_time := 0.0
+	if not UIAccessibility.reduced_motion:
+		reveal_time = text.length() / DialogueBox.CHARACTERS_PER_SECOND
+	await get_tree().create_timer(reveal_time + _auto_advance_delay).timeout
+	if is_active and token == _auto_advance_token:
+		advance()
 
 
 func _finish() -> void:
 	is_active = false
 	_box.close()
-	if _player != null:
+	if _player != null and _freeze_player:
 		_player.frozen = false
 	_player = null
 	_sequence = null
 	_current_index = -1
+	_auto_advance_token += 1
 	dialogue_finished.emit()
 
 
@@ -81,6 +107,7 @@ func reset_for_scene_change() -> void:
 	_player = null
 	_sequence = null
 	_current_index = -1
+	_auto_advance_token += 1
 
 
 func _find_player() -> Node3D:

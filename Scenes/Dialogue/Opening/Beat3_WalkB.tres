@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="DialogueSequence" format=3 uid="uid://cqvfjwgxm51qi"]
+
+[ext_resource type="Script" uid="uid://bsykum8g6nad" path="res://scripts/dialogue/DialogueLine.gd" id="1_line"]
+[ext_resource type="Script" uid="uid://bu1gfy6c7178i" path="res://scripts/dialogue/DialogueSequence.gd" id="2_sequence"]
+
+[sub_resource type="Resource" id="Resource_1"]
+script = ExtResource("1_line")
+speaker_name = "Vyla"
+text = "You know, most people who take this job aren't from here. They get sent. You actually asked for it."
+
+[sub_resource type="Resource" id="Resource_2"]
+script = ExtResource("1_line")
+speaker_name = "Zako"
+text = "Is that strange?"
+
+[sub_resource type="Resource" id="Resource_3"]
+script = ExtResource("1_line")
+speaker_name = "Vyla"
+text = "It's just — I don't know. It's nice, I guess. That someone wanted to stay."
+
+[sub_resource type="Resource" id="Resource_4"]
+script = ExtResource("1_line")
+speaker_name = "Zako"
+text = "I like it here. More than I expected to, honestly."
+
+[sub_resource type="Resource" id="Resource_5"]
+script = ExtResource("1_line")
+speaker_name = "Vyla"
+text = "Good. That's good."
+
+[resource]
+script = ExtResource("2_sequence")
+lines = Array[ExtResource("1_line")]([SubResource("Resource_1"), SubResource("Resource_2"), SubResource("Resource_3"), SubResource("Resource_4"), SubResource("Resource_5")])

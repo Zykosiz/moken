@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="DialogueSequence" format=3 uid="uid://vjkiffyrsbsr"]
+
+[ext_resource type="Script" uid="uid://bsykum8g6nad" path="res://scripts/dialogue/DialogueLine.gd" id="1_line"]
+[ext_resource type="Script" uid="uid://bu1gfy6c7178i" path="res://scripts/dialogue/DialogueSequence.gd" id="2_sequence"]
+
+[sub_resource type="Resource" id="Resource_1"]
+script = ExtResource("1_line")
+speaker_name = "Vyla"
+text = "There he is. Lighthouse Keeper Zako. Doesn't have the same ring as just \"Zako,\" does it?"
+
+[sub_resource type="Resource" id="Resource_2"]
+script = ExtResource("1_line")
+speaker_name = "Zako"
+text = "Give it time. Maybe it'll grow on both of us."
+
+[sub_resource type="Resource" id="Resource_3"]
+script = ExtResource("1_line")
+speaker_name = "Vyla"
+text = "Come on — everyone's going to want to see you off. Well. Not everyone. But some people."
+
+[sub_resource type="Resource" id="Resource_4"]
+script = ExtResource("1_line")
+speaker_name = "Zako"
+text = "That's reassuring."
+
+[sub_resource type="Resource" id="Resource_5"]
+script = ExtResource("1_line")
+speaker_name = "Vyla"
+text = "It's a bit of a walk from here to the lighthouse, you know. Halvard picked the one house on the island furthest from his own front door."
+
+[sub_resource type="Resource" id="Resource_6"]
+script = ExtResource("1_line")
+speaker_name = "Zako"
+text = "Sounds like something he'd do on purpose."
+
+[sub_resource type="Resource" id="Resource_7"]
+script = ExtResource("1_line")
+speaker_name = "Vyla"
+text = "Knowing him? Absolutely on purpose."
+
+[resource]
+script = ExtResource("2_sequence")
+lines = Array[ExtResource("1_line")]([SubResource("Resource_1"), SubResource("Resource_2"), SubResource("Resource_3"), SubResource("Resource_4"), SubResource("Resource_5"), SubResource("Resource_6"), SubResource("Resource_7")])

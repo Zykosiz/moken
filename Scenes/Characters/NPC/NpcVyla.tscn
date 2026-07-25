@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://Scenes/Characters/NPC/NpcBase.tscn" id="1_base"]
+
+[node name="NpcVyla" instance=ExtResource("1_base")]
+display_name = "Vyla"
+movement_speed = 1.6
+body_color = Color(0.86, 0.62, 0.32, 1)

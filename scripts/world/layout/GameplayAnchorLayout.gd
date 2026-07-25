@@ -19,3 +19,4 @@ static func make_anchors(parent: Node3D, terrain: Node, scene_root: Node, harbou
 	PLACEMENT.make_marker(parent, terrain, scene_root, "FutureBattleTransitionTrigger", town.lerp(harbour, 0.45))
 	PLACEMENT.make_marker(parent, terrain, scene_root, "QuietCoastAnchor", quiet)
 	PLACEMENT.make_marker(parent, terrain, scene_root, "InlandGreenAnchor", inland)
+	PLACEMENT.make_marker(parent, terrain, scene_root, "ZakoHouse", town + Vector2(-6.0, 4.0))

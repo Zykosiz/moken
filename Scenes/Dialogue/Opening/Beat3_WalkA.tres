@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="DialogueSequence" format=3 uid="uid://o2n6ro7u6syf"]
+
+[ext_resource type="Script" uid="uid://bsykum8g6nad" path="res://scripts/dialogue/DialogueLine.gd" id="1_line"]
+[ext_resource type="Script" uid="uid://bu1gfy6c7178i" path="res://scripts/dialogue/DialogueSequence.gd" id="2_sequence"]
+
+[sub_resource type="Resource" id="Resource_1"]
+script = ExtResource("1_line")
+speaker_name = "Vyla"
+text = "So. Nervous?"
+
+[sub_resource type="Resource" id="Resource_2"]
+script = ExtResource("1_line")
+speaker_name = "Zako"
+text = "Should I be?"
+
+[sub_resource type="Resource" id="Resource_3"]
+script = ExtResource("1_line")
+speaker_name = "Vyla"
+text = "Halvard's been doing this since before either of our parents were born. He's going to expect a lot from you."
+
+[sub_resource type="Resource" id="Resource_4"]
+script = ExtResource("1_line")
+speaker_name = "Zako"
+text = "Comforting."
+
+[sub_resource type="Resource" id="Resource_5"]
+script = ExtResource("1_line")
+speaker_name = "Vyla"
+text = "I just mean — he wouldn't have picked you if he didn't think you could handle it. He's not exactly generous with his approval."
+
+[sub_resource type="Resource" id="Resource_6"]
+script = ExtResource("1_line")
+speaker_name = "Zako"
+text = "Is that supposed to help?"
+
+[sub_resource type="Resource" id="Resource_7"]
+script = ExtResource("1_line")
+speaker_name = "Vyla"
+text = "A little. Take what you can get."
+
+[resource]
+script = ExtResource("2_sequence")
+lines = Array[ExtResource("1_line")]([SubResource("Resource_1"), SubResource("Resource_2"), SubResource("Resource_3"), SubResource("Resource_4"), SubResource("Resource_5"), SubResource("Resource_6"), SubResource("Resource_7")])

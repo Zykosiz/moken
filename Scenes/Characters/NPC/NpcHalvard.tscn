@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://Scenes/Characters/NPC/NpcBase.tscn" id="1_base"]
+
+[node name="NpcHalvard" instance=ExtResource("1_base")]
+display_name = "Halvard"
+can_interact = false
+movement_speed = 1.6
+body_color = Color(0.45, 0.48, 0.55, 1)
