@@ -100,6 +100,16 @@ func _ready() -> void:
 func set_selected(selected: bool) -> void:
 	if _selected == selected:
 		return
+
+	if selected:
+		# Refresh right before use rather than trusting the _ready()/resized
+		# snapshot: `resized` only fires on size changes, not the position a
+		# parent Container assigns once it finishes laying out children (e.g.
+		# CenterContainer/VBoxContainer), so the cached value can be stale by
+		# the time of the first hover. Safe to recapture here since we're not
+		# currently selected — `position` right now is the true rest position.
+		_base_position = position
+
 	_selected = selected
 
 	var target_selection := 1.0 if selected else 0.0
