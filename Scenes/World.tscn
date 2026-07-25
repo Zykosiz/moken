@@ -5844,9 +5844,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82, 3.9870148, 42)
 [node name="InlandGreenAnchor" type="Marker3D" parent="Island/AuthoredLayout/GameplayAnchors" unique_id=405767297]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 7.1590123, -12)
 
-[node name="TemporaryNPCs" type="Node3D" parent="Island/AuthoredLayout" unique_id=2085767856]
+[node name="NPCs" type="Node3D" parent="Island/AuthoredLayout" unique_id=2085767856]
 
-[node name="HarbourFisherA" type="CharacterBody3D" parent="Island/AuthoredLayout/TemporaryNPCs" unique_id=677615217 instance=ExtResource("48_oe68r")]
+[node name="HarbourFisherA" type="CharacterBody3D" parent="Island/AuthoredLayout/NPCs" unique_id=677615217 instance=ExtResource("48_oe68r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76, 4.183921, 56)
 script = ExtResource("49_46wus")
 display_name = "Fisher"
@@ -5854,7 +5854,7 @@ movement_speed = 1.35
 terrain_path = NodePath("../../../Terrain/TerrainMesh")
 body_color = Color(0.2, 0.42, 0.78, 1)
 
-[node name="HarbourFisherB" type="CharacterBody3D" parent="Island/AuthoredLayout/TemporaryNPCs" unique_id=1831922625 instance=ExtResource("48_oe68r")]
+[node name="HarbourFisherB" type="CharacterBody3D" parent="Island/AuthoredLayout/NPCs" unique_id=1831922625 instance=ExtResource("48_oe68r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84, 1.9607563, 52)
 script = ExtResource("49_46wus")
 display_name = "Fisher"
@@ -5862,7 +5862,7 @@ movement_speed = 1.35
 terrain_path = NodePath("../../../Terrain/TerrainMesh")
 body_color = Color(0.2, 0.42, 0.78, 1)
 
-[node name="VillageVillagerA" type="CharacterBody3D" parent="Island/AuthoredLayout/TemporaryNPCs" unique_id=299708195 instance=ExtResource("50_idtu4")]
+[node name="VillageVillagerA" type="CharacterBody3D" parent="Island/AuthoredLayout/NPCs" unique_id=299708195 instance=ExtResource("50_idtu4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 17.58782, 27)
 script = ExtResource("49_46wus")
 display_name = "Villager"
@@ -5870,7 +5870,7 @@ movement_speed = 1.5
 terrain_path = NodePath("../../../Terrain/TerrainMesh")
 body_color = Color(0.25, 0.66, 0.48, 1)
 
-[node name="VillageVillagerB" type="CharacterBody3D" parent="Island/AuthoredLayout/TemporaryNPCs" unique_id=1973416862 instance=ExtResource("50_idtu4")]
+[node name="VillageVillagerB" type="CharacterBody3D" parent="Island/AuthoredLayout/NPCs" unique_id=1973416862 instance=ExtResource("50_idtu4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 18.900112, 28)
 script = ExtResource("49_46wus")
 display_name = "Villager"
@@ -5878,7 +5878,7 @@ movement_speed = 1.5
 terrain_path = NodePath("../../../Terrain/TerrainMesh")
 body_color = Color(0.25, 0.66, 0.48, 1)
 
-[node name="VillageVillagerC" type="CharacterBody3D" parent="Island/AuthoredLayout/TemporaryNPCs" unique_id=66647734 instance=ExtResource("50_idtu4")]
+[node name="VillageVillagerC" type="CharacterBody3D" parent="Island/AuthoredLayout/NPCs" unique_id=66647734 instance=ExtResource("50_idtu4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 19.455557, 19)
 script = ExtResource("49_46wus")
 display_name = "Villager"
@@ -5886,7 +5886,7 @@ movement_speed = 1.5
 terrain_path = NodePath("../../../Terrain/TerrainMesh")
 body_color = Color(0.25, 0.66, 0.48, 1)
 
-[node name="SlopeResident" type="CharacterBody3D" parent="Island/AuthoredLayout/TemporaryNPCs" unique_id=1406213681 instance=ExtResource("50_idtu4")]
+[node name="SlopeResident" type="CharacterBody3D" parent="Island/AuthoredLayout/NPCs" unique_id=1406213681 instance=ExtResource("50_idtu4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 14.119872, 32)
 script = ExtResource("49_46wus")
 display_name = "Villager"
@@ -5894,7 +5894,7 @@ movement_speed = 1.5
 terrain_path = NodePath("../../../Terrain/TerrainMesh")
 body_color = Color(0.25, 0.66, 0.48, 1)
 
-[node name="LighthousePathWalker" type="CharacterBody3D" parent="Island/AuthoredLayout/TemporaryNPCs" unique_id=1002513962 instance=ExtResource("51_a0mrw")]
+[node name="LighthousePathWalker" type="CharacterBody3D" parent="Island/AuthoredLayout/NPCs" unique_id=1002513962 instance=ExtResource("51_a0mrw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76, 21.544254, -23)
 script = ExtResource("49_46wus")
 display_name = "Guard"

@@ -35,7 +35,8 @@ var _stone_material: StandardMaterial3D
 
 
 func _ready() -> void:
-	_build_layout()
+	if get_node_or_null("Districts") == null:
+		_build_layout()
 
 
 func _set_regenerate(value: bool) -> void:

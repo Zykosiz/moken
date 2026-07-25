@@ -34,7 +34,8 @@ var _terrain: Node
 
 func _ready() -> void:
 	_terrain = get_node_or_null(terrain_path)
-	_generate()
+	if get_child_count() == 0:
+		_generate()
 
 
 func _set_regenerate(value: bool) -> void:

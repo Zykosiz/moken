@@ -17,9 +17,18 @@ extends Node3D
 @export_flags_3d_physics var collision_layer_bits: int = 1
 @export_flags_3d_physics var collision_mask_bits: int = 1
 
+@export var rebuild: bool = false : set = _set_rebuild
+
 
 func _ready() -> void:
-	_rebuild()
+	if get_node_or_null("Visual") == null:
+		_rebuild()
+
+
+func _set_rebuild(value: bool) -> void:
+	if value:
+		_rebuild()
+	rebuild = false
 
 
 func _rebuild() -> void:

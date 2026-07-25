@@ -39,7 +39,8 @@ var _edge_noise := FastNoiseLite.new()
 
 func _ready() -> void:
 	_configure_noise()
-	_generate_mesh()
+	if mesh == null:
+		_generate_mesh()
 
 
 func _set_regenerate(value: bool) -> void:
