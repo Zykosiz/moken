@@ -6,9 +6,9 @@
 [node name="VillageInn" type="Node3D"]
 script = ExtResource("1_script")
 source_scene = ExtResource("2_asset")
-source_scale = Vector3(0.9, 0.9, 0.9)
+source_scale = Vector3(1, 1, 1)
 apply_tint = true
 tint_color = Color(0.68, 0.55, 0.43, 1)
 collision_enabled = true
-collision_size = Vector3(9.0, 5.0, 8.0)
-collision_center = Vector3(0, 2.5, 0)
+collision_size = Vector3(10.0, 5.56, 8.89)
+collision_center = Vector3(0, 2.78, 0)

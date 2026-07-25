@@ -21,6 +21,11 @@ const NPC_VILLAGER: PackedScene = preload("res://Scenes/Characters/NPC/NpcVillag
 const NPC_FISHER: PackedScene = preload("res://Scenes/Characters/NPC/NpcFisher.tscn")
 const NPC_GUARD: PackedScene = preload("res://Scenes/Characters/NPC/NpcGuard.tscn")
 const TERRAIN_PLACEMENT: GDScript = preload("res://scripts/world/TerrainPlacement.gd")
+const PATH_TILES: Array[PackedScene] = [
+	preload("res://Scenes/Layout/Island/PathTileRockA.tscn"),
+	preload("res://Scenes/Layout/Island/PathTileRockB.tscn"),
+	preload("res://Scenes/Layout/Island/PathTileRockC.tscn"),
+]
 
 enum PlacementCategory {
 	BUILDING,
@@ -43,8 +48,6 @@ const WATER_DOCK_HEIGHT := 0.26
 var _terrain: Node
 var _sand_material: StandardMaterial3D
 var _stone_material: StandardMaterial3D
-var _district_material: StandardMaterial3D
-var _anchor_material: StandardMaterial3D
 
 
 func _ready() -> void:
@@ -69,22 +72,27 @@ func _build_layout() -> void:
 	var districts := Node3D.new()
 	districts.name = "Districts"
 	add_child(districts)
+	_own(districts)
 
 	var paths := Node3D.new()
 	paths.name = "Paths"
 	add_child(paths)
+	_own(paths)
 
 	var vegetation := Node3D.new()
 	vegetation.name = "VegetationMasses"
 	add_child(vegetation)
+	_own(vegetation)
 
 	var anchors := Node3D.new()
 	anchors.name = "GameplayAnchors"
 	add_child(anchors)
+	_own(anchors)
 
 	var layout_npcs := Node3D.new()
 	layout_npcs.name = "TemporaryNPCs"
 	add_child(layout_npcs)
+	_own(layout_npcs)
 
 	var harbour: Vector2 = _find_best_near(Vector2(72.0, 50.0), 34.0, 0.12, 0.48, 0.78)
 	var town: Vector2 = _find_best_near(Vector2(48.0, 38.0), 30.0, 0.28, 0.66, 0.72)
@@ -129,6 +137,11 @@ func _clear() -> void:
 		child.queue_free()
 
 
+func _own(node: Node) -> void:
+	if Engine.is_editor_hint() and get_tree() != null and get_tree().edited_scene_root != null:
+		node.owner = get_tree().edited_scene_root
+
+
 func _make_materials() -> void:
 	_sand_material = StandardMaterial3D.new()
 	_sand_material.albedo_color = Color(0.86, 0.75, 0.52, 1.0)
@@ -137,16 +150,6 @@ func _make_materials() -> void:
 	_stone_material = StandardMaterial3D.new()
 	_stone_material.albedo_color = Color(0.55, 0.53, 0.47, 1.0)
 	_stone_material.roughness = 0.95
-
-	_district_material = StandardMaterial3D.new()
-	_district_material.albedo_color = Color(1.0, 0.86, 0.55, 0.25)
-	_district_material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-	_district_material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-
-	_anchor_material = StandardMaterial3D.new()
-	_anchor_material.albedo_color = Color(0.2, 0.75, 1.0, 1.0)
-	_anchor_material.emission_enabled = true
-	_anchor_material.emission = Color(0.2, 0.75, 1.0, 1.0)
 
 
 func _find_best_near(center: Vector2, radius: float, min_mask: float, max_mask: float, min_normal_y: float) -> Vector2:
@@ -197,50 +200,104 @@ func _make_district(parent: Node3D, district_name: String, center: Vector2, radi
 	var root := Node3D.new()
 	root.name = district_name
 	parent.add_child(root)
-
-	var marker := MeshInstance3D.new()
-	marker.name = "DistrictExtent"
-	var mesh := CylinderMesh.new()
-	mesh.top_radius = radius
-	mesh.bottom_radius = radius
-	mesh.height = 0.05
-	mesh.radial_segments = 32
-	marker.mesh = mesh
-	marker.material_override = _district_material
-	root.add_child(marker)
-	marker.global_position = _to_world(center, 0.03)
+	_own(root)
+	root.global_position = _to_world(center, 0.0)
+	root.set_meta("district_radius", radius)
 
 
 func _make_path(parent: Node3D, path_name: String, points: Array, width: float, material: Material) -> void:
 	var root := Node3D.new()
 	root.name = path_name
 	parent.add_child(root)
+	_own(root)
+
+	var tint_color := Color.WHITE
+	if material is StandardMaterial3D:
+		tint_color = (material as StandardMaterial3D).albedo_color
+
+	var tile_index := 0
 	for i in range(points.size() - 1):
-		var from_point: Vector2 = points[i]
-		var to_point: Vector2 = points[i + 1]
-		_make_path_between(root, from_point, to_point, width, material)
+		var include_end: bool = i == points.size() - 2
+		tile_index = _make_path_between(root, path_name, points[i], points[i + 1], width, tint_color, tile_index, include_end)
 
 
-func _make_path_between(parent: Node3D, from_point: Vector2, to_point: Vector2, width: float, material: Material) -> void:
+func _make_path_between(parent: Node3D, path_name: String, from_point: Vector2, to_point: Vector2, width: float, tint_color: Color, start_index: int, include_end: bool) -> int:
 	var distance: float = from_point.distance_to(to_point)
-	var segments: int = maxi(1, int(ceil(distance / 4.0)))
-	for index in range(segments):
-		var t0: float = float(index) / float(segments)
-		var t1: float = float(index + 1) / float(segments)
-		var a: Vector2 = from_point.lerp(to_point, t0)
-		var b: Vector2 = from_point.lerp(to_point, t1)
-		var center: Vector2 = a.lerp(b, 0.5)
-		var length: float = a.distance_to(b) + 0.25
-		var mesh_instance := MeshInstance3D.new()
-		mesh_instance.name = "PathSegment"
-		var mesh := BoxMesh.new()
-		mesh.size = Vector3(width, 0.08, length)
-		mesh_instance.mesh = mesh
-		mesh_instance.material_override = material
-		parent.add_child(mesh_instance)
-		mesh_instance.global_position = _to_world(center, 0.05)
-		var direction := b - a
-		mesh_instance.rotation.y = atan2(direction.x, direction.y)
+	var direction: Vector2 = (to_point - from_point).normalized()
+	var base_yaw: float = atan2(direction.x, direction.y)
+	var perpendicular: Vector2 = Vector2(direction.y, -direction.x)
+	var tile_target_size: float = clampf(width * 0.42, 1.0, 2.0)
+	var spacing: float = tile_target_size * 0.8
+	var step_count: int = maxi(1, int(round(distance / spacing)))
+	var last_step: int = step_count if include_end else step_count - 1
+
+	var index := start_index
+	for step in range(last_step + 1):
+		var t: float = float(step) / float(step_count)
+		var xz: Vector2 = from_point.lerp(to_point, t)
+
+		var rng := RandomNumberGenerator.new()
+		rng.seed = hash("%s_tile_%d" % [path_name, index])
+		var yaw_jitter: float = rng.randf_range(-0.35, 0.35)
+		var scale_jitter: float = rng.randf_range(0.88, 1.12)
+		var lateral_jitter: float = rng.randf_range(-0.3, 0.3) * tile_target_size * 0.3
+		xz += perpendicular * lateral_jitter
+		var tile_scene: PackedScene = PATH_TILES[rng.randi_range(0, PATH_TILES.size() - 1)]
+
+		_place_path_tile(parent, "%s_Tile%02d" % [path_name, index], tile_scene, xz, base_yaw + yaw_jitter, tile_target_size * scale_jitter, tint_color)
+		index += 1
+
+	return index
+
+
+func _place_path_tile(parent: Node3D, node_name: String, tile_scene: PackedScene, xz: Vector2, yaw: float, target_size: float, tint_color: Color) -> void:
+	var node: Node3D = tile_scene.instantiate() as Node3D
+	if node == null:
+		return
+	node.name = node_name
+	node.set("apply_tint", true)
+	node.set("tint_color", tint_color)
+	parent.add_child(node)
+	_own(node)
+
+	var footprint: Vector3 = _measure_local_footprint(node)
+	var base_size: float = maxf(maxf(footprint.x, footprint.z), 0.01)
+	var scale_value: Vector3 = Vector3.ONE * (target_size / base_size)
+
+	TERRAIN_PLACEMENT.apply_surface(node, _terrain, xz, yaw, 0.05, scale_value, 0.35)
+
+
+func _measure_local_footprint(node: Node3D) -> Vector3:
+	var mesh_instance := _find_mesh_instance(node)
+	if mesh_instance == null:
+		return Vector3.ONE
+	var aabb: AABB = mesh_instance.get_aabb()
+	var relative_xform: Transform3D = node.global_transform.affine_inverse() * mesh_instance.global_transform
+	var result := AABB()
+	var first := true
+	for i in range(8):
+		var corner: Vector3 = aabb.position + Vector3(
+			aabb.size.x * float(i & 1),
+			aabb.size.y * float((i >> 1) & 1),
+			aabb.size.z * float((i >> 2) & 1)
+		)
+		var world_corner: Vector3 = relative_xform * corner
+		if first:
+			result = AABB(world_corner, Vector3.ZERO)
+			first = false
+		else:
+			result = result.expand(world_corner)
+	return result.size
+
+
+func _find_mesh_instance(node: Node) -> MeshInstance3D:
+	if node is MeshInstance3D:
+		return node as MeshInstance3D
+	for child in node.get_children():
+		var found := _find_mesh_instance(child)
+		if found != null:
+			return found
+	return null
 
 
 func _populate_harbour(parent: Node3D, center: Vector2) -> void:
@@ -279,7 +336,7 @@ func _populate_heart(parent: Node3D, center: Vector2) -> void:
 		var stall_xz := center + Vector2(float(i - 1) * 5.0, 5.0)
 		_place_prop(parent, MARKET_STALL, "MarketStall%d" % i, stall_xz, TERRAIN_PLACEMENT.yaw_towards(stall_xz, center), Vector3.ONE, true, Vector3(4.2, 2.6, 3.4))
 	_make_plaza(parent, "VillagePlaza", center, 8.0)
-	_make_anchor_visual(parent, "CommunalWellBlockout", center + Vector2(0.0, -1.5), Color(0.55, 0.58, 0.62, 1.0), 1.5)
+	_make_marker(parent, "CommunalWellBlockout", center + Vector2(0.0, -1.5), 0.5)
 
 
 func _populate_residential(parent: Node3D, center: Vector2, lighthouse: Vector2) -> void:
@@ -297,7 +354,7 @@ func _populate_lighthouse(parent: Node3D, center: Vector2, harbour: Vector2) -> 
 	_place_building(parent, LIGHTHOUSE, "Lighthouse", center, TERRAIN_PLACEMENT.yaw_towards(center, harbour), Vector3.ONE, Vector2(8.0, 8.0), 1.8)
 	var keeper_xz := center + Vector2(-8.0, -6.0)
 	_place_building(parent, HOUSE_SMALL, "KeeperHouse", keeper_xz, TERRAIN_PLACEMENT.yaw_towards(keeper_xz, center), Vector3.ONE * 0.8, Vector2(5.2, 5.2), BUILDING_SLOPE_DELTA)
-	_make_anchor_visual(parent, "LightBeaconMarker", center + Vector2(0.0, 0.0), Color(1.0, 0.95, 0.55, 1.0), 1.8, 12.0)
+	_make_marker(parent, "LightBeaconMarker", center, 12.0)
 
 
 func _populate_quiet_coast(parent: Node3D, center: Vector2) -> void:
@@ -320,7 +377,7 @@ func _populate_wild_corner(parent: Node3D, center: Vector2) -> void:
 		_place_natural(parent, PALM_CLUSTER, "WildPalm%d" % i, center + Vector2(float(i % 3 - 1) * 8.0, float(i / 3) * 7.0), float(i) * 0.8, Vector3.ONE * 1.2, 0.2, false)
 	for i in range(5):
 		_place_natural(parent, ROCK_SAND, "WildRock%d" % i, center + Vector2(float(i - 2) * 5.0, -7.0), float(i) * 0.4, Vector3.ONE * 1.5, 0.75, true, Vector3(2.8, 1.8, 2.8))
-	_make_anchor_visual(parent, "FutureCoveMysteryBlockout", center + Vector2(4.0, 4.0), Color(0.28, 0.32, 0.34, 1.0), 2.4)
+	_make_marker(parent, "FutureCoveMysteryBlockout", center + Vector2(4.0, 4.0), 0.5)
 
 
 func _populate_vegetation(parent: Node3D, centers: Array) -> void:
@@ -362,6 +419,7 @@ func _place_building(parent: Node3D, scene: PackedScene, node_name: String, xz: 
 	var sampled: TERRAIN_PLACEMENT.FootprintResult = TERRAIN_PLACEMENT.find_nearby_valid_building(_terrain, xz, yaw, footprint, max_height_delta, 14.0, 2.0, 0.62)
 	node.name = node_name
 	parent.add_child(node)
+	_own(node)
 	TERRAIN_PLACEMENT.apply_upright(node, sampled, 0.1, scale_value)
 	_make_foundation(parent, "%sFoundation" % node_name, sampled, footprint + Vector2(1.0, 1.0), 0.34)
 	return node
@@ -384,6 +442,7 @@ func _place_prop(
 	var sampled: TERRAIN_PLACEMENT.FootprintResult = TERRAIN_PLACEMENT.sample_footprint(_terrain, xz, yaw, Vector2(2.0, 2.0))
 	node.name = node_name
 	parent.add_child(node)
+	_own(node)
 	node.global_position = Vector3(xz.x, sampled.center_height + surface_offset, xz.y)
 	node.rotation = Vector3(0.0, yaw, 0.0)
 	node.scale = scale_value
@@ -408,6 +467,7 @@ func _place_natural(
 		return null
 	node.name = node_name
 	parent.add_child(node)
+	_own(node)
 	TERRAIN_PLACEMENT.apply_surface(node, _terrain, xz, yaw, 0.08, scale_value, normal_alignment_strength)
 	if add_collision:
 		_make_collision_box(node, "PlacementCollision", Vector3(0.0, collision_size.y * 0.5, 0.0), 0.0, collision_size)
@@ -421,6 +481,7 @@ func _place_retaining(parent: Node3D, scene: PackedScene, node_name: String, xz:
 	var sampled: TERRAIN_PLACEMENT.FootprintResult = TERRAIN_PLACEMENT.sample_footprint(_terrain, xz, yaw, Vector2(7.0, 1.4))
 	node.name = node_name
 	parent.add_child(node)
+	_own(node)
 	node.global_position = Vector3(xz.x, sampled.average_height + 0.08, xz.y)
 	node.rotation = Vector3(0.0, yaw, 0.0)
 	node.scale = scale_value
@@ -433,6 +494,7 @@ func _place_dock(parent: Node3D, scene: PackedScene, node_name: String, xz: Vect
 		return null
 	node.name = node_name
 	parent.add_child(node)
+	_own(node)
 	node.global_position = Vector3(xz.x, WATER_DOCK_HEIGHT, xz.y)
 	node.rotation = Vector3(0.0, yaw, 0.0)
 	node.scale = scale_value
@@ -446,6 +508,7 @@ func _place_water_scene(parent: Node3D, scene: PackedScene, node_name: String, x
 		return null
 	node.name = node_name
 	parent.add_child(node)
+	_own(node)
 	node.global_position = Vector3(xz.x, WATER_DOCK_HEIGHT - 0.12, xz.y)
 	node.rotation.y = yaw
 	node.scale = scale_value
@@ -458,6 +521,7 @@ func _place_npc(parent: Node3D, scene: PackedScene, node_name: String, xz: Vecto
 		return
 	node.name = node_name
 	parent.add_child(node)
+	_own(node)
 	node.global_position = _to_world(xz, 1.0)
 	node.set("terrain_path", NodePath("../../../Terrain/TerrainMesh"))
 
@@ -472,6 +536,7 @@ func _make_foundation(parent: Node3D, node_name: String, sampled: TERRAIN_PLACEM
 	mesh_instance.mesh = mesh
 	mesh_instance.material_override = _stone_material
 	parent.add_child(mesh_instance)
+	_own(mesh_instance)
 	mesh_instance.global_position = Vector3(sampled.center.x, foundation_y, sampled.center.y)
 	mesh_instance.rotation.y = sampled.yaw
 	_make_collision_box(mesh_instance, "FoundationCollision", Vector3.ZERO, 0.0, Vector3(size.x, foundation_height, size.y))
@@ -487,6 +552,7 @@ func _make_collision_box(parent: Node3D, node_name: String, local_position: Vect
 	body.position = local_position
 	body.rotation.y = yaw
 	parent.add_child(body)
+	_own(body)
 
 	var shape := CollisionShape3D.new()
 	shape.name = "CollisionShape3D"
@@ -494,6 +560,7 @@ func _make_collision_box(parent: Node3D, node_name: String, local_position: Vect
 	box.size = size
 	shape.shape = box
 	body.add_child(shape)
+	_own(shape)
 
 
 func _make_plaza(parent: Node3D, node_name: String, xz: Vector2, radius: float) -> void:
@@ -507,32 +574,16 @@ func _make_plaza(parent: Node3D, node_name: String, xz: Vector2, radius: float) 
 	mesh_instance.mesh = mesh
 	mesh_instance.material_override = _stone_material
 	parent.add_child(mesh_instance)
+	_own(mesh_instance)
 	mesh_instance.global_position = _to_world(xz, 0.04)
 
 
-func _make_anchor_visual(parent: Node3D, node_name: String, xz: Vector2, color: Color, radius: float, height_offset: float = 0.5) -> void:
-	var mesh_instance := MeshInstance3D.new()
-	mesh_instance.name = node_name
-	var mesh := CylinderMesh.new()
-	mesh.top_radius = radius
-	mesh.bottom_radius = radius
-	mesh.height = 1.0
-	mesh.radial_segments = 16
-	mesh_instance.mesh = mesh
-	var material := StandardMaterial3D.new()
-	material.albedo_color = color
-	material.roughness = 0.8
-	mesh_instance.material_override = material
-	parent.add_child(mesh_instance)
-	mesh_instance.global_position = _to_world(xz, height_offset)
-
-
-func _make_marker(parent: Node3D, marker_name: String, xz: Vector2) -> void:
+func _make_marker(parent: Node3D, marker_name: String, xz: Vector2, height_offset: float = 0.35) -> void:
 	var marker := Marker3D.new()
 	marker.name = marker_name
 	parent.add_child(marker)
-	marker.global_position = _to_world(xz, 0.35)
-	_make_anchor_visual(parent, "%sVisual" % marker_name, xz, _anchor_material.albedo_color, 0.8, 0.35)
+	_own(marker)
+	marker.global_position = _to_world(xz, height_offset)
 
 
 func _to_world(xz: Vector2, height_offset: float = 0.0) -> Vector3:
