@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Scenes/UI/Components/GlassPanel.tscn" id="1_base"]
+[ext_resource type="Script" path="res://scripts/ui/PortraitFrame.gd" id="2_script"]
+
+[node name="PortraitFrame" instance=ExtResource("1_base")]
+custom_minimum_size = Vector2(96, 128)
+offset_right = 96.0
+offset_bottom = 128.0
+script = ExtResource("2_script")
+
+[node name="PortraitArt" type="TextureRect" parent="ContentMargin"]
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 6
+mouse_filter = 2

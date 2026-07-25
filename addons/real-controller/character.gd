@@ -72,9 +72,9 @@ var target_camera_distance: float = 3.5
 var is_transitioning_camera: bool = false
 
 func _ready() -> void:
-	## Mouse starts free; left-click captures it (see _unhandled_input) and
-	## Escape releases it again -- avoids locking the cursor the instant the
-	## scene loads, before the player has clicked into the game window.
+	## Mouse starts free and visible; holding the right mouse button captures
+	## it for look control, releasing it on button-up (see _unhandled_input).
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	target_camera_distance = 0.0 if camera_mode == CameraMode.FIRST_PERSON else camera_distance
 	spring_arm.spring_length = target_camera_distance
 	if character:
@@ -186,13 +186,10 @@ func _unhandled_input(event: InputEvent) -> void:
 	if frozen:
 		return
 
-	if event is InputEventKey and event.physical_keycode == KEY_ESCAPE:
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT:
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED if event.pressed else Input.MOUSE_MODE_VISIBLE
 
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		camera_pivot.rotation.x -= event.relative.y * mouse_sensitivity
 		camera_pivot.rotation.x = clampf(camera_pivot.rotation.x, -tilt_limit, tilt_limit)
 		camera_pivot.rotation.y += -event.relative.x * mouse_sensitivity

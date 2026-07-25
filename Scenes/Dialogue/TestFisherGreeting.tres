@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="DialogueSequence" format=3]
+
+[ext_resource type="Script" path="res://scripts/dialogue/DialogueLine.gd" id="1_byjj0"]
+[ext_resource type="Script" path="res://scripts/dialogue/DialogueSequence.gd" id="2_w1myi"]
+
+[sub_resource type="Resource" id="Resource_6wfjy"]
+script = ExtResource("1_byjj0")
+speaker_name = "Old Fisher"
+text = "Storms out past the reef again. Lighthouse keeper says it's been quiet too long."
+
+[sub_resource type="Resource" id="Resource_76fq7"]
+script = ExtResource("1_byjj0")
+speaker_name = "Old Fisher"
+text = "You're new around here, aren't you? Careful on the western cliffs after dark."
+
+[sub_resource type="Resource" id="Resource_rhdj2"]
+script = ExtResource("1_byjj0")
+speaker_name = "Old Fisher"
+text = "Anyway. Good tides to you."
+
+[resource]
+script = ExtResource("2_w1myi")
+lines = Array[ExtResource("1_byjj0")]([SubResource("Resource_6wfjy"), SubResource("Resource_76fq7"), SubResource("Resource_rhdj2")])

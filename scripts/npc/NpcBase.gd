@@ -21,6 +21,7 @@ signal interacted(npc: NpcBase, actor: Node)
 @export var turn_speed: float = 10.0
 @export var body_color: Color = Color(1.0, 0.396, 0.0, 1.0)
 @export var debug_interactions: bool = true
+@export var dialogue_sequence: DialogueSequence
 
 @onready var navigation_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var visual_root: Node3D = $VisualRoot
@@ -87,6 +88,8 @@ func interact(actor: Node = null) -> void:
 	if debug_interactions:
 		print("%s interacted with %s" % [actor.name if actor != null else "Someone", display_name])
 	interacted.emit(self, actor)
+	if dialogue_sequence != null:
+		DialogueManager.play_sequence(dialogue_sequence)
 
 
 func _get_navigation_velocity() -> Vector3:

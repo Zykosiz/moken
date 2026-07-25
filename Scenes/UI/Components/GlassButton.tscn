@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Scenes/UI/Components/GlassPanel.tscn" id="1_base"]
+[ext_resource type="Script" path="res://scripts/ui/GlassButton.gd" id="2_script"]
+
+[node name="GlassButton" instance=ExtResource("1_base")]
+custom_minimum_size = Vector2(240, 64)
+offset_right = 240.0
+offset_bottom = 64.0
+script = ExtResource("2_script")
+
+[node name="Label" type="Label" parent="ContentMargin"]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "Button"

@@ -1,16 +1,84 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene format=3 uid="uid://dihe0bj2rf56n"]
 
-[ext_resource type="PackedScene" path="res://addons/real-controller/character.tscn" id="1_real"]
-[ext_resource type="Script" path="res://scripts/player/PlayerTerrainSpawn.gd" id="2_spawn"]
+[ext_resource type="PackedScene" uid="uid://dasabj0i5wtrx" path="res://addons/real-controller/character.tscn" id="1_real"]
+[ext_resource type="Script" uid="uid://bu6yi4txsbsdw" path="res://scripts/player/PlayerTerrainSpawn.gd" id="2_spawn"]
+[ext_resource type="Script" path="res://scripts/player/PlayerInteractor.gd" id="3_o5en2"]
 
-[node name="Player" instance=ExtResource("1_real")]
-speed = 5.0
-walk_speed = 2.5
-sprint_speed = 8.0
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_7pt4t"]
+height = 1.8
+radius = 1.6
+
+[node name="Player" unique_id=1015841286 instance=ExtResource("1_real")]
 jump_velocity = 8.0
 camera_distance = 6.5
 
-[node name="TerrainSpawn" type="Node" parent="."]
+[node name="GeneralSkeleton" parent="character" parent_id_path=PackedInt32Array(1251024955) index="1" unique_id=1635208342]
+bones/1/position = Vector3(-0.014261888, 1.0070575, 0.031545002)
+bones/1/rotation = Quaternion(-0.015048833, -0.0062294137, -0.008973653, 0.99982715)
+bones/2/rotation = Quaternion(0.06905841, 0.009788285, -0.0049340404, 0.9975524)
+bones/3/rotation = Quaternion(0.14828314, 0.0034549313, 0.035453316, 0.9883033)
+bones/4/rotation = Quaternion(0.49320626, -0.50853795, -0.4559847, -0.53871596)
+bones/5/rotation = Quaternion(0.26436782, 0.83960754, -0.023280993, -0.47394818)
+bones/6/rotation = Quaternion(0.4628202, 0.56375426, -0.4591118, 0.50714386)
+bones/7/rotation = Quaternion(-0.07853629, -0.7078925, 0.08421618, 0.69687015)
+bones/8/rotation = Quaternion(-0.009920052, -0.00091969804, -0.021234332, 0.999725)
+bones/9/rotation = Quaternion(-0.118320316, 0.017361138, -0.0029572404, 0.9928193)
+bones/10/rotation = Quaternion(-0.118602514, 0.014974779, -0.004364045, 0.99281937)
+bones/11/rotation = Quaternion(-0.0794491, 0.0065136044, 0.0005094431, 0.9968176)
+bones/12/rotation = Quaternion(-0.11952082, 0.0128631815, -0.009957944, 0.99269843)
+bones/13/rotation = Quaternion(-0.12005759, 0.01041473, -0.0052394075, 0.9926985)
+bones/14/rotation = Quaternion(-0.13101447, 0.0061106775, 0.037982076, 0.9906338)
+bones/15/rotation = Quaternion(-0.12481873, 0.0072572455, 0.000336066, 0.992153)
+bones/16/rotation = Quaternion(-0.124651164, 0.0015160944, 0.009606663, 0.99215305)
+bones/17/rotation = Quaternion(-0.15707092, 0.006525104, 0.05355893, 0.98611236)
+bones/18/rotation = Quaternion(-0.15094844, 0.0021122124, 0.0016689718, 0.988538)
+bones/19/rotation = Quaternion(-0.15068018, 0.0036668607, 0.00864584, 0.988538)
+bones/20/rotation = Quaternion(-0.24718529, -0.6667019, -0.1939348, 0.6758678)
+bones/21/rotation = Quaternion(-0.0639604, 0.024791311, 0.0032355946, 0.9976393)
+bones/22/rotation = Quaternion(-0.06362483, 0.02580802, 0.0012859922, 0.9976393)
+bones/24/rotation = Quaternion(-0.27169487, 0.0037377148, 0.00012285556, 0.96237624)
+bones/27/rotation = Quaternion(0.48137578, 0.5302354, 0.43724695, -0.54400647)
+bones/28/rotation = Quaternion(-0.25592595, 0.8712244, -0.13064949, 0.397996)
+bones/29/rotation = Quaternion(0.45546648, -0.56952226, 0.45189986, 0.51379114)
+bones/30/rotation = Quaternion(-0.109303184, 0.6660353, 0.08237103, 0.73325634)
+bones/31/rotation = Quaternion(0.0722981, 0.011350971, -0.013558235, 0.9972264)
+bones/32/rotation = Quaternion(-0.086225785, -0.012651645, 0.002155334, 0.996193)
+bones/33/rotation = Quaternion(-0.08643113, -0.010913293, 0.0031803157, 0.996193)
+bones/34/rotation = Quaternion(0.03206347, 0.00262907, 0.00020575552, 0.99948233)
+bones/35/rotation = Quaternion(-0.0775255, -0.008343806, 0.0064591514, 0.99693453)
+bones/36/rotation = Quaternion(-0.07787405, -0.0067556007, 0.003398786, 0.99693453)
+bones/37/rotation = Quaternion(-0.044178884, -0.0027324862, -0.010434796, 0.9989655)
+bones/38/rotation = Quaternion(-0.08931879, -0.0051933522, -0.00024025186, 0.9959896)
+bones/39/rotation = Quaternion(-0.08919907, -0.0010848463, -0.006874067, 0.99598956)
+bones/40/rotation = Quaternion(-0.08848325, -0.0033498642, -0.015645795, 0.99594915)
+bones/41/rotation = Quaternion(-0.11267045, -0.001576576, -0.0012456652, 0.9936304)
+bones/42/rotation = Quaternion(-0.11246997, -0.0027362665, -0.006452902, 0.9936304)
+bones/43/rotation = Quaternion(-0.2770435, 0.64327663, 0.22670439, 0.67679185)
+bones/44/rotation = Quaternion(-0.08864113, -0.034357794, -0.0044845254, 0.99546087)
+bones/45/rotation = Quaternion(-0.088178955, -0.0357682, -0.0017819443, 0.9954607)
+bones/47/rotation = Quaternion(0.07036934, 0.3078273, 0.9437995, -0.09763786)
+bones/48/rotation = Quaternion(0.017325507, 0.8022408, -0.5967484, -0.0009860459)
+bones/49/rotation = Quaternion(-0.10758148, 0.7706052, -0.62784666, 0.020062229)
+bones/50/rotation = Quaternion(1.4492196e-07, 0.9999769, -0.0068095867, -1.9296616e-07)
+bones/51/rotation = Quaternion(-0.07558768, 0.44992763, 0.8897953, 0.010776783)
+bones/52/rotation = Quaternion(-0.018362366, 0.76890707, -0.6390958, 0.0012225161)
+bones/53/rotation = Quaternion(0.026045067, 0.82110465, -0.5689672, -0.03721895)
+bones/54/rotation = Quaternion(-4.0836937e-07, 0.99619985, -0.087097354, 1.9093677e-06)
+bones/55/position = Vector3(-0.012702667, 1.0907613, 0.035445333)
+bones/55/rotation = Quaternion(0.057150636, 0.0028363422, -0.013610516, 0.99826884)
+
+[node name="TerrainSpawn" type="Node" parent="." index="6" unique_id=404484389]
 script = ExtResource("2_spawn")
 terrain_path = NodePath("../../Island/Terrain/TerrainMesh")
-spawn_height_offset = 1.0
+
+[node name="PlayerInteractor" type="Node3D" parent="." index="7" unique_id=681266826]
+script = ExtResource("3_o5en2")
+
+[node name="InteractionArea" type="Area3D" parent="PlayerInteractor" index="0" unique_id=1894429529]
+collision_layer = 0
+collision_mask = 32
+monitorable = false
+
+[node name="InteractionShape" type="CollisionShape3D" parent="PlayerInteractor/InteractionArea" index="0" unique_id=1416525427]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CylinderShape3D_7pt4t")

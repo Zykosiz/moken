@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/world/SavePoint.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://cfrp6c3ipm6h0" path="res://Assets/Quaternius/Game Kits/Pirate Kit - Nov 2023/glTF/Prop_Anchor.gltf" id="2_anchor"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_1"]
+radius = 1.5
+height = 2.0
+
+[node name="SavePoint" type="Area3D"]
+collision_layer = 32
+collision_mask = 0
+monitoring = false
+monitorable = true
+script = ExtResource("1_script")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_1")
+
+[node name="Visual" type="Node3D" parent="."]
+
+[node name="AnchorMesh" parent="Visual" instance=ExtResource("2_anchor")]
+
+[node name="Glow" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+light_color = Color(0.25, 0.85, 1, 1)
+light_energy = 1.2
+omni_range = 3.0

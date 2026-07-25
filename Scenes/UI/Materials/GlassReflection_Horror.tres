@@ -1,0 +1,26 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://shaders/ui/glass_panel.gdshader" id="1_shader"]
+
+[resource]
+shader = ExtResource("1_shader")
+shader_parameter/shard_seed = 0.0
+shader_parameter/edge_irregularity = 0.45
+shader_parameter/base_tint = Color(0.35, 0.32, 0.4, 0.4)
+shader_parameter/base_opacity = 0.4
+shader_parameter/edge_highlight_width_px = 1.5
+shader_parameter/edge_highlight_color = Color(0.8, 0.75, 0.85, 0.8)
+shader_parameter/blur_amount = 0.5
+shader_parameter/background_busyness = 0.5
+shader_parameter/selection_amount = 0.0
+shader_parameter/reflection_color = Color(0.4, 0.35, 0.45, 0.3)
+shader_parameter/reflection_width = 0.18
+shader_parameter/reflection_speed = 0.15
+shader_parameter/horror_mix = 1.0
+shader_parameter/horror_drift = 1.0
+shader_parameter/motion_scale = 1.0
+shader_parameter/refraction_scale = 1.0
+shader_parameter/distortion_scale = 1.0
+shader_parameter/min_opacity_floor = 0.0
+shader_parameter/rect_size_px = Vector2(256, 128)
+shader_parameter/detail_size_px = 18.0
