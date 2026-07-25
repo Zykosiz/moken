@@ -119,12 +119,15 @@ func _build_layout() -> void:
 
 
 func _ensure_npc_container(scene_root: Node) -> Node3D:
-	var existing := get_node_or_null("NPCs")
+	var existing := get_node_or_null(NPC_LAYOUT.CONTAINER_NAME)
 	if existing != null:
-		return existing as Node3D
+		var existing_3d := existing as Node3D
+		if existing_3d == null:
+			push_warning("AuthoredIslandLayout: a node named '%s' exists but isn't a Node3D; NPC placement will be skipped this run." % NPC_LAYOUT.CONTAINER_NAME)
+		return existing_3d
 
 	var npc_parent := Node3D.new()
-	npc_parent.name = "NPCs"
+	npc_parent.name = NPC_LAYOUT.CONTAINER_NAME
 	add_child(npc_parent)
 	PLACEMENT.own_node(npc_parent, scene_root)
 	return npc_parent
@@ -132,7 +135,7 @@ func _ensure_npc_container(scene_root: Node) -> Node3D:
 
 func _clear() -> void:
 	for child in get_children():
-		if child.name == "NPCs":
+		if child.name == NPC_LAYOUT.CONTAINER_NAME:
 			continue
 		remove_child(child)
 		child.queue_free()

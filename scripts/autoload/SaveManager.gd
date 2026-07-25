@@ -92,18 +92,24 @@ func load_game(slot: int) -> bool:
 	if data.is_empty():
 		return false
 
+	# Validate fully before mutating any state — a corrupt/incomplete save
+	# must leave the currently-running session untouched, not half-apply.
+	var player_data: Dictionary = data.get("player", {})
+	var scene_path: String = player_data.get("scene_path", "")
+	if scene_path.is_empty():
+		push_warning("SaveManager: save file slot %d has no scene_path, refusing to load" % slot)
+		return false
+
 	active_slot = slot
 	flags = (data.get("flags", {}) as Dictionary).duplicate(true)
 	inventory = (data.get("inventory", {}) as Dictionary).duplicate(true)
 	world_state = (data.get("world_state", {}) as Dictionary).duplicate(true)
-
-	var player_data: Dictionary = data.get("player", {})
-	_pending_scene_path = player_data.get("scene_path", "")
+	_pending_scene_path = scene_path
 	_pending_spawn_point = player_data.get("spawn_point", "")
 
-	if _pending_scene_path.is_empty():
-		push_warning("SaveManager: save file has no scene_path")
-		return false
+	# A dialogue could conceivably still be active from whatever scene we're
+	# loading away from — reset it before the scene it references gets freed.
+	DialogueManager.reset_for_scene_change()
 
 	# Deferred: change_scene_to_file() can't run safely if load_game() was
 	# itself called from a node's _ready() or an input/signal callback while
@@ -112,6 +118,14 @@ func load_game(slot: int) -> bool:
 	get_tree().change_scene_to_file.call_deferred(_pending_scene_path)
 	game_loaded.emit(slot)
 	return true
+
+
+func reset_session_state() -> void:
+	flags.clear()
+	inventory.clear()
+	world_state.clear()
+	_pending_scene_path = ""
+	_pending_spawn_point = ""
 
 
 func has_save(slot: int) -> bool:

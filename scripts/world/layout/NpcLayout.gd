@@ -11,6 +11,11 @@ extends RefCounted
 
 const PLACEMENT: GDScript = preload("res://scripts/world/layout/PlacementPrimitives.gd")
 
+## Name of the spared child AuthoredIslandLayout._clear() must not delete.
+## Referenced from there via NPC_LAYOUT.CONTAINER_NAME rather than a second
+## hardcoded literal, so the two can't drift out of sync.
+const CONTAINER_NAME := "NPCs"
+
 const NPC_VILLAGER: PackedScene = preload("res://Scenes/Characters/NPC/NpcVillager.tscn")
 const NPC_FISHER: PackedScene = preload("res://Scenes/Characters/NPC/NpcFisher.tscn")
 const NPC_GUARD: PackedScene = preload("res://Scenes/Characters/NPC/NpcGuard.tscn")
@@ -32,7 +37,15 @@ static func ensure_npcs_placed(parent: Node3D, terrain: Node, scene_root: Node, 
 
 
 static func _ensure_npc(parent: Node3D, terrain: Node, scene_root: Node, scene: PackedScene, node_name: String, xz: Vector2) -> void:
-	if parent.has_node(node_name):
+	var existing := parent.get_node_or_null(node_name)
+	if existing != null:
+		# Name match alone isn't enough — verify it's actually the NPC we
+		# expect (PackedScene.instantiate() stamps scene_file_path on the
+		# resulting root with the source .tscn's own path, so this is a
+		# reliable, no-bookkeeping-required identity check) before treating
+		# it as "already placed" and skipping.
+		if existing.scene_file_path != scene.resource_path:
+			push_warning("NpcLayout: '%s' exists but isn't an instance of %s — leaving it alone rather than overwriting; this NPC will be missing from the layout until the name conflict is resolved by hand." % [node_name, scene.resource_path])
 		return
 
 	var node: Node3D = scene.instantiate() as Node3D

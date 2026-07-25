@@ -20,7 +20,7 @@ signal interacted(npc: NpcBase, actor: Node)
 @export var acceleration: float = 12.0
 @export var turn_speed: float = 10.0
 @export var body_color: Color = Color(1.0, 0.396, 0.0, 1.0)
-@export var debug_interactions: bool = true
+@export var debug_interactions: bool = false
 @export var dialogue_sequence: DialogueSequence
 
 @onready var navigation_agent: NavigationAgent3D = $NavigationAgent3D

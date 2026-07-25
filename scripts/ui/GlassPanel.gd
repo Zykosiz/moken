@@ -36,7 +36,6 @@ const _VARIANT_SEEDS := {
 	set(value):
 		edge_irregularity = value
 		_set_param(_background_material, "edge_irregularity", edge_irregularity)
-		_set_param(_fracture_material, "edge_irregularity", edge_irregularity)
 
 @export var detail_size_px: float = 18.0:
 	set(value):
@@ -117,8 +116,14 @@ func set_selected(selected: bool) -> void:
 	# Layout-level "separation from neighboring panes" — a shader alone can't
 	# move the Control relative to siblings. Tweened relative to the cached
 	# base position (set once in _ready/_on_resized), not the current live
-	# position, so repeated select/deselect calls never drift.
-	var target_offset := Vector2(0.0, -6.0) if selected else Vector2.ZERO
+	# position, so repeated select/deselect calls never drift. Suppressed
+	# under Reduced Motion — the opacity/edge-highlight tween above still
+	# runs (the doc lists those as valid non-motion selection signals), only
+	# the physical bounce is motion in the sense the accessibility setting
+	# means to suppress.
+	var target_offset := Vector2.ZERO
+	if selected and not UIAccessibility.reduced_motion:
+		target_offset = Vector2(0.0, -6.0)
 	_selection_tween.tween_property(self, "position", _base_position + target_offset, 0.15)
 
 

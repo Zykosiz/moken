@@ -69,6 +69,20 @@ func _finish() -> void:
 	dialogue_finished.emit()
 
 
+## Called by anything about to change the current scene out from under a
+## possibly-active dialogue (SaveManager.load_game, StartMenu's New Game) —
+## drops all state and closes the box before the referenced Player/scene get
+## freed, so we never touch a freed object and never leave PlayerInteractor
+## permanently gated on a stuck is_active with no dialogue box visible.
+func reset_for_scene_change() -> void:
+	if is_active:
+		is_active = false
+		_box.close()
+	_player = null
+	_sequence = null
+	_current_index = -1
+
+
 func _find_player() -> Node3D:
 	var scene := get_tree().current_scene
 	if scene == null:
