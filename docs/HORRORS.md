@@ -62,6 +62,37 @@ Possible outcomes include:
 
 The restored location is part of the reward. The player should be able to see and explore the consequences of defeating the Horror.
 
+## The Opening Horror
+
+The first Horror appears during the pirate attack on Zako's home island.
+
+The pirate captain shoots it with his own pistol. The shot has no effect. The Horror then swallows the captain.
+
+A young woman from the village retrieves the fallen pistol and fires at the Horror. Her shot also has no effect. The Horror swallows her together with the weapon.
+
+The Horror later spits the pistol back out in front of Zako. It is no longer visually unchanged: the weapon is now black and faintly glowing.
+
+When the Horror approaches Zako, he grabs the pistol in panic and fires. This time the shot hurts or frightens the Horror badly enough that it screams and retreats.
+
+The reason for this difference is not explained in the opening.
+
+## The Pistol — Hidden Origin
+
+The current hidden-lore intent is that the young woman and the pistol somehow merge or become connected while inside the Horror.
+
+Her innocence, will, soul, or some other uncorrupted part of her may be what changes the weapon into something capable of harming Horrors.
+
+This is not confirmed to Zako or the player during the opening. The scene should only establish:
+
+- The pistol was ineffective before she was swallowed with it.
+- The pistol returns altered.
+- The changed pistol can affect the Horror.
+- The exact reason remains unknown.
+
+The later story may gradually suggest that some part of her remains within or connected to the weapon, but this reveal must be paced carefully and should not be stated outright during the vertical slice.
+
+The pistol should remain ambiguous enough that other interpretations are still possible until the story deliberately resolves them.
+
 ## Production Principles
 
 Each Horror requires a normal location, a distorted interpretation, and a restored state. The distorted version may reuse recognizable geometry, landmarks, themes, and assets where practical.
@@ -78,3 +109,8 @@ The goal is not maximum technical complexity. A strong camera change, movement m
 - Defeating a Horror restores the normal world and reveals meaningful changes.
 - Every major Horror should have a distinct altered perspective or primary interaction style.
 - The player should never know exactly how the next Horror will rewrite reality.
+- The opening Horror swallows the young woman together with the captain's pistol.
+- The pistol is black and faintly glowing when the Horror spits it back out.
+- The unchanged pistol cannot hurt the Horror; the changed pistol can.
+- The reason the pistol changes is not explained during the opening.
+- The current hidden-lore intent is that the young woman and the weapon have become connected in some way.
