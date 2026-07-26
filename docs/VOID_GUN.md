@@ -23,6 +23,40 @@ Over the course of the story its meaning changes from a symbol of hatred into a 
 
 ---
 
+## Directional Navigation
+
+The Void Gun does not fire to create or reveal a path.
+
+Instead, it acts as a supernatural compass. The gun glows and points toward the direction the ship must travel.
+
+The star-sea reacts continuously to how closely the player follows that direction.
+
+When the ship moves toward the gun's indicated heading:
+
+- stars become denser ahead of the ship
+- the sea grows brighter
+- luminous currents become easier to read
+- the ship's wake gains more light
+- the navigable route gradually appears through movement
+
+When the ship turns away from the indicated heading:
+
+- the stars become progressively sparser
+- the blue light of the sea fades
+- the currents weaken
+- the ship's wake loses its glow
+- the route eventually disappears into the black void
+
+This is a soft navigation corridor rather than an invisible wall.
+
+The player is not completely locked to a single line and may deviate slightly to explore, circle an island, investigate nearby objects, or approach a destination from a different angle. The farther the ship strays from the intended direction, however, the less starlight remains to support navigation.
+
+The transition must be gradual rather than binary. Star density, brightness, current visibility, ambient haze, and wake intensity should all scale smoothly according to the ship's angular difference from the target heading.
+
+The intended player experience is freedom with guidance: the world itself communicates the correct route without removing control from the player.
+
+---
+
 ## Future Crew Scene
 
 At a later point in the journey, one of Zeko's future crewmates notices the gun instantly.
