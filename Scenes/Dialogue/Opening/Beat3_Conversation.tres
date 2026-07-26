@@ -1,0 +1,93 @@
+[gd_resource type="Resource" script_class="DialogueSequence" format=3]
+
+[ext_resource type="Script" uid="uid://bsykum8g6nad" path="res://scripts/dialogue/DialogueLine.gd" id="1_line"]
+[ext_resource type="Script" uid="uid://bu1gfy6c7178i" path="res://scripts/dialogue/DialogueSequence.gd" id="2_sequence"]
+
+[sub_resource type="Resource" id="Resource_1"]
+script = ExtResource("1_line")
+speaker_name = "Vyla"
+text = "So. Nervous?"
+
+[sub_resource type="Resource" id="Resource_2"]
+script = ExtResource("1_line")
+speaker_name = "Zako"
+text = "Should I be?"
+
+[sub_resource type="Resource" id="Resource_3"]
+script = ExtResource("1_line")
+speaker_name = "Vyla"
+text = "Halvard's been doing this since before either of our parents were born. He's going to expect a lot from you."
+
+[sub_resource type="Resource" id="Resource_4"]
+script = ExtResource("1_line")
+speaker_name = "Zako"
+text = "Comforting."
+
+[sub_resource type="Resource" id="Resource_5"]
+script = ExtResource("1_line")
+speaker_name = "Vyla"
+text = "I just mean — he wouldn't have picked you if he didn't think you could handle it. He's not exactly generous with his approval."
+
+[sub_resource type="Resource" id="Resource_6"]
+script = ExtResource("1_line")
+speaker_name = "Zako"
+text = "Is that supposed to help?"
+
+[sub_resource type="Resource" id="Resource_7"]
+script = ExtResource("1_line")
+speaker_name = "Vyla"
+text = "A little. Take what you can get."
+
+[sub_resource type="Resource" id="Resource_8"]
+script = ExtResource("1_line")
+speaker_name = "Vyla"
+text = "You know, most people who take this job aren't from here. They get sent. You actually asked for it."
+
+[sub_resource type="Resource" id="Resource_9"]
+script = ExtResource("1_line")
+speaker_name = "Zako"
+text = "Is that strange?"
+
+[sub_resource type="Resource" id="Resource_10"]
+script = ExtResource("1_line")
+speaker_name = "Vyla"
+text = "It's just — I don't know. It's nice, I guess. That someone wanted to stay."
+
+[sub_resource type="Resource" id="Resource_11"]
+script = ExtResource("1_line")
+speaker_name = "Zako"
+text = "I like it here. More than I expected to, honestly."
+
+[sub_resource type="Resource" id="Resource_12"]
+script = ExtResource("1_line")
+speaker_name = "Vyla"
+text = "Good. That's good."
+
+[sub_resource type="Resource" id="Resource_13"]
+script = ExtResource("1_line")
+speaker_name = "Zako"
+text = "It's strange, though. Keeper of the light, and I'm still on the same island as everyone. I half expected it to feel like leaving."
+
+[sub_resource type="Resource" id="Resource_14"]
+script = ExtResource("1_line")
+speaker_name = "Vyla"
+text = "You're not going anywhere. You're just... up a hill now."
+
+[sub_resource type="Resource" id="Resource_15"]
+script = ExtResource("1_line")
+speaker_name = "Zako"
+text = "Up a hill now. I'll put that on the door."
+
+[sub_resource type="Resource" id="Resource_16"]
+script = ExtResource("1_line")
+speaker_name = "Vyla"
+text = "And if the hill ever gets lonely — I'm just a whistle away, you know. Don't forget that."
+
+[sub_resource type="Resource" id="Resource_17"]
+script = ExtResource("1_line")
+speaker_name = "Zako"
+text = "I won't."
+
+[resource]
+script = ExtResource("2_sequence")
+lines = Array[ExtResource("1_line")]([SubResource("Resource_1"), SubResource("Resource_2"), SubResource("Resource_3"), SubResource("Resource_4"), SubResource("Resource_5"), SubResource("Resource_6"), SubResource("Resource_7"), SubResource("Resource_8"), SubResource("Resource_9"), SubResource("Resource_10"), SubResource("Resource_11"), SubResource("Resource_12"), SubResource("Resource_13"), SubResource("Resource_14"), SubResource("Resource_15"), SubResource("Resource_16"), SubResource("Resource_17")])

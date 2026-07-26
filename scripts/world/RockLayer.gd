@@ -15,6 +15,12 @@ const INLAND_ROCK_MESHES: Array[String] = [
 
 @export var terrain_path: NodePath
 @export var random_seed: int = 1000
+## Off once a scene has deliberately cleared this layer out (see
+## AuthoredIslandLayout.gd's identical flag) -- otherwise _ready()'s "no
+## children yet" check can't tell "never generated" apart from "generated
+## once, then intentionally removed", and would keep silently regenerating
+## the rocks back on every load.
+@export var auto_populate: bool = true
 @export var regenerate: bool = false : set = _set_regenerate
 
 @export_group("Coastal Rocks")
@@ -34,7 +40,7 @@ var _terrain: Node
 
 func _ready() -> void:
 	_terrain = get_node_or_null(terrain_path)
-	if get_child_count() == 0:
+	if auto_populate and get_child_count() == 0:
 		_generate()
 
 

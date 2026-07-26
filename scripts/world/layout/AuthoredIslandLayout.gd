@@ -27,6 +27,12 @@ const NPC_LAYOUT: GDScript = preload("res://scripts/world/layout/NpcLayout.gd")
 const PLACEMENT: GDScript = preload("res://scripts/world/layout/PlacementPrimitives.gd")
 
 @export var terrain_path: NodePath = NodePath("../Terrain/TerrainMesh")
+## Off once a scene has deliberately emptied this node out in favor of a
+## hand-placed layout (see docs/ISLAND_LAYOUT.md) -- otherwise _ready()'s
+## "no Districts child yet" check can't tell "never generated" apart from
+## "generated once, then intentionally cleared", and would keep silently
+## regenerating the old layout back on every load.
+@export var auto_populate: bool = true
 @export var regenerate: bool = false : set = _set_regenerate
 
 var _terrain: Node
@@ -35,7 +41,7 @@ var _stone_material: StandardMaterial3D
 
 
 func _ready() -> void:
-	if get_node_or_null("Districts") == null:
+	if auto_populate and get_node_or_null("Districts") == null:
 		_build_layout()
 
 
