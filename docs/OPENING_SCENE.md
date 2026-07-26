@@ -1,264 +1,184 @@
-# Moken — Opening Scene (Vertical Slice)
+# Moken — Opening Scene (Current Canon)
 
-Placeholder dialogue throughout — meant to be refined, not final. Character names in brackets are placeholders where nothing's been locked yet. Technical notes flag what each beat needs from existing or new systems.
+Placeholder dialogue remains subject to refinement. This document locks the story structure and character roles for the opening.
 
-**Relationship note:** Vyla and Zako are close lifelong friends, not a romantic pairing. She represents his home, community, and the ordinary life that is shattered in the opening. The game's slow-burn romance belongs later, with a visibly cursed woman who becomes part of his found family.
+## Cast
 
-**Cast:**
-- **Zako** — protagonist, new lighthouse keeper
-- **[Vyla]** — village girl and Zako's close lifelong friend; placeholder name, easily swapped
-- **[Old Keeper — "Halvard"?]** — the outgoing lighthouse keeper, placeholder name
-- **Pirate Captain** — antagonist for this scene only
+- **Zeko** — protagonist and newly appointed lighthouse keeper
+- **Vyla** — Halvard's daughter, approximately ten years old
+- **Halvard** — outgoing lighthouse keeper, Vyla's father and Zeko's mentor
+- **Pirate Captain** — leader of the raid; dies in the opening
 
----
+## Relationship Canon
 
-## Beat 1 — Wake Up (black screen, dialogue only)
+Vyla is a child and has no romantic role. Zeko's bond with her is protective and sibling-like. She represents Halvard's surviving legacy, the island's remaining hope, and the family Zeko initially pushes away after the collapse.
 
-*No background needed yet — full black, dialogue box only. Uses existing DialogueManager, no new system required.*
-
-**[Vyla]:** Zako. Zako, wake up — it's happening today.
-
-**Zako:** ...What time is it.
-
-**[Vyla]:** Late enough that if you don't get up, I'm telling Halvard you slept through your own promotion.
-
-**Zako:** He'd probably just find that fitting.
-
-**[Vyla]:** Get dressed. I'll be outside.
-
-*(Fade from black begins here — screen stays dark a moment longer before beat 2.)*
+The game's eventual slow-burn romance belongs to a visibly cursed adult woman who joins the crew later.
 
 ---
 
-## Beat 2 — Outside the House (still minimal background, dialogue continues)
+## Beat 1 — Wake Up
 
-*Can remain a mostly-dark or simple background — doesn't need the full rendered island yet if that's easier. Technical: this is still DialogueManager, just with a change of "scene" implied through a line or a simple background swap, not necessarily real 3D space yet.*
+The game opens on black.
 
-**[Vyla]:** There he is. Lighthouse Keeper Zako. Doesn't have the same ring as just "Zako," does it?
+Vyla wakes Zeko on the morning he is to become the new lighthouse keeper. Their dialogue establishes that she is young, energetic, comfortable around him, and proud that her father chose him.
 
-**Zako:** Give it time. Maybe it'll grow on both of us.
-
-**[Vyla]:** Come on — everyone's going to want to see you off. Well. Not *everyone*. But some people.
-
-**Zako:** That's reassuring.
-
-**[Vyla]:** It's a bit of a walk from here to the lighthouse, you know. Halvard picked the one house on the island furthest from his own front door.
-
-**Zako:** Sounds like something he'd do on purpose.
-
-**[Vyla]:** Knowing him? Absolutely on purpose.
+The player then gains control and walks with Vyla toward the lighthouse.
 
 ---
 
-## Beat 3 — The Walk to the Lighthouse (real spawn, player-controlled)
+## Beat 2 — Walk to the Lighthouse
 
-*Technical: this is where the player actually spawns into the live 3D world for the first time — reuse PlayerTerrainSpawn logic, just as a cutscene entry point rather than a save load. Camera/control handoff from dialogue-only to player-controlled movement happens here. This beat is now a proper walk-and-talk — dialogue plays out over real traversal rather than a single line.*
+The walk should feel bright, safe, and adventurous. Vyla talks excitedly about Zeko's new job and teases him about Halvard's habits.
 
-*(Player gains control, walking alongside Vyla toward the lighthouse. Several lines exchanged along the way — casual, unhurried, gives the island room to feel lived-in before anything happens to it.)*
-
-**[Vyla]:** So. Nervous?
-
-**Zako:** Should I be?
-
-**[Vyla]:** Halvard's been doing this since before either of our parents were born. He's going to expect a lot from you.
-
-**Zako:** Comforting.
-
-**[Vyla]:** I just mean — he wouldn't have picked you if he didn't think you could handle it. He's not exactly generous with his approval.
-
-**Zako:** Is that supposed to help?
-
-**[Vyla]:** A little. Take what you can get.
-
-*(A beat of quiet walking. Then—)*
-
-**[Vyla]:** You know, most people who take this job aren't from here. They get sent. You actually asked for it.
-
-**Zako:** Is that strange?
-
-**[Vyla]:** A little. But it's good. This place needs someone who actually knows the people living here.
-
-**Zako:** I like it here. More than I expected to, honestly.
-
-**[Vyla]:** Then you'll fit right in. None of us know why we stay either.
-
-*(Their closeness should feel familiar and lived-in, without romantic framing. Vyla is part of the community Zako belongs to, not a lost-love setup.)*
-
-**Zako:** It's strange, though. Keeper of the light, and I'm still on the same island as everyone. I half expected it to feel like leaving.
-
-**[Vyla]:** You're not going anywhere. You're just... up a hill now.
-
-**Zako:** Up a hill now. I'll put that on the door.
-
-**[Vyla]:** And if the hill ever gets lonely, come back down. That's where everyone else is.
-
-**Zako:** Hard to argue with that.
-
-**[Vyla]:** Anyway — don't let Halvard scare you. He's all bark. Mostly.
-
-**Zako:** "Mostly" is doing a lot of work in that sentence.
-
-**[Vyla]:** You'll survive. Probably.
-
-*(They arrive at the lighthouse.)*
+Their relationship should read as familiar and affectionate without romantic subtext. Zeko is an older-brother figure and trusted family friend.
 
 ---
 
-## Beat 4 — Arrival at the Lighthouse
+## Beat 3 — Halvard's Lesson
 
-**[Vyla]:** Halvard! He's up. Barely.
+At the lighthouse, Halvard formally passes responsibility to Zeko.
 
-**[Halvard]:** *(to Zako)* Punctual as ever, I see.
+His core philosophy remains:
 
-**Zako:** I'm here, aren't I.
+> People do not see the island first. They see the light. The light tells them there is still a way home.
 
-**[Halvard]:** Barely counts. Come inside — we've got a lot to go over before I'm anyone's problem but yours.
-
-**[Vyla]:** That's my cue. I've got things to do that don't involve listening to two lighthouse keepers talk about *maintenance schedules*.
-
-**[Halvard]:** Go on, then.
-
-**[Vyla]:** See you at dinner, Zako. Everyone wants to hear how badly the first day goes.
-
-**Zako:** I'll try not to disappoint them.
-
-*(Vyla exits. The exchange should feel warm and familiar, but entirely platonic.)*
+In the star-sea setting, this is literal as well as thematic. Ships travel through deep-blue cosmic space along paths of white starlight. The lighthouse helps sailors find an island-world and its surrounding star route.
 
 ---
 
-## Beat 5 — The Keeper's Philosophy
+## Beat 4 — Pirate Attack
 
-**[Halvard]:** Sit. Before we get to the mechanical part, I want you to understand why this matters — because if you only ever see it as a job, you'll do it like one.
+Pirates arrive and raid the island.
 
-**Zako:** I'm listening.
+Halvard intervenes to protect the villagers and Vyla. The Pirate Captain shoots Halvard. His death is abrupt and should not become a long farewell speech.
 
-**[Halvard]:** People out there — sailors, traders, whoever's lost their bearings in the dark — they don't see the island. Not at first. They see the light. It's the only thing telling them there's still a way home.
+Vyla runs toward her father. The Captain threatens her.
 
-**[Halvard]:** You keep that light burning, and somewhere out there, someone stops being afraid. That's the whole job. Everything else is just upkeep.
+Zeko reaches Vyla first and holds her protectively.
 
-**Zako:** That's... a lot more than I expected from an orientation.
+**Zeko:** Don't worry. It's gonna be alright.
 
-**[Halvard]:** Get used to disappointment. Now — the oil reserves are kept—
-
-*(Interrupted — this is where the pirate attack begins. See Beat 6.)*
+Zeko already knows this is probably a lie. He says it because Vyla needs to hear it.
 
 ---
 
-## Beat 6 — Pirates Attack (scripted, not real combat)
+## Beat 5 — The Stars Disappear
 
-*Technical: this is the first beat needing real cutscene/timeline tooling — camera control, forced NPC positions/reactions, no player combat input. Distant shouting/alarm as a lead-in works well here before anything is shown.*
+Before the Captain can shoot Zeko or Vyla, the surrounding star-sea changes.
 
-**[Halvard]:** *(standing, alert)* That's not a drill bell.
+The deep-blue space around the island turns black. The white stars begin disappearing as a Cosmic Horror consumes the starlight itself.
 
-*(Cut to: pirates landing/attacking the village below. Zako and Halvard react, move to intervene — still cinematic, no player input.)*
-
-**[Halvard]:** Stay back if you can, Zako — I mean it.
-
-*(He doesn't stay back either. Halvard moves to protect villagers directly.)*
+Without stars, ships cannot sail. The island is being cut off from the universe.
 
 ---
 
-## Beat 7 — Halvard is Shot
+## Beat 6 — The Captain Is Swallowed
 
-*(The Captain confronts Halvard. Brief, brutal — no drawn-out fight, this should land fast and hard.)*
+The Horror reaches the pirates first.
 
-**Captain:** Out of my way, old man.
+Before the Captain can fire again, the Horror swallows him. His pistol is swallowed with him.
 
-**[Halvard]:** *(stepping between the Captain and villagers)* Not today.
+Zeko continues holding Vyla, shielding her from what he can, but he has no way to fight the creature.
 
-*(The Captain shoots him. Halvard falls.)*
-
-**Captain:** *(to the crowd, boastful)* Anyone else?
+Vyla survives.
 
 ---
 
-## Beat 8 — The Girl's Grief, The Threat
+## Beat 7 — The Void Gun
 
-**[Vyla]:** *(crying out, running toward Halvard)* No — no, no—
+The Horror spits the Captain's pistol back out.
 
-**Captain:** *(turning toward her)* Keep crying, girl, and you'll be next.
+The weapon has changed. It is now black, faintly luminous, and fused with fragments of the starlight the Horror consumed.
 
----
+This becomes the **Void Gun**.
 
-## Beat 9 — Zako Reaches Her
-
-*(Zako moves — first real active choice-coded moment in the scene, even though it's still scripted. He gets to her before the Captain acts further.)*
-
-**Zako:** *(quiet, pulling her into him)* Don't worry. It's gonna be alright.
-
-**[Vyla]:** *(shaking, barely audible)* I'm scared.
-
-*(He holds her. This is protective friendship and shared terror, not romantic framing. Zako knows his reassurance is a lie, but says it because she needs to hear it.)*
+The gun's deeper nature is not fully explained in the opening. The visible rule is enough: it contains or channels stolen starlight.
 
 ---
 
-## Beat 10 — The Sky Turns
+## Beat 8 — Zeko Fires
 
-*Technical: the world-lighting state change starts here — this is new work, no existing system covers "sky and sea go black." Likely a WorldEnvironment/skybox override triggered by the cutscene script.*
+The Horror turns toward Zeko and Vyla.
 
-*(No dialogue. The sky darkens unnaturally. The sea goes black. Something is coming.)*
+Zeko grabs the Void Gun and fires out of panic rather than heroism.
 
----
+The shot wounds the Horror. It retreats and loses enough stolen starlight to restore a bright field around the island.
 
-## Beat 11 — The Horror Arrives
-
-*(The Horror emerges. It moves through the pirate crew first — implied/stylized rather than graphic, per the game's tone.)*
-
-*(The Captain, cornered, fires at it. Nothing happens — no effect at all.)*
-
-**Captain:** *(first real fear)* What—
-
-*(The Horror takes him. No line needed — the silence sells it.)*
+The returning stars keep the abandoned pirate ship from sinking or drifting into the black void. The island remains isolated, but it now has one surviving vessel trapped inside its restored ring of starlight.
 
 ---
 
-## Beat 12 — Vyla and the Gun
+## Beat 9 — Aftermath
 
-*(Vyla breaks from Zako — unscripted-feeling but still cinematic — reaches for the fallen pistol, fires at the Horror.)*
+Halvard is dead. Vyla survives.
 
-*(Nothing happens.)*
+The stars beyond the island's small restored area remain gone. No ships arrive. The lighthouse can no longer guide anyone home because the wider routes no longer exist.
 
-*(The Horror takes her too — gun still in hand.)*
+Zeko is left with:
 
-**Zako:** *(one word, breaking)* Vyla—
+- Halvard's death
+- responsibility for Vyla that he does not feel capable of carrying
+- a lighthouse without a purpose
+- the Void Gun
+- the pirate ship
+- the belief that he failed before his real life as keeper even began
 
-*(This is the first time her name is spoken aloud by any character in the scene. The dialogue UI may identify her as [Vyla] beforehand, but no one says her name until Zako realizes she is gone.)*
-
----
-
-## Beat 13 — The Gun Returns
-
-*(The Horror spits the pistol back out — changed. Black. Faintly glowing.)*
-
-*(It turns toward Zako.)*
+Fade to black.
 
 ---
 
-## Beat 14 — Zako Fires
+# Time Skip
 
-*(Pure panic, not heroism. He grabs the gun, fires on instinct.)*
+Years pass.
 
-*(The Horror screams and flees.)*
+Zeko is deeply depressed and has withdrawn from the village. He still lives with the useless lighthouse and keeps the Void Gun hidden.
 
----
+Vyla no longer visits him. This is not because she stopped caring. Zeko pushed her and everyone else away, and Vyla has grown tired of watching him refuse to live.
 
-## Beat 15 — Aftermath
+Zeko considers suicide with the Void Gun.
 
-*(Silence. The sky and sea begin to clear — but only over the island. The sea beyond stays black.)*
+Instead of firing normally, the gun awakens and reveals a thin path of white stars leading through the black cosmic sea toward another island.
 
-*(Zako doesn't speak. He's in shock — holding a gun that wasn't his, standing in a village that's lost two people who mattered to him in the same five minutes.)*
+For the first time since the collapse, there is somewhere to go.
 
-*(No dialogue needed here. This beat is about restraint — let the silence do the work.)*
-
-*(Fade to black.)*
-
-*(Time skip — later.)*
+Zeko steals the abandoned pirate ship and follows the path alone.
 
 ---
 
-## Open Notes / Things to Decide Later
+# First Horror Island
 
-- Vyla's ultimate fate is not locked by the romance decision. The opening will need a separate rewrite if she survives under the newer star-sea concept.
-- Whether Halvard's death includes any final word to Zako, or stays as abrupt as written (abrupt may be more honest to the tone)
-- Confirm placeholder names before this becomes real content in dialogue resources — "Vyla" and "Halvard" are just working names
-- Camera direction/blocking specifics are intentionally left loose here — this doc is the dialogue/beat skeleton, not a full shot list
+The first island serves as the combat and exploration tutorial.
+
+Zeko fights through enemies and eventually defeats the island's Horror. When it dies, stolen starlight returns and permanently restores part of the route network.
+
+This proves the universe can be reconnected.
+
+When Zeko returns to the ship, he discovers that Vyla secretly stowed away before departure.
+
+He insists on taking her home.
+
+Vyla refuses. Halvard is dead, the lighthouse is useless, the island is isolated, and Zeko has already left emotionally even if he tries to return physically. She tells him that she has nothing left there either.
+
+Vyla promises to work aboard the ship and make herself useful. She becomes the excited, hopeful force pushing Zeko toward the next island.
+
+Their initial dynamic is:
+
+- **Zeko:** exhausted, depressed, cautious, convinced the journey will fail
+- **Vyla:** curious, energetic, stubborn, convinced restoring even one path means they must try again
+
+She is not comic relief and should become genuinely useful aboard the ship through navigation, inventory, maintenance, maps, observation, and practical work appropriate to her age.
+
+---
+
+# Emotional Foundation
+
+Zeko is not grieving a lost romance.
+
+He is broken because he lost his mentor, his purpose, his confidence, and the connected universe he expected to protect.
+
+Vyla is not the person he failed to save. She is the person he did save, but then emotionally abandoned during the years after the collapse.
+
+Her return forces him to confront the fact that surviving is not the same as living.
+
+The larger story follows Zeko gradually forming a new family aboard the ship. Later, a visibly cursed adult woman joins the crew and becomes the game's slow-burn romantic lead. She and Zeko help each other regain a sense of self without either character simply curing or fixing the other.
