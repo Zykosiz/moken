@@ -9,6 +9,8 @@
 [ext_resource type="Shader" uid="uid://ffj070w1hbpi" path="res://shaders/island_terrain.gdshader" id="6"]
 [ext_resource type="Material" uid="uid://blu8ih0yrk4m2" path="res://Assets/Kenney/Pirate Kit/palm-detailed-straight_colormap.tres" id="6_mvfa8"]
 [ext_resource type="Shader" uid="uid://qonedx4uakwv" path="res://shaders/water.gdshader" id="7"]
+[ext_resource type="Texture2D" path="res://Assets/Quaternius/Nature/Stylized Nature MegaKit - July 2024/Textures/Rocks_Diffuse.png" id="70_rocktex"]
+[ext_resource type="Texture2D" path="res://Assets/Quaternius/Nature/Stylized Nature MegaKit - July 2024/Textures/Rocks_Desert_Diffuse.png" id="71_sandtex"]
 [ext_resource type="Material" uid="uid://ynjkafpdmfal" path="res://Assets/Kenney/Pirate Kit/palm-detailed-bend_colormap.tres" id="7_r0dna"]
 [ext_resource type="Script" uid="uid://c35m6fu3cd6fy" path="res://scripts/world/layout/AuthoredIslandLayout.gd" id="8_layout"]
 [ext_resource type="PackedScene" path="res://Scenes/Layout/Island/Lighthouse.tscn" id="35_nfsqp"]
@@ -77,6 +79,8 @@ shader_parameter/rim_power = 3.0
 shader_parameter/rim_strength = 0.045
 shader_parameter/color_variation_strength = 0.08
 shader_parameter/color_variation_scale = 3.0
+shader_parameter/rock_texture = ExtResource("70_rocktex")
+shader_parameter/sand_texture = ExtResource("71_sandtex")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ofme6"]
 _surfaces = [{
