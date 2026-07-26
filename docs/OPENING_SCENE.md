@@ -2,9 +2,11 @@
 
 Placeholder dialogue throughout — meant to be refined, not final. Character names in brackets are placeholders where nothing's been locked yet. Technical notes flag what each beat needs from existing or new systems.
 
+**Relationship note:** Vyla and Zako are close lifelong friends, not a romantic pairing. She represents his home, community, and the ordinary life that is shattered in the opening. The game's slow-burn romance belongs later, with a visibly cursed woman who becomes part of his found family.
+
 **Cast:**
 - **Zako** — protagonist, new lighthouse keeper
-- **[Vyla]** — village girl, placeholder name, easily swapped
+- **[Vyla]** — village girl and Zako's close lifelong friend; placeholder name, easily swapped
 - **[Old Keeper — "Halvard"?]** — the outgoing lighthouse keeper, placeholder name
 - **Pirate Captain** — antagonist for this scene only
 
@@ -74,13 +76,13 @@ Placeholder dialogue throughout — meant to be refined, not final. Character na
 
 **Zako:** Is that strange?
 
-**[Vyla]:** It's just — I don't know. It's nice, I guess. That someone wanted to stay.
+**[Vyla]:** A little. But it's good. This place needs someone who actually knows the people living here.
 
 **Zako:** I like it here. More than I expected to, honestly.
 
-**[Vyla]:** Good. That's good.
+**[Vyla]:** Then you'll fit right in. None of us know why we stay either.
 
-*(Understated — neither of them lingers on it, but it's clearly meant something to both of them. No further comment needed.)*
+*(Their closeness should feel familiar and lived-in, without romantic framing. Vyla is part of the community Zako belongs to, not a lost-love setup.)*
 
 **Zako:** It's strange, though. Keeper of the light, and I'm still on the same island as everyone. I half expected it to feel like leaving.
 
@@ -88,9 +90,9 @@ Placeholder dialogue throughout — meant to be refined, not final. Character na
 
 **Zako:** Up a hill now. I'll put that on the door.
 
-**[Vyla]:** And if the hill ever gets lonely — I'm just a whistle away, you know. Don't forget that.
+**[Vyla]:** And if the hill ever gets lonely, come back down. That's where everyone else is.
 
-**Zako:** I won't.
+**Zako:** Hard to argue with that.
 
 **[Vyla]:** Anyway — don't let Halvard scare you. He's all bark. Mostly.
 
@@ -116,13 +118,11 @@ Placeholder dialogue throughout — meant to be refined, not final. Character na
 
 **[Halvard]:** Go on, then.
 
-*(Vyla lingers a beat too long before leaving — small, unspoken. Zako notices, and it shows — not oblivious, just as understated as she is.)*
+**[Vyla]:** See you at dinner, Zako. Everyone wants to hear how badly the first day goes.
 
-**[Vyla]:** ...See you at dinner, Zako.
+**Zako:** I'll try not to disappoint them.
 
-**Zako:** *(a little warmer than strictly necessary)* Wouldn't miss it.
-
-*(Vyla exits.)*
+*(Vyla exits. The exchange should feel warm and familiar, but entirely platonic.)*
 
 ---
 
@@ -188,7 +188,7 @@ Placeholder dialogue throughout — meant to be refined, not final. Character na
 
 **[Vyla]:** *(shaking, barely audible)* I'm scared.
 
-*(He holds her. No further words needed.)*
+*(He holds her. This is protective friendship and shared terror, not romantic framing. Zako knows his reassurance is a lie, but says it because she needs to hear it.)*
 
 ---
 
@@ -258,7 +258,7 @@ Placeholder dialogue throughout — meant to be refined, not final. Character na
 
 ## Open Notes / Things to Decide Later
 
-- Whether Vyla gets any line at all in Beat 12 beyond a wordless cry, or stays completely silent from Beat 9 onward (both work — silence might hit harder)
+- Vyla's ultimate fate is not locked by the romance decision. The opening will need a separate rewrite if she survives under the newer star-sea concept.
 - Whether Halvard's death includes any final word to Zako, or stays as abrupt as written (abrupt may be more honest to the tone)
 - Confirm placeholder names before this becomes real content in dialogue resources — "Vyla" and "Halvard" are just working names
 - Camera direction/blocking specifics are intentionally left loose here — this doc is the dialogue/beat skeleton, not a full shot list
